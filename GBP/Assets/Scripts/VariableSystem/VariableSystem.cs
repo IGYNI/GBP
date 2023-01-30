@@ -39,6 +39,10 @@ public class VariableSystem : MonoBehaviour
         {
             gameVar.Value = newValue;
         }
+        else
+        {
+            Debug.LogWarning($"[GameVar] Variable {variableName} doesn't exists");
+        }
     }
     
     public void CreateVariable(string variableName, string initialValue)

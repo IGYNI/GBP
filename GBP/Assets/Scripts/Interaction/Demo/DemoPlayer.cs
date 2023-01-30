@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CharacterController))]
 public class DemoPlayer : MonoBehaviour
 {
     
     [SerializeField] private float speed;
-    [SerializeField] private Rigidbody rBody;
+    [SerializeField] private CharacterController characterController;
 
     private void Awake()
     {
-        rBody = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
     }
 
     private void Update()
@@ -40,7 +40,8 @@ public class DemoPlayer : MonoBehaviour
 
         if (force != Vector3.zero)
         {
-            rBody.MovePosition(transform.position + force);
+            characterController.Move(force);
+            //rBody.MovePosition(transform.position + );
         }
     }
 }
