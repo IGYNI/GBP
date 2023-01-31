@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skipText: {fileID: 1780171472}
   nextSceneInfo:
-    sceneName: QuestPrototype
+    sceneName: DockingRoom
     hints: []
     images: []
 --- !u!4 &1953978844

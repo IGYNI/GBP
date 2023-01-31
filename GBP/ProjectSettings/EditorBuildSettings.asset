@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryCutScene.unity
     guid: 5569bbad43e4b264584a1c1af588b961
   - enabled: 1
+    path: Assets/Scenes/DockingRoom.unity
+    guid: 682f15a206cabac4caa8c116749b81f6
+  - enabled: 1
     path: Assets/Scenes/QuestPrototype.unity
     guid: 1979b0f4671759a4cb876d92d81c6ff4
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+    guid: df7dd1bd918f3724281e27b8fb8fe060
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 0a88cdf982b9ea148b04c2e4bacbf463
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6f23e29385b5bfb49b1d015f0a6eb145, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 3751342445f80ff469ef61f0b51339d9, type: 2}
