@@ -1,10 +1,10 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VariableSystem : MonoBehaviour
 {
+    public static VariableSystem Instance { get; private set; }
+
     public List<VariableDesc> initialVariables;
 
     public IReadOnlyDictionary<string, GameVar> Variables => _gameVariables; 
@@ -13,10 +13,28 @@ public class VariableSystem : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         foreach (var variable in initialVariables)
         {
             var gameVar = new GameVar(variable.name, variable.value);
             _gameVariables.Add(variable.name, gameVar);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
         }
     }
 
