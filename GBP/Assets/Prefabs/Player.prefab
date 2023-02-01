@@ -37,7 +37,7 @@ Transform:
   - {fileID: 6638914524563446375}
   - {fileID: 6675544852923524226}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8600045715664128189
 MonoBehaviour:
@@ -139,7 +139,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3373340189127798052}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Speed: 7
   m_Acceleration: 30
   avoidancePriority: 50
