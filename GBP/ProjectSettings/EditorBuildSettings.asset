@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen.unity
     guid: 0a88cdf982b9ea148b04c2e4bacbf463
+  - enabled: 1
+    path: Assets/Scenes/Laboratory.unity
+    guid: fa4a4b58b73808648b875a94da8a1213
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6f23e29385b5bfb49b1d015f0a6eb145, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 3751342445f80ff469ef61f0b51339d9, type: 2}
