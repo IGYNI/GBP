@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using FMOD.Studio;
 using Player.Commands;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -38,7 +40,9 @@ public class PlayerController : MonoBehaviour
 
 	private readonly ObservableVar<PlayerState> _playerState = new ObservableVar<PlayerState>();
 
-	private void Awake()
+    private EventInstance footsteps;
+
+    private void Awake()
 	{
 		_navMeshAgent = GetComponent<NavMeshAgent>();
 	}
@@ -48,7 +52,8 @@ public class PlayerController : MonoBehaviour
 		_raycastCamera = Camera.main;
 		_currentAction = _idleAction;
 		ActiveItem.OnValueChanged += OnSelectItem;
-	}
+        footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
+    }
 
 	private void OnSelectItem(Item previous, Item item)
 	{
@@ -65,7 +70,9 @@ public class PlayerController : MonoBehaviour
 		UpdateNavigation();
 		CheckItems();
 		UpdateActions();
-	}
+        UpdateSounds();
+
+    }
 
 	private void UpdateNavigation()
 	{
@@ -81,7 +88,7 @@ public class PlayerController : MonoBehaviour
 					_playerActions.Clear();
 					_currentAction = _idleAction;
 					_playerActions.Enqueue(new MoveToPoint(this, hitInfo.point));
-				}
+                }
 			}
 		}
 	}
@@ -178,4 +185,14 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
+    private void UpdateSounds()
+    {
+		PLAYBACK_STATE playbackstate;
+        footsteps.getPlaybackState(out playbackstate);
+		if (State.Value == PlayerState.Run && playbackstate.Equals(PLAYBACK_STATE.STOPPED))
+			{
+			footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+			footsteps.start();
+		}
+		}
 }
