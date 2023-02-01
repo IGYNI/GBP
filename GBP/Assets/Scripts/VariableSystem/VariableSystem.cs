@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VariableSystem : MonoBehaviour
 {
     public static VariableSystem Instance { get; private set; }
+
+    public event Action<GameVar> OnCreateVariable; 
 
     public List<VariableDesc> initialVariables;
 
@@ -40,27 +43,26 @@ public class VariableSystem : MonoBehaviour
 
     public GameVar GetVariable(string variableName)
     {
-        if (_gameVariables.TryGetValue(variableName, out var gameVar))
-        {
-            return gameVar;
-        }
-
-        return null;
+        return _gameVariables.TryGetValue(variableName, out GameVar gameVar) ? gameVar : null;
     }
     
-    public void SetVariable(string variableName, string newValue)
+    public bool SetVariable(string variableName, string newValue, bool createVariable = false)
     {
         if (string.IsNullOrEmpty(variableName))
-            return;
+            return false;
         
-        if (_gameVariables.TryGetValue(variableName, out var gameVar))
+        if (_gameVariables.TryGetValue(variableName, out GameVar gameVar))
         {
             gameVar.Value = newValue;
+            return true;
         }
-        else
+        if (createVariable)
         {
-            Debug.LogWarning($"[GameVar] Variable {variableName} doesn't exists");
+            CreateVariable(variableName, newValue);
+            return true;
         }
+        Debug.LogWarning($"[GameVar] Variable {variableName} doesn't exists");
+        return false;
     }
     
     public void CreateVariable(string variableName, string initialValue)
@@ -72,6 +74,10 @@ public class VariableSystem : MonoBehaviour
         if (!_gameVariables.TryAdd(variableName, gameVar))
         {
             Debug.LogWarning($"[GameVar] Variable {variableName} already exists");
+        }
+        else
+        {
+            OnCreateVariable?.Invoke(gameVar);
         }
     }
 }

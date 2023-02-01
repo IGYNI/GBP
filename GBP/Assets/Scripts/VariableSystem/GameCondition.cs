@@ -39,7 +39,7 @@ public class GameCondition : MonoBehaviour
 			return;
 		foreach (GameAction gameAction in actions)
 		{
-			gameAction.Invoke(variableSystem);
+			gameAction.Invoke(gameObject, variableSystem);
 		}
 	}
 }

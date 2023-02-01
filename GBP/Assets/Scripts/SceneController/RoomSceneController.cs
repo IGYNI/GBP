@@ -6,7 +6,7 @@ public abstract class RoomSceneController : BaseSceneController
 {
 	public UnityEvent OnLoad;
 
-	[SerializeField] private DemoPlayer player;
+	[SerializeField] private PlayerController player;
 	[SerializeField] private PlayerSpawner playerSpawner;
 
 	protected void SpawnPlayer(SceneContext sceneContext)
