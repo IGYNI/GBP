@@ -4,6 +4,7 @@ using Player.Commands;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
 	private readonly ObservableVar<PlayerState> _playerState = new ObservableVar<PlayerState>();
 
     private EventInstance footsteps;
+    private string _sceneName;
+
 
     private void Awake()
 	{
@@ -52,7 +55,8 @@ public class PlayerController : MonoBehaviour
 		_raycastCamera = Camera.main;
 		_currentAction = _idleAction;
 		ActiveItem.OnValueChanged += OnSelectItem;
-        footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
+        _sceneName = SceneManager.GetActiveScene().name;
+		footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
     }
 
 	private void OnSelectItem(Item previous, Item item)
@@ -193,6 +197,13 @@ public class PlayerController : MonoBehaviour
 			{
 			footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
 			footsteps.start();
-		}
-		}
+		}else if (_sceneName == "Corridor")
+        {
+            footsteps.setParameterByName("footsteps", 1);
+        }
+        else
+        {
+            footsteps.setParameterByName("footsteps", 0);
+        }
+    }
 }
