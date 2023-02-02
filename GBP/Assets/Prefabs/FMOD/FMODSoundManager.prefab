@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884640933894907492}
-  - component: {fileID: 8884640933894907419}
   - component: {fileID: 775693762}
   - component: {fileID: 775693761}
   m_Layer: 0
@@ -32,28 +31,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8884640933894907419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8884640933894907418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadEvent: 1
-  UnloadEvent: 2
-  Banks:
-  - Footsteps
-  - OST
-  - Sfx
-  CollisionTag: 
-  PreloadSamples: 0
 --- !u!114 &775693762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d9ae09e06670242994262f64c505aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events: {fileID: 775693761}
+  bankLoaderPrefab: {fileID: 8780825761072326730, guid: 9832e6c8d98af9f4d8e9c46f814aef68, type: 3}
 --- !u!114 &775693761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,11 +61,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <footsteps>k__BackingField:
     Guid:
-      Data1: 1934536442
-      Data2: 1114638361
-      Data3: 352624021
-      Data4: -345871470
-    Path: event:/Footsteps/Footsteps
+      Data1: -1938299459
+      Data2: 1110251486
+      Data3: 151223466
+      Data4: 279846546
+    Path: event:/Footsteps/FootstepsEvent
   <openDoors>k__BackingField:
     Guid:
       Data1: 198548289
@@ -99,10 +80,24 @@ MonoBehaviour:
       Data3: 200160128
       Data4: -820687698
     Path: event:/Sfx/Doors Closed
+  <grabItem>k__BackingField:
+    Guid:
+      Data1: -1839361710
+      Data2: 1109003561
+      Data3: -1964193632
+      Data4: 2018590093
+    Path: event:/Sfx/GrabItem
+  <ambience>k__BackingField:
+    Guid:
+      Data1: 2124815434
+      Data2: 1085277058
+      Data3: 1502015395
+      Data4: 1056783654
+    Path: event:/Ambience/Ambience
   <mainTheme>k__BackingField:
     Guid:
-      Data1: -61136944
-      Data2: 1224696820
-      Data3: -1543298644
-      Data4: -332443596
-    Path: event:/OST/MusicEvent
+      Data1: -1235230629
+      Data2: 1270133762
+      Data3: 504862340
+      Data4: 1802546783
+    Path: event:/OST/Main Theme

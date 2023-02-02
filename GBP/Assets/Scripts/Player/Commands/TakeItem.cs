@@ -33,7 +33,7 @@ namespace Player.Commands
 				//_player.PlayTakeAnimation();
 				_started = true;
 				_timer = 0.5f;
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.grabItem, _player.transform.position);
+                AudioManager.instance.PlayOneShot(AudioManager.instance.events.grabItem, _player.transform.position);
             }
             _timer += Time.deltaTime;
 			if (_timer > 1f)

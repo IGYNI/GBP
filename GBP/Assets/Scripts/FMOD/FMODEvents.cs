@@ -20,14 +20,14 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference mainTheme { get; private set; }
 
 
-    public static FMODEvents instance { get; private set; }
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogError("Found more than one FMODEvents instance in scene");
-        }
-        instance = this;
-    }
+    // public static FMODEvents instance { get; private set; }
+    //
+    // private void Awake()
+    // {
+    //     if (instance != null)
+    //     {
+    //         Debug.LogError("Found more than one FMODEvents instance in scene");
+    //     }
+    //     instance = this;
+    // }
 }

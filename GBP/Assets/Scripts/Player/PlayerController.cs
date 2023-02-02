@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using FMOD.Studio;
 using Player.Commands;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -43,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 	private readonly ObservableVar<PlayerState> _playerState = new ObservableVar<PlayerState>();
 
-	private EventInstance footsteps;
+	
 	private string _sceneName;
 
 
@@ -58,7 +56,11 @@ public class PlayerController : MonoBehaviour
 		_currentAction = _idleAction;
 		ActiveItem.OnValueChanged += OnSelectItem;
 		_sceneName = SceneManager.GetActiveScene().name;
-		footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
+	}
+	
+	private void OnDestroy()
+	{
+		ActiveItem.OnValueChanged -= OnSelectItem;
 	}
 
 	private void OnSelectItem(ItemInteraction previous, ItemInteraction item)
@@ -76,7 +78,6 @@ public class PlayerController : MonoBehaviour
 		UpdateNavigation();
 		CheckItems();
 		UpdateActions();
-		UpdateSounds();
 	}
 
 	private void UpdateNavigation()
@@ -212,24 +213,5 @@ public class PlayerController : MonoBehaviour
 		}
 
 		return null;
-	}
-
-	private void UpdateSounds()
-	{
-		PLAYBACK_STATE playbackstate;
-		footsteps.getPlaybackState(out playbackstate);
-		if (State.Value == PlayerState.Run && playbackstate.Equals(PLAYBACK_STATE.STOPPED))
-		{
-			footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-			footsteps.start();
-		}
-		else if (_sceneName == "Corridor")
-		{
-			footsteps.setParameterByName("footsteps", 1);
-		}
-		else
-		{
-			footsteps.setParameterByName("footsteps", 0);
-		}
 	}
 }

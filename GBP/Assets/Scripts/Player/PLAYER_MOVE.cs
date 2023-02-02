@@ -41,7 +41,7 @@ public class PLAYER_MOVE : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         Player_pos = GetComponent<Transform>();
-        footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
+        footsteps = AudioManager.instance.CreateInstance(AudioManager.instance.events.footsteps);
     }
 
     public void SetDestination(Vector3 destination)
