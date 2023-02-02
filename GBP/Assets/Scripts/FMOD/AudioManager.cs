@@ -1,6 +1,7 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class AudioManager : MonoBehaviour
     private string _sceneName;
     private EventInstance mainThemeInstance;
     private EventInstance ambience;
+    private EventInstance buttonHandler;
+    private EventInstance buttonClick;
     private StudioBankLoader _bank;
     
     private void Awake()
@@ -90,6 +93,18 @@ public class AudioManager : MonoBehaviour
     public void SetMusicArea(MusicArea area)
     {
         ambience.setParameterByName("AMB", (float)area);
+    }
+
+    public void InitializeMenuButtonHandler() 
+    {
+        buttonHandler = CreateInstance(events.buttonHover);
+        buttonHandler.start();
+    }
+
+    public void InitializeMenuButtonClick()
+    {
+        buttonClick = CreateInstance(events.buttonClick);
+        buttonClick.start();
     }
 
 }

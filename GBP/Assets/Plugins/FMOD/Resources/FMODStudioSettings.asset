@@ -587,6 +587,7 @@ MonoBehaviour:
   Banks:
   - Desktop/Ambience
   - Desktop/Footsteps
+  - Desktop/Menu
   - Desktop/OST
   - Desktop/Sfx
   BanksToLoad: []
