@@ -40,12 +40,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6762855183556662298}
-  - component: {fileID: 6762855183556662291}
   - component: {fileID: 6762855183556662288}
   - component: {fileID: 6762855183556662289}
   - component: {fileID: 6762855183556662297}
   - component: {fileID: 6762855183556662296}
   - component: {fileID: 6762855183556662295}
+  - component: {fileID: 2886014339619885489}
   m_Layer: 6
   m_Name: Item
   m_TagString: Untagged
@@ -67,22 +67,8 @@ Transform:
   m_Children:
   - {fileID: 311733473561276154}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6762855183556662291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6762855183556662294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825eeb9ab5ede6f458b62bd3f58a76f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  slotButton: {fileID: 3611640744231086363, guid: e05e4d0ab99ed904e98b729f543be66a, type: 3}
 --- !u!114 &6762855183556662288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,14 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0aa42fb1daf8844480eabe2943e3365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: TestItem
-  description: bla bla
-  icon: {fileID: 21300000, guid: 9b92ba752f95ed241b2a6c6403b639f8, type: 3}
-  itemOutline: {fileID: 6762855183556662289}
-  interactionInfo:
-    interactionMode: 1
-    interactionSpot: {fileID: 311733473561276154}
-    interactionRadius: 0
+  info: {fileID: 0}
+  interaction: {fileID: 2886014339619885489}
 --- !u!114 &6762855183556662289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +172,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2886014339619885489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762855183556662294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd0ce64089e47068b8b0748309d88f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 6762855183556662288}
+  outline: {fileID: 6762855183556662289}
+  interactionInfo:
+    interactionMode: 1
+    interactionSpot: {fileID: 311733473561276154}
+    interactionRadius: 0
+  overviewInfo: 

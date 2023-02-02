@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,24 @@ public class VariableSystemDebug : MonoBehaviour
 
     [SerializeField] private VariableSystem variableSystem;
     [SerializeField] private Transform variablesRoot;
-    // Start is called before the first frame update
+    
+
+    private void Awake()
+    {
+        variableSystem.OnCreateVariable += CreateDebugSlot;
+    }
+
+    private void CreateDebugSlot(GameVar gameVar)
+    {
+        var view = Instantiate(variableDescTemplate, variablesRoot);
+        view.Init(gameVar);
+    }
+
     private void Start()
     {
         foreach (var gameVar in variableSystem.Variables)
         {
-            var view = Instantiate(variableDescTemplate, variablesRoot);
-            view.Init(gameVar.Value);
+            CreateDebugSlot(gameVar.Value);
         }
     }
 }

@@ -6,13 +6,15 @@ public class VariableSystem : MonoBehaviour
 {
     public static VariableSystem Instance { get; private set; }
 
-    public event Action<GameVar> OnCreateVariable; 
+    public event Action<GameVar> OnCreateVariable;
+    public Inventory Inventory;
 
     public List<VariableDesc> initialVariables;
 
     public IReadOnlyDictionary<string, GameVar> Variables => _gameVariables; 
 
     private readonly Dictionary<string, GameVar> _gameVariables = new Dictionary<string, GameVar>();
+    private readonly Dictionary<string, ItemState> _itemStates = new Dictionary<string, ItemState>();
 
     private void Awake()
     {
@@ -39,6 +41,16 @@ public class VariableSystem : MonoBehaviour
         {
             Instance = null;
         }
+    }
+
+    public ItemState GetItemState(string itemName)
+    {
+        if (_itemStates.TryGetValue(itemName, out var itemState))
+        {
+            return itemState;
+        }
+
+        return ItemState.Default;
     }
 
     public GameVar GetVariable(string variableName)
@@ -71,13 +83,13 @@ public class VariableSystem : MonoBehaviour
             return;
         
         var gameVar = new GameVar(variableName, initialValue);
-        if (!_gameVariables.TryAdd(variableName, gameVar))
+        if (_gameVariables.TryAdd(variableName, gameVar))
         {
-            Debug.LogWarning($"[GameVar] Variable {variableName} already exists");
+            OnCreateVariable?.Invoke(gameVar);
         }
         else
         {
-            OnCreateVariable?.Invoke(gameVar);
+            Debug.LogWarning($"[GameVar] Variable {variableName} already exists");
         }
     }
 }

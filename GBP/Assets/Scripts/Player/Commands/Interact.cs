@@ -1,4 +1,3 @@
-using Interaction;
 using UnityEngine;
 
 namespace Player.Commands
@@ -7,17 +6,20 @@ namespace Player.Commands
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.Interact;
 		
-		private readonly PlayerController _player;
-		private readonly IInteractable _interactable;
-
+		
 		private float _timer;
 		private bool _completed;
 		private bool _started;
+		
+		private readonly PlayerController _player;
+		private readonly VariableSystem _variableSystem;
+		private readonly ItemInteraction _item;
 
-		public Interact(PlayerController player, IInteractable interactable)
+		public Interact(VariableSystem variableSystem, PlayerController player, ItemInteraction item)
 		{
+			_variableSystem = variableSystem;
 			_player = player;
-			_interactable = interactable;
+			_item = item;
 		}
 		
 		public bool Completed()
@@ -36,7 +38,7 @@ namespace Player.Commands
 			_timer += Time.deltaTime;
 			if (_timer > 1f)
 			{
-				_interactable.Interact();
+				_item.Interact(_variableSystem);
 				Debug.Log("[Player] StopInteractAnimation");
 				//_player.StopInteractAnimation();
 				_completed = true;

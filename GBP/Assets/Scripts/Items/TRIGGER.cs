@@ -37,17 +37,27 @@ public class TRIGGER : MonoBehaviour
                 {
                     if (_current != null)
                     {
-                        _current.itemOutline.OutlineWidth = 0;
+                        if (_current.interaction != null)
+                        {
+                            _current.interaction.outline.OutlineWidth = 0;
+                        }
                         itemInfo.ClearInfo(_current);
                     }
                     _current = item;
                     itemInfo.Init(_current);
                 }
-                _current.itemOutline.OutlineWidth = Item_Width;    
+
+                if (_current.interaction != null)
+                {
+                    _current.interaction.outline.OutlineWidth = Item_Width;
+                }
             }
             else if (_current != null)
             {
-                _current.itemOutline.OutlineWidth = 0;
+                if (_current.interaction != null)
+                {
+                    _current.interaction.outline.OutlineWidth = 0;
+                }
                 itemInfo.ClearInfo(_current);
                 _current = null;
             }

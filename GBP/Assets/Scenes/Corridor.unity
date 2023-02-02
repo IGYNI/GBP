@@ -2382,6 +2382,7 @@ GameObject:
   - component: {fileID: 2142899359}
   - component: {fileID: 2142899358}
   - component: {fileID: 2142899360}
+  - component: {fileID: 2142899361}
   m_Layer: 0
   m_Name: SceneBootstrap
   m_TagString: Untagged
@@ -2406,6 +2407,7 @@ MonoBehaviour:
       m_Calls: []
   player: {fileID: 292668249}
   playerSpawner: {fileID: 2142899360}
+  itemStateSystem: {fileID: 2142899361}
 --- !u!4 &2142899359
 Transform:
   m_ObjectHideFlags: 0
@@ -2452,6 +2454,19 @@ MonoBehaviour:
   - name: 
     spawnPoint: {fileID: 0}
   defaultSpawn: {fileID: 2081560106}
+--- !u!114 &2142899361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142899357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44c5a32298f425baec6b60bcc75e477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!23 &7211342609567152552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2564,7 +2579,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.13333334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 2a77848304b80c944a41b19c4aecde54, type: 2}
   m_BuildHeightMesh: 0

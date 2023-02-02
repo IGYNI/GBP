@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using FMOD.Studio;
 using Player.Commands;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -15,21 +17,22 @@ public class PlayerController : MonoBehaviour
 		TakeItem,
 		Interact,
 	}
+
 	public float itemOutlineWidth;
-	
+
 	public IObservableVar<PlayerState> State => _playerState;
 	[SerializeField] private LayerMask groundLayer;
 	[SerializeField] private LayerMask interactable;
-	
 
-	public IObservableVar<Item> ActiveItem => _activeItem;
-	public IObservableVar<Item> HoveredItem => _hoveredItem;
+
+	public IObservableVar<ItemInteraction> ActiveItem => _activeItem;
+	public IObservableVar<ItemInteraction> HoveredItem => _hoveredItem;
 	public string currentAction;
-	
+
 	//public UIItemInfo itemInfo;
-	
-	private readonly ObservableVar<Item> _activeItem = new ObservableVar<Item>();
-	private readonly ObservableVar<Item> _hoveredItem = new ObservableVar<Item>();
+
+	private readonly ObservableVar<ItemInteraction> _activeItem = new ObservableVar<ItemInteraction>();
+	private readonly ObservableVar<ItemInteraction> _hoveredItem = new ObservableVar<ItemInteraction>();
 
 	private PlayerState _previousState;
 	private NavMeshAgent _navMeshAgent;
@@ -40,11 +43,11 @@ public class PlayerController : MonoBehaviour
 
 	private readonly ObservableVar<PlayerState> _playerState = new ObservableVar<PlayerState>();
 
-    private EventInstance footsteps;
-    private string _sceneName;
+	private EventInstance footsteps;
+	private string _sceneName;
 
 
-    private void Awake()
+	private void Awake()
 	{
 		_navMeshAgent = GetComponent<NavMeshAgent>();
 	}
@@ -54,11 +57,11 @@ public class PlayerController : MonoBehaviour
 		_raycastCamera = Camera.main;
 		_currentAction = _idleAction;
 		ActiveItem.OnValueChanged += OnSelectItem;
-        _sceneName = SceneManager.GetActiveScene().name;
+		_sceneName = SceneManager.GetActiveScene().name;
 		footsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footsteps);
-    }
+	}
 
-	private void OnSelectItem(Item previous, Item item)
+	private void OnSelectItem(ItemInteraction previous, ItemInteraction item)
 	{
 		InteractWith(item);
 	}
@@ -67,53 +70,57 @@ public class PlayerController : MonoBehaviour
 	{
 		_navMeshAgent.destination = destination;
 	}
-	
+
 	private void Update()
 	{
 		UpdateNavigation();
 		CheckItems();
 		UpdateActions();
-        UpdateSounds();
-
-    }
+		UpdateSounds();
+	}
 
 	private void UpdateNavigation()
 	{
-		if (State.Value == PlayerState.Idle || State.Value == PlayerState.Run)
+		if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+			return;
+		
+		if (State.Value != PlayerState.Idle && State.Value != PlayerState.Run) return;
+		if (Input.GetMouseButtonDown(0))
 		{
-			if (Input.GetMouseButtonDown(0))
-			{
-				Ray mRay = _raycastCamera.ScreenPointToRay(Input.mousePosition); 
+			Ray mRay = _raycastCamera.ScreenPointToRay(Input.mousePosition);
 
-				if (Physics.Raycast(mRay.origin, mRay.direction, out RaycastHit hitInfo, 100, groundLayer))
-				{
-					//Debug.Log(hitInfo.transform.gameObject.name);
-					_playerActions.Clear();
-					_currentAction = _idleAction;
-					_playerActions.Enqueue(new MoveToPoint(this, hitInfo.point));
-                }
+			if (Physics.Raycast(mRay.origin, mRay.direction, out RaycastHit hitInfo, 100, groundLayer))
+			{
+				//Debug.Log(hitInfo.transform.gameObject.name);
+				_playerActions.Clear();
+				_currentAction = _idleAction;
+				_playerActions.Enqueue(new MoveToPoint(this, hitInfo.point));
 			}
 		}
 	}
 
 	private void CheckItems()
 	{
+		if (EventSystem.current.IsPointerOverGameObject())
+			return;
+		
 		Ray mRay = _raycastCamera.ScreenPointToRay(Input.mousePosition);
 
-		if (Physics.Raycast(mRay, out RaycastHit hitInfo, 100,interactable))
+		if (Physics.Raycast(mRay, out RaycastHit hitInfo, 100, interactable))
 		{
-			if (hitInfo.transform.TryGetComponent(out Item item))
+			if (hitInfo.transform.TryGetComponent(out ItemInteraction item))
 			{
 				if (item != _hoveredItem.Value)
 				{
 					if (_hoveredItem.Value != null)
 					{
-						_hoveredItem.Value.itemOutline.OutlineWidth = 0;
+						_hoveredItem.Value.outline.OutlineWidth = 0;
 					}
+
 					_hoveredItem.Value = item;
 				}
 
-				_hoveredItem.Value.itemOutline.OutlineWidth = itemOutlineWidth;
+				_hoveredItem.Value.outline.OutlineWidth = itemOutlineWidth;
 
 				if (Input.GetMouseButtonDown(0))
 				{
@@ -126,12 +133,12 @@ public class PlayerController : MonoBehaviour
 		else
 			UnHoverItem();
 	}
-	
+
 	private void UnHoverItem()
 	{
-		if (_hoveredItem.Value == null) 
+		if (_hoveredItem.Value == null)
 			return;
-		_hoveredItem.Value.itemOutline.OutlineWidth = 0;
+		_hoveredItem.Value.outline.OutlineWidth = 0;
 		_hoveredItem.Set(null);
 	}
 
@@ -148,6 +155,7 @@ public class PlayerController : MonoBehaviour
 				_currentAction = _idleAction;
 			}
 		}
+
 		Debug.Assert(_currentAction != null, "[Player] Current Action is null!");
 
 		_currentAction.Update();
@@ -155,7 +163,7 @@ public class PlayerController : MonoBehaviour
 		_playerState.SetOnce(_currentAction.State);
 	}
 
-	public void InteractWith(Item item)
+	public void InteractWith(ItemInteraction item)
 	{
 		switch (item.interactionInfo.interactionMode)
 		{
@@ -164,19 +172,17 @@ public class PlayerController : MonoBehaviour
 				var direction = item.transform.position - transform.position;
 				direction.y = 0f;
 				_playerActions.Enqueue(new RotateToTarget(this, direction.normalized));
-				// if (item is IInteractable interactable)
-				// {
-				// 	_playerActions.Enqueue(new Interact(this, interactable));
-				// }
 			}
 				break;
+
 			case EInteractionMode.Radius:
 			{
 				var target = item.transform.position;
 				target.y = 0;
 				_playerActions.Enqueue(new MoveToPoint(this, target));
-				break;
 			}
+				break;
+
 			case EInteractionMode.FixedPoint:
 			{
 				var spot = item.interactionInfo.interactionSpot;
@@ -184,25 +190,46 @@ public class PlayerController : MonoBehaviour
 				position.y = 0;
 				_playerActions.Enqueue(new MoveToPoint(this, position));
 				_playerActions.Enqueue(new RotateToTarget(this, spot.forward));
-				break;
 			}
+				break;
+		}
+
+		var interactAction = GetAction(item);
+		if (interactAction != null)
+		{
+			_playerActions.Enqueue(interactAction);
 		}
 	}
-    private void UpdateSounds()
-    {
+
+	private IPlayerAction GetAction(ItemInteraction interaction)
+	{
+		switch (interaction.ProvideState)
+		{
+			case PlayerState.TakeItem:
+				return new TakeItem(VariableSystem.Instance, this, interaction);
+			case PlayerState.Interact:
+				return new Interact(VariableSystem.Instance, this, interaction);
+		}
+
+		return null;
+	}
+
+	private void UpdateSounds()
+	{
 		PLAYBACK_STATE playbackstate;
-        footsteps.getPlaybackState(out playbackstate);
+		footsteps.getPlaybackState(out playbackstate);
 		if (State.Value == PlayerState.Run && playbackstate.Equals(PLAYBACK_STATE.STOPPED))
-			{
+		{
 			footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
 			footsteps.start();
-		}else if (_sceneName == "Corridor")
-        {
-            footsteps.setParameterByName("footsteps", 1);
-        }
-        else
-        {
-            footsteps.setParameterByName("footsteps", 0);
-        }
-    }
+		}
+		else if (_sceneName == "Corridor")
+		{
+			footsteps.setParameterByName("footsteps", 1);
+		}
+		else
+		{
+			footsteps.setParameterByName("footsteps", 0);
+		}
+	}
 }
