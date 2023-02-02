@@ -12,12 +12,14 @@ namespace UI
 
 		public IEnumerator Show()
 		{
-			yield return canvasGroup.DOFade(1f, fadeTime).SetEase(Ease.OutSine);
+            yield return canvasGroup.DOFade(1f, fadeTime).SetEase(Ease.OutSine);
 			canvasGroup.interactable = true;
 			canvasGroup.blocksRaycasts = true;
-		}
-		
-		public IEnumerator Hide()
+            
+
+        }
+
+        public IEnumerator Hide()
 		{
 			canvasGroup.blocksRaycasts = false;
 			canvasGroup.interactable = false;
@@ -28,9 +30,9 @@ namespace UI
 		{
 			yield return Hide();
 			yield return prev.Show();
-		}
+        }
 
-		public void Back()
+        public void Back()
 		{
 			if (previous != null)
 			{
