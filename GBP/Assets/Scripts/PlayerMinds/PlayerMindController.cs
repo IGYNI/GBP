@@ -6,7 +6,7 @@ public class PlayerMindController : MonoBehaviour
 	[SerializeField] private MindView mindView;
 	[SerializeField] private PlayerMinds playerMinds;
 	[SerializeField] private float minIdleTime = 15f;
-	[SerializeField] private float showMindTime = 10f;
+	//[SerializeField] private float showMindTime = 10f;
 
 	private DemoPlayer _player;
 	private Vector3 _lastPosition;

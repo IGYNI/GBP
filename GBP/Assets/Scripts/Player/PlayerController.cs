@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Player.Commands;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -86,16 +87,20 @@ public class PlayerController : MonoBehaviour
 			return;
 		
 		if (State.Value != PlayerState.Idle && State.Value != PlayerState.Run) return;
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && _hoveredItem.Value == null)
 		{
 			Ray mRay = _raycastCamera.ScreenPointToRay(Input.mousePosition);
 
 			if (Physics.Raycast(mRay.origin, mRay.direction, out RaycastHit hitInfo, 100, groundLayer))
 			{
-				//Debug.Log(hitInfo.transform.gameObject.name);
-				_playerActions.Clear();
-				_currentAction = _idleAction;
-				_playerActions.Enqueue(new MoveToPoint(this, hitInfo.point));
+				NavMeshPath navMeshPath = new NavMeshPath();
+				if (_navMeshAgent.CalculatePath(hitInfo.point, navMeshPath) && navMeshPath.status == NavMeshPathStatus.PathComplete)
+				{
+					//Debug.Log(hitInfo.transform.gameObject.name);
+					_playerActions.Clear();
+					_currentAction = _idleAction;
+					_playerActions.Enqueue(new MoveToPoint(this, hitInfo.point));
+				}
 			}
 		}
 	}
@@ -111,21 +116,28 @@ public class PlayerController : MonoBehaviour
 		{
 			if (hitInfo.transform.TryGetComponent(out ItemInteraction item))
 			{
-				if (item != _hoveredItem.Value)
+				if (item.Interactable)
 				{
-					if (_hoveredItem.Value != null)
+					if (item != _hoveredItem.Value)
 					{
-						_hoveredItem.Value.outline.OutlineWidth = 0;
+						if (_hoveredItem.Value != null)
+						{
+							_hoveredItem.Value.outline.OutlineWidth = 0;
+						}
+
+						_hoveredItem.Value = item;
 					}
 
-					_hoveredItem.Value = item;
+					_hoveredItem.Value.outline.OutlineWidth = itemOutlineWidth;
+
+					if (Input.GetMouseButtonDown(0))
+					{
+						_activeItem.Set(item);
+					}
 				}
-
-				_hoveredItem.Value.outline.OutlineWidth = itemOutlineWidth;
-
-				if (Input.GetMouseButtonDown(0))
+				else
 				{
-					_activeItem.Set(item);
+					UnHoverItem();	
 				}
 			}
 			else
@@ -188,7 +200,6 @@ public class PlayerController : MonoBehaviour
 			{
 				var spot = item.interactionInfo.interactionSpot;
 				var position = spot.position;
-				position.y = 0;
 				_playerActions.Enqueue(new MoveToPoint(this, position));
 				_playerActions.Enqueue(new RotateToTarget(this, spot.forward));
 			}

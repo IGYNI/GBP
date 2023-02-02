@@ -8,26 +8,30 @@ public class VariableSystem : MonoBehaviour
 
     public event Action<GameVar> OnCreateVariable;
     public Inventory Inventory;
+    public NoteBook NoteBook;
 
     public List<VariableDesc> initialVariables;
 
     public IReadOnlyDictionary<string, GameVar> Variables => _gameVariables; 
 
     private readonly Dictionary<string, GameVar> _gameVariables = new Dictionary<string, GameVar>();
-    private readonly Dictionary<string, ItemState> _itemStates = new Dictionary<string, ItemState>();
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            InitializeSystem();
             DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
-            return;
         }
+    }
+
+    private void InitializeSystem()
+    {
         foreach (var variable in initialVariables)
         {
             var gameVar = new GameVar(variable.name, variable.value);
@@ -41,16 +45,6 @@ public class VariableSystem : MonoBehaviour
         {
             Instance = null;
         }
-    }
-
-    public ItemState GetItemState(string itemName)
-    {
-        if (_itemStates.TryGetValue(itemName, out var itemState))
-        {
-            return itemState;
-        }
-
-        return ItemState.Default;
     }
 
     public GameVar GetVariable(string variableName)

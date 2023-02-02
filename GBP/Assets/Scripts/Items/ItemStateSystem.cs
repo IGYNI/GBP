@@ -20,6 +20,9 @@ public class ItemStateSystem : MonoBehaviour
 		var variableSystem = VariableSystem.Instance;
 		foreach (Item item in items)
 		{
+			if (item == null)
+				continue;
+			
 			item.LoadState(variableSystem);
 		}
 	}

@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-	public static readonly string TakenSuffix = "_taken";
-	public static readonly string VisibleSuffix = "_visible";
-	
+	public const string TakenSuffix = "_taken";
+	public const string VisibleSuffix = "_visible";
+	public const string ExploredSuffix = "_explored";
+
 	public ItemInfo info;
 	[SerializeField] public ItemInteraction interaction;
 
@@ -29,6 +30,11 @@ public class Item : MonoBehaviour
 		if (variable != null)
 		{
 			gameObject.SetActive(variable.Value == "true");
+		}
+
+		if (interaction != null)
+		{
+			interaction.LoadState(variableSystem);
 		}
 	}
 }

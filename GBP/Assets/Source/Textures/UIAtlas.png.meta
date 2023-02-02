@@ -127,7 +127,7 @@ TextureImporter:
         width: 112
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 16, y: 16, z: 16, w: 16}
       outline: []
       physicsShape: []
@@ -148,7 +148,7 @@ TextureImporter:
         width: 112
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 16, y: 16, z: 16, w: 16}
       outline: []
       physicsShape: []
@@ -156,6 +156,27 @@ TextureImporter:
       bones: []
       spriteID: c31e3e44489bd74479a8bdf6d415e102
       internalID: -448374082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Glove
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 897
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544fba4f90b7315428a45a57f7697963
+      internalID: 325913245
       vertices: []
       indices: 
       edges: []
@@ -172,6 +193,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIAtlas_FillBar: -448374082
+      UIAtlas_Glove: 325913245
       UIAtlas_FillBG: 1854762598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
