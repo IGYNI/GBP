@@ -328,28 +328,96 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <ambience>k__BackingField.Path
+      value: event:/Ambience/Ambience
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <grabItem>k__BackingField.Path
+      value: event:/Sfx/GrabItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <footsteps>k__BackingField.Path
       value: event:/Footsteps/FootstepsEvent
       objectReference: {fileID: 0}
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <mainTheme>k__BackingField.Path
+      value: event:/OST/Main Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <ambience>k__BackingField.Guid.Data1
+      value: 2124815434
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <ambience>k__BackingField.Guid.Data2
+      value: 1085277058
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <ambience>k__BackingField.Guid.Data3
+      value: 1502015395
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <ambience>k__BackingField.Guid.Data4
+      value: 1056783654
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <grabItem>k__BackingField.Guid.Data1
+      value: -1839361710
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <grabItem>k__BackingField.Guid.Data2
+      value: 1109003561
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <grabItem>k__BackingField.Guid.Data3
+      value: -1964193632
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <grabItem>k__BackingField.Guid.Data4
+      value: 2018590093
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <footsteps>k__BackingField.Guid.Data1
-      value: -163465839
+      value: -1938299459
       objectReference: {fileID: 0}
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <footsteps>k__BackingField.Guid.Data2
-      value: 1238300644
+      value: 1110251486
       objectReference: {fileID: 0}
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <footsteps>k__BackingField.Guid.Data3
-      value: 1263159199
+      value: 151223466
       objectReference: {fileID: 0}
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <footsteps>k__BackingField.Guid.Data4
-      value: -2141354837
+      value: 279846546
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <mainTheme>k__BackingField.Guid.Data1
+      value: -1235230629
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <mainTheme>k__BackingField.Guid.Data2
+      value: 1270133762
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <mainTheme>k__BackingField.Guid.Data3
+      value: 504862340
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <mainTheme>k__BackingField.Guid.Data4
+      value: 1802546783
       objectReference: {fileID: 0}
     - target: {fileID: 8884640933894907418, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: m_Name
       value: FMODSoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884640933894907419, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: PreloadSamples
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884640933894907419, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: Banks.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8884640933894907419, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: Banks.Array.data[0]
@@ -362,6 +430,10 @@ PrefabInstance:
     - target: {fileID: 8884640933894907419, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: Banks.Array.data[2]
       value: Desktop/Sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884640933894907419, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: Banks.Array.data[3]
+      value: Desktop/Ambience
       objectReference: {fileID: 0}
     - target: {fileID: 8884640933894907492, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: m_RootOrder

@@ -14,6 +14,7 @@ public class ExitRoomTrigger : MonoBehaviour
             nextSceneContext.sceneInfo = nextSceneInfo;
             nextSceneContext.spawnPointName = exitPointName;
             SceneLoader.LoadScene(nextSceneContext);
+
         }
     }
 }

@@ -10,5 +10,7 @@ public enum MusicArea
         KITCHEN_AREA = 3,
         LAB_AREA = 4,
         CAPTAIN_ROOM = 5,
+        REAKTOR = 6,
+        CUT_SCENE_1 = 7,
 
 }

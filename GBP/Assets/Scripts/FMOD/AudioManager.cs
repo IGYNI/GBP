@@ -9,9 +9,9 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     private string _sceneName;
-    private EventInstance footsteps;
-
     private EventInstance mainThemeInstance;
+    private EventInstance ambience;
+
 
     private void Awake()
     {
@@ -21,18 +21,14 @@ public class AudioManager : MonoBehaviour
         }
         instance = this; 
         DontDestroyOnLoad(gameObject);
+        
     }
 
     private void Start()
     {
-        InitializeMainTheme(FMODEvents.instance.mainTheme);
-        _sceneName = SceneManager.GetActiveScene().name;
-        footsteps = instance.CreateInstance(FMODEvents.instance.footsteps);
-    }
 
-    private void Update()
-    {
-        SceneFootSteps();
+        InitializeAmbience(FMODEvents.instance.ambience);
+
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPosition)
@@ -46,26 +42,21 @@ public class AudioManager : MonoBehaviour
         return eventInstance;
     }
 
-    private void InitializeMainTheme(EventReference mainThemeEventReference)
+    public void InitializeAmbience(EventReference ambienceEventReference)
+    {
+        ambience = CreateInstance(ambienceEventReference);
+        ambience.start();
+    }
+
+    public void InitializeMainTheme(EventReference mainThemeEventReference)
     {
         mainThemeInstance = CreateInstance(mainThemeEventReference);
-        //mainThemeInstance.start();
+        mainThemeInstance.start();
     }
 
-    private void SetMusicArea(MusicArea area)
+    public void SetMusicArea(MusicArea area)
     {
-        mainThemeInstance.setParameterByName("area", (float) area);
+        ambience.setParameterByName("AMB", (float)area);
     }
 
-    private void SceneFootSteps()
-    {
-        if (_sceneName == "Corridor")
-        {
-            footsteps.setParameterByName("footsteps", 1);
-        }
-        else
-        {
-            footsteps.setParameterByName("footsteps", 0);
-        }
-    }
 }

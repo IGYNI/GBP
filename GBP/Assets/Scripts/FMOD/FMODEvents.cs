@@ -12,9 +12,11 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference openDoors { get; private set; }
     [field: Header("Doors Closed")]
     [field: SerializeField] public EventReference closeDoors { get; private set; }
-
+    [field: Header("Grab Item")]
+    [field: SerializeField] public EventReference grabItem { get; private set; }
+    [field: Header("Ambience")]
+    [field: SerializeField] public EventReference ambience { get; private set; }
     [field: Header("Music")]
-    [field: Header("Main Theme")]
     [field: SerializeField] public EventReference mainTheme { get; private set; }
 
 
