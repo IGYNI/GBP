@@ -17,7 +17,7 @@ public class UpItem : MonoBehaviour
                 {
                     inventory.isFull[i] = true;
                     Instantiate(slotButton, inventory.slots[i].transform);
-                    inventory._inventory.Add(gameObject.tag);
+                    inventory._inventory.Add(gameObject.name);
                     Destroy(gameObject);
                     break;
                 }
