@@ -41,7 +41,7 @@ public class CutSceneController : BaseSceneController
 		LoadNextScene();
 	}
 
-	private void LoadNextScene()
+	public void LoadNextScene()
 	{
 		var context = new SceneContext();
 		context.sceneInfo = nextSceneInfo;

@@ -5,7 +5,7 @@ namespace Player.Commands
 	public class TakeItem : IPlayerAction
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.TakeItem;
-		private readonly Item _item;
+		private readonly ItemInteraction _item;
 		private readonly VariableSystem _variableSystem;
 		private readonly PlayerController _player;
 
@@ -13,7 +13,7 @@ namespace Player.Commands
 		private bool _completed;
 		private bool _started;
 
-		public TakeItem(VariableSystem variableSystem, PlayerController player, Item item)
+		public TakeItem(VariableSystem variableSystem, PlayerController player, ItemInteraction item)
 		{
 			_variableSystem = variableSystem;
 			_player = player;
@@ -32,14 +32,15 @@ namespace Player.Commands
 				Debug.Log("[Player] PlayTakeAnimation");
 				//_player.PlayTakeAnimation();
 				_started = true;
-			}
-			_timer += Time.deltaTime;
+				_timer = 0.5f;
+                AudioManager.instance.PlayOneShot(AudioManager.instance.events.grabItem, _player.transform.position);
+            }
+            _timer += Time.deltaTime;
 			if (_timer > 1f)
 			{
 				Debug.Log("[Player] StopTakeAnimation");
 				//_player.StopTakeAnimation();
-				_variableSystem.SetVariable(_item.itemName, "1");
-				Object.Destroy(_item.gameObject);
+				_item.Interact(_variableSystem);
 				_completed = true;
 			}
 		}

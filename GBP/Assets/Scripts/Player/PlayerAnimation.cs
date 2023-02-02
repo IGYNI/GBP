@@ -27,6 +27,15 @@ public class PlayerAnimation : MonoBehaviour
 			case PlayerController.PlayerState.Run:
 				animator.SetBool(AnimationRun,true);
 				break;
+			
+			case PlayerController.PlayerState.TakeItem:
+				animator.SetTrigger(AnimationTake);
+				break;
+			
+			case PlayerController.PlayerState.Interact:
+				animator.SetTrigger(AnimationInteract);
+				break;
+				
 		}		
 	}
 }

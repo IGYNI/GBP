@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using FMOD.Studio;
+using static UnityEngine.ParticleSystem;
 
 public class PLAYER_MOVE : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class PLAYER_MOVE : MonoBehaviour
     private Transform _current_box;
     private box _current_boxclass;
     private short zat; // анальна затычка (на удачу)
-
+    
     public Camera Cam; // Камера из которой будет сробатывать лазер
     public int MouseButton; // На какую кнопку нажато (0 - левая кнопка мышы, 1 - правая кнопка мышы)
 
@@ -33,10 +35,13 @@ public class PLAYER_MOVE : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
 
+    private EventInstance footsteps;
+
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         Player_pos = GetComponent<Transform>();
+        footsteps = AudioManager.instance.CreateInstance(AudioManager.instance.events.footsteps);
     }
 
     public void SetDestination(Vector3 destination)
@@ -90,13 +95,15 @@ public class PLAYER_MOVE : MonoBehaviour
                             _current_box = Box;
                             _current_boxclass = Boxclass;
                         }
+                        
                     }
                     else
                         _current_box = null;
                 }
+               
             }
         }
-        
+        UpdateSounds();
         DrugBox();
     }
 
@@ -110,6 +117,8 @@ public class PLAYER_MOVE : MonoBehaviour
         else if (_navMeshAgent.remainingDistance < 0.3f && _navMeshAgent.remainingDistance > 0.01f)
         {
             State = PlayerState.FinishWalk;
+            ;
+
         }
         else
         {
@@ -126,5 +135,20 @@ public class PLAYER_MOVE : MonoBehaviour
             State = PlayerState.DrugedBox;
         
         LastPosition = transform.position;
+    }
+
+    private void UpdateSounds()
+    {
+        PLAYBACK_STATE playbackState;
+        footsteps.getPlaybackState(out playbackState);
+        if(playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            if(State== PlayerState.Walk)
+        {
+            footsteps.start();
+        }
+        else
+        {
+            footsteps.stop(STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }
