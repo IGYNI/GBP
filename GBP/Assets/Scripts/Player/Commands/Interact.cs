@@ -11,14 +11,12 @@ namespace Player.Commands
 		private bool _completed;
 		private bool _started;
 		
-		private readonly PlayerController _player;
 		private readonly VariableSystem _variableSystem;
 		private readonly ItemInteraction _item;
 
-		public Interact(VariableSystem variableSystem, PlayerController player, ItemInteraction item)
+		public Interact(VariableSystem variableSystem,  ItemInteraction item)
 		{
 			_variableSystem = variableSystem;
-			_player = player;
 			_item = item;
 		}
 		
@@ -31,16 +29,12 @@ namespace Player.Commands
 		{
 			if (!_started)
 			{
-				Debug.Log("[Player] PlayInteractAnimation");
-				//_player.PlayInteractAnimation();
 				_started = true;
+				_item.Interact(_variableSystem);
 			}
 			_timer += Time.deltaTime;
-			if (_timer > 1f)
+			if (_timer > _item.InteractionTime)
 			{
-				_item.Interact(_variableSystem);
-				Debug.Log("[Player] StopInteractAnimation");
-				//_player.StopInteractAnimation();
 				_completed = true;
 			}
 		}

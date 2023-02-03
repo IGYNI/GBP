@@ -18,6 +18,7 @@ public class PlayerAnimation : MonoBehaviour
 
 	private void HandlePlayerState(PlayerController.PlayerState prev, PlayerController.PlayerState current)
 	{
+		Debug.Log(current);
 		switch (current)
 		{
 			case PlayerController.PlayerState.Idle:
@@ -35,7 +36,7 @@ public class PlayerAnimation : MonoBehaviour
 			case PlayerController.PlayerState.Interact:
 				animator.SetTrigger(AnimationInteract);
 				break;
-				
+
 		}		
 	}
 }

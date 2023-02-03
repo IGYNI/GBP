@@ -29,15 +29,11 @@ namespace Player.Commands
 		{
 			if (!_started)
 			{
-				Debug.Log("[Player] PlayTakeAnimation");
-				//_player.PlayTakeAnimation();
 				_started = true;
             }
             _timer += Time.deltaTime;
 			if (_timer > 1f)
 			{
-				Debug.Log("[Player] StopTakeAnimation");
-				//_player.StopTakeAnimation();
 				_item.Interact(_variableSystem);
 				_completed = true;
 			}

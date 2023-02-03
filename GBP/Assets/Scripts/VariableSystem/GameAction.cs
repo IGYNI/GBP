@@ -17,7 +17,7 @@ public class GameAction
 		{
 			var result = variableSystem.SetVariable(gameVarEvent.variableName, gameVarEvent.newValue);
 			if (!result)
-				Debug.LogWarning($@"[GameVar] Can't set variable {{gameVarEvent.variableName}} on {sender.name}");
+				Debug.LogWarning($"[GameVar] Can't set variable {gameVarEvent.variableName} on {sender.name}");
 		}
 	}
 	

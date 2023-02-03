@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 		Run,
 		TakeItem,
 		Interact,
+		IdleInteract,
 	}
 
 	public float itemOutlineWidth;
@@ -192,15 +193,20 @@ public class PlayerController : MonoBehaviour
 			{
 				var target = item.transform.position;
 				target.y = 0;
-				_playerActions.Enqueue(new MoveToPoint(this, target));
+				if (Vector3.Distance(transform.position, target) > 0.3f)
+				{
+					_playerActions.Enqueue(new MoveToPoint(this, target));
+				}
 			}
 				break;
 
 			case EInteractionMode.FixedPoint:
 			{
 				var spot = item.interactionInfo.interactionSpot;
-				var position = spot.position;
-				_playerActions.Enqueue(new MoveToPoint(this, position));
+				if (Vector3.Distance(transform.position, spot.position) > 0.3)
+				{
+					_playerActions.Enqueue(new MoveToPoint(this, spot.position));
+				}
 				_playerActions.Enqueue(new RotateToTarget(this, spot.forward));
 			}
 				break;
@@ -220,7 +226,9 @@ public class PlayerController : MonoBehaviour
 			case PlayerState.TakeItem:
 				return new TakeItem(VariableSystem.Instance, this, interaction);
 			case PlayerState.Interact:
-				return new Interact(VariableSystem.Instance, this, interaction);
+				return new Interact(VariableSystem.Instance, interaction);
+			case PlayerState.IdleInteract:
+				return new IdleInteract(VariableSystem.Instance, interaction);
 		}
 
 		return null;

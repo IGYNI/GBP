@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Resources;
 using DG.Tweening;
-using Interaction;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IInteractable
+public class Door : MonoBehaviour
 {
 	public enum EState
 	{

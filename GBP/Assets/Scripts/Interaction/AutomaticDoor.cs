@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using Interaction;
 using UnityEngine;
 
-public class AutomaticDoor : MonoBehaviour, IInteractable
+public class AutomaticDoor : MonoBehaviour
 {
 	[Serializable]
 	public class Part

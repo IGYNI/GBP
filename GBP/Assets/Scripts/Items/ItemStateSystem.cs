@@ -10,7 +10,7 @@ public class ItemStateSystem : MonoBehaviour
 	private void ScanItemsOnScene()
 	{
 		items.Clear();
-		var sceneItems = FindObjectsOfType<Item>();
+		var sceneItems = FindObjectsOfType<Item>(true);
 		items.AddRange(sceneItems);
 	}
 #endif

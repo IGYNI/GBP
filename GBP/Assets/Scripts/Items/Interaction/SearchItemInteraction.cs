@@ -14,7 +14,7 @@ public class SearchItemInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override void Interact(VariableSystem variableSystem)
+	public override bool Interact(VariableSystem variableSystem)
 	{
 		variableSystem.SetVariable(item.info.itemName + Item.ExploredSuffix, "true", true);
 		if (hiddenItem != null)
@@ -30,6 +30,7 @@ public class SearchItemInteraction : ItemInteraction
 		}
 
 		Interactable = false;
+		return true;
 	}
 
 	public override void LoadState(VariableSystem variableSystem)

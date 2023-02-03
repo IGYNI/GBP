@@ -20,7 +20,7 @@ namespace Player.Commands
 		{
 			var vec = _player.transform.position - _target;
 			vec.y = 0;
-			return Vector3.SqrMagnitude(vec) <= 0.5f;
+			return vec.magnitude <= 0.1f;
 		}
 
 		public void Update()
