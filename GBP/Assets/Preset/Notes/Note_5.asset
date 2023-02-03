@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecc96432fba49b98bdf3705b02ce67f, type: 3}
+  m_Name: Note_5
+  m_EditorClassIdentifier: 
+  noteName: Note1
+  screenName: Memuars
+  text: I've had it up to here, I've had it! Why did I take this job? I should have
+    gotten a job as an engineer at a regular company, on a regular project, not here!
+    They would have paid much less, but this wouldn't have happened there. All right,
+    I've got to think what to do next. From what the lab guys are telling me, this
+    thing feeds off the reactor's energy. And looking at the data coming directly
+    from the reactor room, it's clear that it's doing it carefully, because the reactor
+    itself hasn't shut down yet, and the ship's power hasn't gone out. Maybe if cranking
+    up the power to 100% it will choke out. Of course it is dangerous to do this,
+    but I do not see any other options.
+  icon: {fileID: 0}
+  isReceipt: 0
+  receipt:
+    screenName: 
+    fabricationTime: 5
+    requiredItems: []
+    result: {fileID: 0}

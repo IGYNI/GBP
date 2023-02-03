@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ecc96432fba49b98bdf3705b02ce67f, type: 3}
-  m_Name: Note_1
+  m_Name: Note_4
   m_EditorClassIdentifier: 
   noteName: Note1
-  screenName: Note 128
-  text: 'Diary entry #128 Project: GHA-47t Senior Scientist: Classified. Today we
-    finally succeeded in synthesizing protein molecules compatible with the test
-    sample. Tomorrow, we''ll be able to start the production of the serum prototype.
-    After so many days of failures, I was beginning to doubt the success of the project,
-    but now everything has changed. Now the issue of increased funding is just a
-    formality.'
+  screenName: ROOT THING
+  text: Damn! That thing stabbed me! I had such a hard time getting to the reactor
+    and it turned out that the terminal was blocked! Only the captain has access
+    now. That bastard must've been the first one to get off the ship! Or died in
+    some dark corner. Looks like it's a serious wound. I don't have much time. I'll
+    try to hack into the terminal.
   icon: {fileID: 0}
   isReceipt: 0
   receipt:
