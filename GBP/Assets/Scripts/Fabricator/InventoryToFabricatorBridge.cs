@@ -1,4 +1,4 @@
-public class InventoryToFabricatorBridge : ItemHandler
+public class InventoryToFabricatorBridge : IItemHandler
 {
 	private readonly Fabricator _fabricator;
 	private readonly Inventory _inventory;

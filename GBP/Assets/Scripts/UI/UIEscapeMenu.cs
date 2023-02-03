@@ -17,6 +17,7 @@ namespace UI
 		[SerializeField] private Button exitGameButton;
 		[SerializeField] private Button closeMenuButton;
 		[SerializeField] private GameObject view;
+		[SerializeField] private GameObject dimmer;
 
 		private string _sceneName;
 		
@@ -36,6 +37,7 @@ namespace UI
 			_sceneName = SceneManager.GetActiveScene().name;
 			var isMainMenu = _sceneName == "MainMenu";
 			view.gameObject.SetActive(isMainMenu);
+			dimmer.gameObject.SetActive(!isMainMenu);
 			newGameButton.gameObject.SetActive(isMainMenu);
 			//continueButton.gameObject.SetActive(isMainMenu);
 			continueButton.gameObject.SetActive(false);

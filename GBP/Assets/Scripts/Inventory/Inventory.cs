@@ -1,12 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour, ItemHandler
+public interface IItemHandler
+{
+    void ProcessItem(ItemInfo itemInfo);
+}
+
+public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<ItemSlot> slots;
     [SerializeField] private List<ItemInfo> itemDatabase;
 
-    public void SetItemHandler(ItemHandler itemHandler)
+    public void SetItemHandler(IItemHandler itemHandler)
     {
         foreach (ItemSlot slot in slots)
         {
@@ -70,10 +75,5 @@ public class Inventory : MonoBehaviour, ItemHandler
         }
 
         return null;
-    }
-
-    public void ProcessItem(ItemInfo itemInfo)
-    {
-        AddItem(itemInfo);
     }
 }
