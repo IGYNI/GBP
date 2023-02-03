@@ -1,11 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ItemHandler
 {
     [SerializeField] private List<ItemSlot> slots;
     [SerializeField] private List<ItemInfo> itemDatabase;
 
+    public void SetItemHandler(ItemHandler itemHandler)
+    {
+        foreach (ItemSlot slot in slots)
+        {
+            slot.ItemHandler = itemHandler;
+        }
+    }
+    
     public void AddItem(string itemName)
     {
         var info = GetItemInfo(itemName);
@@ -27,6 +35,19 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(ItemInfo itemInfo)
+    {
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.isFull && slot.ItemInfo == itemInfo)
+            {
+                slot.isFull = false;
+                slot.SetItem(null);
+                break;
+            }
+        }
+    }
+    
     public void RemoveItem(string itemName)
     {
         foreach (ItemSlot slot in slots)
@@ -50,5 +71,9 @@ public class Inventory : MonoBehaviour
 
         return null;
     }
-        
+
+    public void ProcessItem(ItemInfo itemInfo)
+    {
+        AddItem(itemInfo);
+    }
 }

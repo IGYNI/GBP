@@ -5,6 +5,7 @@ public class Item : MonoBehaviour
 	public const string TakenSuffix = "_taken";
 	public const string VisibleSuffix = "_visible";
 	public const string ExploredSuffix = "_explored";
+	public const string UnlockedSuffix = "_unlocked";
 	public const string MovedSuffix = "_moved";
 
 	public ItemInfo info;

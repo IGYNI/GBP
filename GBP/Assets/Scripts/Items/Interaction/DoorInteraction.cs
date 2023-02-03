@@ -24,9 +24,16 @@ public class DoorInteraction : ItemInteraction
 
 	public override bool Interact(VariableSystem variableSystem)
 	{
-		if (openDoorCondition != null && openDoorCondition.Satisfied())
+		if (openDoorCondition == null)
 		{
 			StartCoroutine(LoadNextLevelCor());
+		}
+		else
+		{
+			if (openDoorCondition.Satisfied())
+			{
+				StartCoroutine(LoadNextLevelCor());
+			}
 		}
 		return true;
 	}

@@ -169,7 +169,7 @@ TextureImporter:
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,6 +177,27 @@ TextureImporter:
       bones: []
       spriteID: 544fba4f90b7315428a45a57f7697963
       internalID: 325913245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Chemical_2
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad55cdad7e6b36d48aa9ff9e30d12ffb
+      internalID: 165262598
       vertices: []
       indices: 
       edges: []
@@ -193,6 +214,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIAtlas_FillBar: -448374082
+      UIAtlas_Chemical_2: 165262598
       UIAtlas_Glove: 325913245
       UIAtlas_FillBG: 1854762598
   mipmapLimitGroupName: 
