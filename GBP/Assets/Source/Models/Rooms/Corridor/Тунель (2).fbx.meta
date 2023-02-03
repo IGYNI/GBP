@@ -3,7 +3,37 @@ guid: 60beb9ba110df5f4a80d0de33197cb64
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aluminium
+    second: {fileID: 2100000, guid: c40c25e1f053590409f3d1917c1ac16a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roots
+    second: {fileID: 2100000, guid: a123bc4f6649df54780a832dc73b1b68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Default] Rough'
+    second: {fileID: 2100000, guid: 753e50f6783d3594884d18f9176162d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: neon litgh blue.002
+    second: {fileID: 2100000, guid: bc3775f84eabf6a4bbb70114c2ae544d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u041C\u0435\u0442\u0430\u043B \u0411\u0410\u0417\u0410 .001"
+    second: {fileID: 2100000, guid: 2f891c47e107c5d45bc3d2181b155f57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u041C\u0435\u0442\u0430\u043B \u0411\u0410\u0417\u0410 .002"
+    second: {fileID: 2100000, guid: afd07a9cfdf34624ab2ef52a0057ddbb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
