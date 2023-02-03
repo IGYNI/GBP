@@ -17,7 +17,24 @@ public class AudioManager : MonoBehaviour
     private EventInstance buttonHandler;
     private EventInstance buttonClick;
     private StudioBankLoader _bank;
-    
+
+    [Header("Volume")]
+    [Range(0, 1)]
+    public float masterVolume =1;
+    [Range(0, 1)]
+    public float musicVolume =1;
+    [Range(0, 1)]
+    public float ambienceVolume = 1;
+    [Range(0, 1)]
+    public float sfxVolume = 1;
+
+    private Bus masterBus;
+    private Bus ambienceBus;
+    private Bus musicBus;
+    private Bus sfxBus;
+
+
+
     private void Awake()
     {
         if (instance == null)
@@ -31,8 +48,12 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        
+
+        masterBus = RuntimeManager.GetBus("bus:/");
+        ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        sfxBus = RuntimeManager.GetBus("bus:/Sfx");
+
         // if (instance != null)
         // {
         //     Debug.LogError("Found more than one Audio Manager in scene");
@@ -40,7 +61,15 @@ public class AudioManager : MonoBehaviour
         // instance = this; 
         // DontDestroyOnLoad(gameObject);
     }
-    
+
+    public void Update()
+    {
+        masterBus.setVolume(masterVolume);
+        ambienceBus.setVolume(ambienceVolume);
+        musicBus.setVolume(musicVolume);
+        sfxBus.setVolume(sfxVolume);
+    }
+
     private void OnDestroy()
     {
         if (instance == this)
