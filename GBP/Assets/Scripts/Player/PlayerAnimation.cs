@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
 
 	private void HandlePlayerState(PlayerController.PlayerState prev, PlayerController.PlayerState current)
 	{
-		Debug.Log(current);
+		//Debug.Log(current);
 		switch (current)
 		{
 			case PlayerController.PlayerState.Idle:

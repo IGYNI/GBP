@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1845306786278582545, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3411928079110843687, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5071,6 +5075,7 @@ MonoBehaviour:
   player: {fileID: 1885731262}
   playerSpawner: {fileID: 1664988384}
   itemStateSystem: {fileID: 1664988386}
+  journalMountPoint: {fileID: 0}
 --- !u!114 &1664988386
 MonoBehaviour:
   m_ObjectHideFlags: 0

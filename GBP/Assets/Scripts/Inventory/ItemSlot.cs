@@ -10,7 +10,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 	
 	private ItemInfo _itemInfo;
 
-	public ItemHandler ItemHandler { get; set; }
+	public IItemHandler ItemHandler { get; set; }
 
 	public void SetItem(ItemInfo itemInfo)
 	{
