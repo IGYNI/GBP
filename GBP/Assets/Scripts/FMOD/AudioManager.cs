@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     public FMODEvents events;
     [SerializeField] private StudioBankLoader bankLoaderPrefab;
     private string _sceneName;
-    private EventInstance mainThemeInstance;
+    private EventInstance ost;
     private EventInstance ambience;
     private EventInstance buttonHandler;
     private EventInstance buttonClick;
@@ -58,8 +58,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        
         InitializeAmbience(events.ambience);
-       
+        InitializeOst(events.mainTheme);
+
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPosition)
@@ -79,10 +81,10 @@ public class AudioManager : MonoBehaviour
         ambience.start();
     }
 
-    public void InitializeMainTheme(EventReference mainThemeEventReference)
+    public void InitializeOst(EventReference ostReference)
     {
-        mainThemeInstance = CreateInstance(mainThemeEventReference);
-        mainThemeInstance.start();
+        ost = CreateInstance(ostReference);
+        ost.start();
     }
 
     private void InitializePlayerFootsteps()
@@ -92,7 +94,8 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicArea(MusicArea area)
     {
-        ambience.setParameterByName("AMB", (float)area);
+        ambience.setParameterByName("AMBIENCE", (float)area);
+        ost.setParameterByName("MusicArea", (float)area);
     }
 
     public void InitializeMenuButtonHandler() 
