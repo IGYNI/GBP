@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AmbientEquatorColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_AmbientEquatorColor: {r: 0.47009614, g: 0.6263355, b: 0.7169812, a: 1}
+  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -5595,10 +5595,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3208375206687012496, guid: a4b972a47d82966478ea441559bfa571, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3208375206687012497, guid: a4b972a47d82966478ea441559bfa571, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5646,10 +5642,6 @@ PrefabInstance:
     - target: {fileID: 3208375206687012499, guid: a4b972a47d82966478ea441559bfa571, type: 3}
       propertyPath: m_Name
       value: Global Volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208375206687012499, guid: a4b972a47d82966478ea441559bfa571, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5729,20 +5721,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3823884808404347889, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3823884808404347893, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
       propertyPath: m_Type
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3823884808404347893, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
       propertyPath: m_Range
-      value: 50
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 3823884808404347893, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
       propertyPath: m_Intensity
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3823884808404347893, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
       propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823884808404347893, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
+      propertyPath: m_BounceIntensity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3823884809221005784, guid: 61daa556eb63b1746b4379cb87fb8c40, type: 3}
