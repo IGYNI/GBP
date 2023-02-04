@@ -28,6 +28,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference lockDone { get; private set; }
     [field: Header("Lock Open")]
     [field: SerializeField] public EventReference lockOpen { get; private set; }
+    [field: Header("Fabricator Anim")]
+    [field: SerializeField] public EventReference fabricatorAnim { get; private set; }
+    [field: Header("Extinguish")]
+    [field: SerializeField] public EventReference extinguish { get; private set; }
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
     [field: Header("Music")]

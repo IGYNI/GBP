@@ -146,7 +146,8 @@ public class Fabricator : Puzzle
 		if (fabricatorAnimation != null)
 		{
 			fabricatorAnimation.Play();
-		}
+            AudioManager.instance.InitializefabricatorAnim();
+        }
 		
 		yield return new WaitForSeconds(_receipt.fabricationTime);
 		fabricatedItem.SetItem(_receipt.result); 

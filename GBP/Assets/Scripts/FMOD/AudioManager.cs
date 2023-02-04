@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     private EventInstance lockFail;
     private EventInstance lockDone;
     private EventInstance lockOpen;
+    private EventInstance fabricatorAnim;
+    private EventInstance extinguish;
     private StudioBankLoader _bank;
 
     [Header("Volume")]
@@ -175,6 +177,17 @@ public class AudioManager : MonoBehaviour
         lockOpen.start();
     }
 
+    public void InitializefabricatorAnim()
+    {
+        fabricatorAnim = CreateInstance(events.fabricatorAnim);
+        fabricatorAnim.start();
+    }
+
+    public void InitializeExtinguish()
+    {
+        extinguish = CreateInstance(events.extinguish);
+        extinguish.start();
+    }
 
 
 }

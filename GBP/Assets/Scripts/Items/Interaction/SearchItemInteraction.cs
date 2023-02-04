@@ -21,9 +21,9 @@ public class SearchItemInteraction : ItemInteraction
 		{
 			variableSystem.SetVariable(hiddenItem.itemName + Item.TakenSuffix, "true", true);
 			variableSystem.Inventory.AddItem(hiddenItem);
-		}
+        }
 
-		if (noteInfo != null)
+        if (noteInfo != null)
 		{
 			variableSystem.SetVariable(noteInfo.noteName + Item.TakenSuffix, "true", true);
 			variableSystem.NoteBook.Add(noteInfo);
