@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Player.Commands;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -134,25 +135,6 @@ public class PlayerController : MonoBehaviour
 					if (Input.GetMouseButtonDown(0))
 					{
 						_activeItem.Set(item);
-					} 
-					else if (Input.GetMouseButtonDown(1))
-					{
-						if (VariableSystem.Instance != null)
-						{
-							var info = _hoveredItem.Value.GetOverviewInfo(VariableSystem.Instance);
-#if UNITY_EDITOR
-							if (string.IsNullOrEmpty(info))
-							{
-								Debug.LogWarning($"[ItemOverview] Overview not set on {_hoveredItem.Value.gameObject.name}");
-								UnityEditor.Selection.activeGameObject = _hoveredItem.Value.gameObject;
-							}
-#endif
-							VariableSystem.Instance.ItemOverview.ShowOverview(info);
-						}
-						
-						var direction = item.transform.position - transform.position;
-						direction.y = 0f;
-						_playerActions.Enqueue(new RotateToTarget(this, direction.normalized));
 					}
 				}
 				else

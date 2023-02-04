@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class DoorInteraction : ItemInteraction
 {
+	public bool CanGo;
+
+
 	public override PlayerController.PlayerState ProvideState
 	{
+		
 		get 
 		{
 			if (openDoorCondition != null && !openDoorCondition.Satisfied())
@@ -50,11 +54,14 @@ public class DoorInteraction : ItemInteraction
 
 	private IEnumerator LoadNextLevelCor()
 	{
+		if (CanGo)
+		{
 		outline.enabled = false;
 		yield return new WaitForSecondsRealtime(0.3f);
 		door.Open();
 		yield return new WaitForSecondsRealtime(0.5f);
 		LoadNextScene();
+		}
 	}
 
 	public override void LoadState(VariableSystem variableSystem)
@@ -64,7 +71,7 @@ public class DoorInteraction : ItemInteraction
 
 	public override string GetOverviewInfo(VariableSystem variableSystem)
 	{
-		return (openDoorCondition != null ? openDoorCondition.Satisfied() ? failInfo : overviewInfo : overviewInfo);
+		return openDoorCondition.Satisfied() ? failInfo : overviewInfo;
 	}
 
 	private void LoadNextScene()

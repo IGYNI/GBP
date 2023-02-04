@@ -232,11 +232,8 @@ MonoBehaviour:
     interactionSpot: {fileID: 1306583980}
     interactionRadius: 0
   condition: {fileID: 2450644}
-  failConditionOverview: Analyzer Septum RDE-28 is a powerful thing. It can analyze
-    any material by breaking it down almost to molecules. Maybe I can analize a root
-    rart here
-  overview: Analyzer Septum RDE-28 is a powerful thing. It can analyze any material
-    by breaking it down almost to molecules.
+  failConditionOverview: Maybe I can atalize this roots
+  overview: Analyzer
   analyzedItem: {fileID: 11400000, guid: c82bc4aee77b86d498ff8d7964a4c29a, type: 2}
   hiddenItem: {fileID: 0}
   noteInfo: {fileID: 11400000, guid: 92708dc7770feb84c9bb2b93d8546c90, type: 2}
@@ -648,38 +645,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1512043429617825035, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -752,14 +717,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4616994162201428418, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616994162225319360, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000050842762
-      objectReference: {fileID: 0}
     - target: {fileID: 4616994162688286890, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
       propertyPath: m_Name
       value: VariableSystem
@@ -812,8 +769,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4616994162901140634, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
-      propertyPath: m_Value
+    - target: {fileID: 4616994164024533206, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5606011758906783985, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
@@ -1425,7 +1382,7 @@ MonoBehaviour:
     interactionMode: 0
     interactionSpot: {fileID: 0}
     interactionRadius: 0.5
-  overview: I wonder where this rabbit hole will lead me
+  overview: 
   exitPointName: Laboratory
   nextSceneInfo:
     sceneName: CabinCompany
@@ -5506,9 +5463,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 626965388}
     interactionRadius: 0
-  overviewInfo: A cabinet full of chemicals is locked with a combination lock. A
-    password is required. However, here is a list of the entire repository. Here
-    you can obviously get a catalyst for the Fabricator
+  overviewInfo: 
   hiddenItem: {fileID: 11400000, guid: dbae26a6acc51654c8b94203373c47b2, type: 2}
   noteInfo: {fileID: 0}
   codeLock: {fileID: 259767491}
@@ -6030,8 +5985,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 863006857}
     interactionRadius: 0
-  overviewInfo: The latest model of the Fabricator. You don't need to do anything,
-    just put the ingredients in, press the button and you're done
+  overviewInfo: 
   fabricator: {fileID: 1893250462}
 --- !u!1 &1615031574
 GameObject:

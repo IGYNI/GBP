@@ -58,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b201efb8c3e7e494c9b4da5779d3ed0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: 5
+  area: 1

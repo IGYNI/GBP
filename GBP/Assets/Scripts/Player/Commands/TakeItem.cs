@@ -30,7 +30,6 @@ namespace Player.Commands
 			if (!_started)
 			{
 				_started = true;
-                AudioManager.instance.PlayOneShot(AudioManager.instance.events.grabItem, _player.transform.position);
             }
             _timer += Time.deltaTime;
 			if (_timer > 1f)

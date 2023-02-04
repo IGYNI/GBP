@@ -9,7 +9,6 @@ public class VariableSystem : MonoBehaviour
     public event Action<GameVar> OnCreateVariable;
     public Inventory Inventory;
     public NoteBook NoteBook;
-    [field: SerializeField] public ItemOverview ItemOverview { get; private set; }
 
     public List<VariableDesc> initialVariables;
 

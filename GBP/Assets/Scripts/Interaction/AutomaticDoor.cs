@@ -34,7 +34,6 @@ public class AutomaticDoor : MonoBehaviour
 			{
 				doorPart.view.transform.DOMove(doorPart.opened.transform.position, duration).SetEase(Ease.InOutSine).OnComplete(() => state = EState.Open);
 				doorPart.view.transform.DORotate(doorPart.opened.transform.eulerAngles, duration).SetEase(Ease.InOutSine);
-				AudioManager.instance.PlayOneShot(AudioManager.instance.events.openDoors, transform.position);
 			}
 		}
 	}
@@ -49,8 +48,7 @@ public class AutomaticDoor : MonoBehaviour
 			{
 				doorPart.view.transform.DOMove(doorPart.closed.transform.position, duration).SetEase(Ease.InOutSine).OnComplete(() => state = EState.Closed);
 				doorPart.view.transform.DORotate(doorPart.closed.transform.eulerAngles, duration).SetEase(Ease.InOutSine);
-                AudioManager.instance.PlayOneShot(AudioManager.instance.events.closeDoors, transform.position);
-            }
+			}
 		}
 	}
 

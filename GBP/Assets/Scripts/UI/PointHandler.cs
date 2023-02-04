@@ -17,6 +17,6 @@ public class PointHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        //AudioManager.instance.InitializeMenuButtonClick();
+        AudioManager.instance.InitializeMenuButtonClick();
     }
 }
