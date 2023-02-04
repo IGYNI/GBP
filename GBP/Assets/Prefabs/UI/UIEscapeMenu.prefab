@@ -2235,8 +2235,7 @@ GameObject:
   - component: {fileID: 2031469741853695729}
   - component: {fileID: 2031469741853695734}
   - component: {fileID: 2031469741853695731}
-  - component: {fileID: 1788577159}
-  - component: {fileID: 2530897404272494661}
+  - component: {fileID: 1283795976}
   m_Layer: 5
   m_Name: NewGame
   m_TagString: Untagged
@@ -2346,7 +2345,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031469741853695729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1283795976}
+        m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2031469741853695731
 Animator:
   serializedVersion: 5
@@ -2367,7 +2378,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1788577159
+--- !u!114 &1283795976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2376,21 +2387,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2031469741853695732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e9645791c2f4f5c845b03bf26775694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2530897404272494661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031469741853695732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -35448987
+      Data2: 1137532896
+      Data3: -793398139
+      Data4: 1077787731
+    Path: event:/Sfx/UI/ButtonClick
 --- !u!1 &2031469741886426223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,7 +2747,6 @@ GameObject:
   - component: {fileID: 2031469742340319881}
   - component: {fileID: 2031469742340319886}
   - component: {fileID: 2031469742340319883}
-  - component: {fileID: 1489337652}
   - component: {fileID: 676896764684486999}
   m_Layer: 5
   m_Name: Setting
@@ -2853,7 +2858,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 676896764684486999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -2885,18 +2890,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1489337652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031469742340319884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &676896764684486999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2929,7 +2922,6 @@ GameObject:
   - component: {fileID: 2031469742476880677}
   - component: {fileID: 2031469742476880682}
   - component: {fileID: 2031469742476880679}
-  - component: {fileID: 7305365193601234573}
   - component: {fileID: 7606626567848977278}
   m_Layer: 5
   m_Name: Back
@@ -3085,18 +3077,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7305365193601234573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031469742476880680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7606626567848977278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3836,7 +3816,6 @@ GameObject:
   - component: {fileID: 2031469743008658337}
   - component: {fileID: 2031469743008658339}
   - component: {fileID: 5742258243298016832}
-  - component: {fileID: 9072203152087099444}
   m_Layer: 5
   m_Name: ContinueGame
   m_TagString: Untagged
@@ -3998,18 +3977,6 @@ MonoBehaviour:
       Data3: -851892087
       Data4: -2111658470
     Path: event:/Sfx/UI/Buttons
---- !u!114 &9072203152087099444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031469743008658342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2031469743126695455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4708,7 +4675,6 @@ GameObject:
   - component: {fileID: 2031469743676971404}
   - component: {fileID: 2031469743676971406}
   - component: {fileID: 2031469743676971405}
-  - component: {fileID: 1236525880}
   - component: {fileID: 2452297512530888421}
   m_Layer: 5
   m_Name: ExitGame
@@ -4820,7 +4786,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2452297512530888421}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -4852,18 +4818,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1236525880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031469743676971411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2452297512530888421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5261,7 +5215,7 @@ Transform:
   m_Children:
   - {fileID: 2031469742572730239}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1892377108790043414
 MonoBehaviour:
