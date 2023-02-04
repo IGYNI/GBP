@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
   m_PrefabInstance: {fileID: 8818579842177117348}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8818579842177117349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0278ee4bf7ea93442bc41f79996b9c9a, type: 3}
@@ -6809,6 +6809,7 @@ GameObject:
   - component: {fileID: 1754811773}
   - component: {fileID: 1754811772}
   - component: {fileID: 1754811771}
+  - component: {fileID: 1754811775}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -6859,7 +6860,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1754811772}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1754811775}
+        m_TargetAssemblyTypeName: CodeLockAudio, Assembly-CSharp
+        m_MethodName: LockButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1754811772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6919,6 +6932,18 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 205}
   m_SizeDelta: {x: 360, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1754811775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754811770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b5e64edf878d44a4acf51ba38a169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1787848858
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,6 +6956,7 @@ GameObject:
   - component: {fileID: 1787848861}
   - component: {fileID: 1787848860}
   - component: {fileID: 1787848862}
+  - component: {fileID: 1787848863}
   m_Layer: 5
   m_Name: Run
   m_TagString: Untagged
@@ -7040,7 +7066,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1787848860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1787848863}
+        m_TargetAssemblyTypeName: CodeLockAudio, Assembly-CSharp
+        m_MethodName: LockButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1787848863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787848858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b5e64edf878d44a4acf51ba38a169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1839475526
 GameObject:
   m_ObjectHideFlags: 0
@@ -8534,6 +8584,86 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 865275862}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8818579842177117350}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8818579842177117350}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8818579842177117350}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LockFail
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LockDone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LockOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CodeLockAudio, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CodeLockAudio, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CodeLockAudio, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311077504571322479, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8818579842289668197, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
       propertyPath: m_Name
       value: CodeLockPuzzle
@@ -8590,8 +8720,28 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5553017504575696950, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8818579842289668197, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8818579842177117350}
   m_SourcePrefab: {fileID: 100100000, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+--- !u!1 &8818579842177117349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8818579842289668197, guid: 076917d5e125ad94fa9dd50d93933c51, type: 3}
+  m_PrefabInstance: {fileID: 8818579842177117348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8818579842177117350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8818579842177117349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b5e64edf878d44a4acf51ba38a169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9065839316639108432
 MonoBehaviour:
   m_ObjectHideFlags: 0

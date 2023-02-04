@@ -17,6 +17,10 @@ public class AudioManager : MonoBehaviour
     private EventInstance buttonHandler;
     private EventInstance buttonClick;
     private EventInstance buttonsClick;
+    private EventInstance lockClick;
+    private EventInstance lockFail;
+    private EventInstance lockDone;
+    private EventInstance lockOpen;
     private StudioBankLoader _bank;
 
     [Header("Volume")]
@@ -146,5 +150,31 @@ public class AudioManager : MonoBehaviour
         buttonsClick = CreateInstance(events.buttonsClick);
         buttonsClick.start();
     }
+
+    public void InitializeLockClick()
+    {
+        lockClick = CreateInstance(events.lockButtonsClick);
+        lockClick.start();
+    }
+
+    public void InitializeLockFail()
+    {
+        lockFail = CreateInstance(events.lockFail);
+        lockFail.start();
+    }
+
+    public void InitializeLockDone()
+    {
+        lockDone = CreateInstance(events.lockDone);
+        lockDone.start();
+    }
+
+    public void InitializeLockOpen()
+    {
+        lockOpen = CreateInstance(events.lockOpen);
+        lockOpen.start();
+    }
+
+
 
 }

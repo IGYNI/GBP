@@ -47,6 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: {fileID: 775693761}
   bankLoaderPrefab: {fileID: 8780825761072326730, guid: 9832e6c8d98af9f4d8e9c46f814aef68, type: 3}
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  sfxVolume: 1
 --- !u!114 &775693761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +105,41 @@ MonoBehaviour:
       Data3: -793398139
       Data4: 1077787731
     Path: event:/Sfx/UI/ButtonClick
+  <buttonsClick>k__BackingField:
+    Guid:
+      Data1: 1868202369
+      Data2: 1233362833
+      Data3: -851892087
+      Data4: -2111658470
+    Path: event:/Sfx/UI/Buttons
+  <lockButtonsClick>k__BackingField:
+    Guid:
+      Data1: -822187944
+      Data2: 1136841670
+      Data3: -392708710
+      Data4: 2138425768
+    Path: event:/Sfx/UI/LockButton
+  <lockFail>k__BackingField:
+    Guid:
+      Data1: 1319690743
+      Data2: 1184382647
+      Data3: 1089983419
+      Data4: 1885505207
+    Path: event:/Sfx/UI/Fail
+  <lockDone>k__BackingField:
+    Guid:
+      Data1: -1161887900
+      Data2: 1287401813
+      Data3: 956695699
+      Data4: 420140444
+    Path: event:/Sfx/UI/Done
+  <lockOpen>k__BackingField:
+    Guid:
+      Data1: 1229065781
+      Data2: 1206313553
+      Data3: -1447228785
+      Data4: 1484221534
+    Path: event:/Sfx/UI/Unlock
   <ambience>k__BackingField:
     Guid:
       Data1: 2124815434
