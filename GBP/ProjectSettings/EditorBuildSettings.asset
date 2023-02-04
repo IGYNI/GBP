@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CabinCompany.unity
     guid: fd371e41ed769ff49898118a68effe2b
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 977088f8b4bcc454d9218a971264eff1
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6f23e29385b5bfb49b1d015f0a6eb145, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 3751342445f80ff469ef61f0b51339d9, type: 2}

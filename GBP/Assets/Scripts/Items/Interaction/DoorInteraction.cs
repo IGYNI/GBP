@@ -64,7 +64,7 @@ public class DoorInteraction : ItemInteraction
 
 	public override string GetOverviewInfo(VariableSystem variableSystem)
 	{
-		return openDoorCondition.Satisfied() ? failInfo : overviewInfo;
+		return (openDoorCondition != null ? openDoorCondition.Satisfied() ? failInfo : overviewInfo : overviewInfo);
 	}
 
 	private void LoadNextScene()
