@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     private EventInstance ambience;
     private EventInstance buttonHandler;
     private EventInstance buttonClick;
+    private EventInstance buttonsClick;
     private StudioBankLoader _bank;
 
     [Header("Volume")]
@@ -62,14 +63,7 @@ public class AudioManager : MonoBehaviour
         // DontDestroyOnLoad(gameObject);
     }
 
-    public void Update()
-    {
-        masterBus.setVolume(masterVolume);
-        ambienceBus.setVolume(ambienceVolume);
-        musicBus.setVolume(musicVolume);
-        sfxBus.setVolume(sfxVolume);
-    }
-
+    
     private void OnDestroy()
     {
         if (instance == this)
@@ -91,6 +85,14 @@ public class AudioManager : MonoBehaviour
         InitializeAmbience(events.ambience);
         InitializeOst(events.mainTheme);
 
+    }
+
+    public void Update()
+    {
+        masterBus.setVolume(masterVolume);
+        ambienceBus.setVolume(ambienceVolume);
+        musicBus.setVolume(musicVolume);
+        sfxBus.setVolume(sfxVolume);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPosition)
@@ -137,6 +139,12 @@ public class AudioManager : MonoBehaviour
     {
         buttonClick = CreateInstance(events.buttonClick);
         buttonClick.start();
+    }
+
+    public void InitializeMenuClick()
+    {
+        buttonsClick = CreateInstance(events.buttonsClick);
+        buttonsClick.start();
     }
 
 }
