@@ -7,6 +7,7 @@ public class LightbulbScript : MonoBehaviour
     [SerializeField] private GameObject lightRed;
     [SerializeField] private GameObject lightGreen;
     [SerializeField] private bool lightSwich;
+    [SerializeField] private float timer = 1f;
 
     void Start()
     {
@@ -26,11 +27,11 @@ public class LightbulbScript : MonoBehaviour
         {
             lightRed.SetActive(true);
             lightGreen.SetActive(false);
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(timer);
 
             lightRed.SetActive(false);
             lightGreen.SetActive(true);
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(timer);
         }
 
     }
