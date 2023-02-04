@@ -63,12 +63,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 4666466044490107372}
   interactionTime: 0.5
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 5596016807437767258}
   interactionInfo:
     interactionMode: 0
     interactionSpot: {fileID: 0}
     interactionRadius: 0.2
-  overviewInfo: 
+  overviewInfo: Fire extinguisher. A useful thing.
 --- !u!65 &4666466044490107371
 BoxCollider:
   m_ObjectHideFlags: 0
