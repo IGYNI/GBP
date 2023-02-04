@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PointHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class PointHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 {
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -15,8 +15,4 @@ public class PointHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     }
 
-    public void OnPointerClick(PointerEventData pointerEventData)
-    {
-        //AudioManager.instance.InitializeMenuButtonClick();
-    }
 }
