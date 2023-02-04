@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 		Run,
 		TakeItem,
 		Interact,
+		UseItem,
 		IdleInteract,
 	}
 
@@ -229,6 +230,9 @@ public class PlayerController : MonoBehaviour
 				return new Interact(VariableSystem.Instance, interaction);
 			case PlayerState.IdleInteract:
 				return new IdleInteract(VariableSystem.Instance, interaction);
+			case PlayerState.UseItem:
+				return new UseItem(VariableSystem.Instance, interaction);
+
 		}
 
 		return null;

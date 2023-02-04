@@ -16,7 +16,7 @@ public class TakeItemInteraction : ItemInteraction
 	{
 		variableSystem.SetVariable(item.info.itemName + Item.TakenSuffix, "true", true);
 		variableSystem.SetVariable(item.info.itemName + Item.VisibleSuffix, "false", true);
-		variableSystem.Inventory.AddItem(item.info.itemName);
+		variableSystem.Inventory.AddItem(item.info);
 		item.gameObject.SetActive(false);
 	}
 
