@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TakeItemInteraction : ItemInteraction
 {
@@ -6,7 +7,7 @@ public class TakeItemInteraction : ItemInteraction
 	public override bool Interactable { get; protected set; }
 
 	[SerializeField] private string overviewInfo;
-
+	
 	private void Awake()
 	{
 		Interactable = true;
@@ -17,6 +18,7 @@ public class TakeItemInteraction : ItemInteraction
 		variableSystem.SetVariable(item.info.itemName + Item.TakenSuffix, "true", true);
 		variableSystem.SetVariable(item.info.itemName + Item.VisibleSuffix, "false", true);
 		variableSystem.Inventory.AddItem(item.info);
+		onInteract.Invoke();
 		item.gameObject.SetActive(false);
 	}
 

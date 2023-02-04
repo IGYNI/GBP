@@ -43,6 +43,7 @@ namespace Items.Interaction
 				}
 
 				variableSystem.SetVariable(analyzedItem.itemName + Item.AnalyzedSuffix, "true", true);
+				onInteract.Invoke();
 			}
 		}
 

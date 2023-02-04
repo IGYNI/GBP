@@ -14,7 +14,7 @@ public class LockedDoorInteraction : ItemInteraction
 
 	public override void Interact(VariableSystem variableSystem)
 	{
-		
+		onInteract.Invoke();
 	}
 
 	public override void LoadState(VariableSystem variableSystem)

@@ -51,6 +51,7 @@ public class SecuredBoxInteraction : ItemInteraction
 
 	private IEnumerator ShowCodeLock()
 	{
+		onInteract.Invoke();
 		yield return new WaitForSeconds(0.5f);
 		codeLock.Show();
 	}

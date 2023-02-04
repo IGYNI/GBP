@@ -50,6 +50,7 @@ public class DoorInteraction : ItemInteraction
 
 	private IEnumerator LoadNextLevelCor()
 	{
+		onInteract.Invoke();
 		outline.enabled = false;
 		yield return new WaitForSecondsRealtime(0.3f);
 		door.Open();

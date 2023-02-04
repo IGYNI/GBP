@@ -26,6 +26,7 @@ public class MoveItemInteraction : ItemInteraction
         _started = true;
         variableSystem.SetVariable(item.info.itemName + Item.MovedSuffix, "true", true);
         OnInteract.Invoke(item.gameObject, variableSystem);
+        onInteract.Invoke();
     }
 
     private void Update()

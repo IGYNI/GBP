@@ -24,6 +24,7 @@ public class TeleportInteraction : ItemInteraction
 	
 	private IEnumerator LoadNextLevelCor()
 	{
+		onInteract.Invoke();
 		yield return new WaitForSecondsRealtime(0.6f);
 		LoadNextScene();
 	}

@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Item))]
 public abstract class ItemInteraction : MonoBehaviour
 {
 	[SerializeField] public Item item;
 	[SerializeField] private float interactionTime = 1f;
+	[SerializeField] protected UnityEvent onInteract;
 	public Outline outline;
 	public InteractionInfo interactionInfo;
 	

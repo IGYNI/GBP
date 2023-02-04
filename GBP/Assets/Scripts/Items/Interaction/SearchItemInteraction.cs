@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SearchItemInteraction : ItemInteraction
 {
@@ -8,7 +9,7 @@ public class SearchItemInteraction : ItemInteraction
 	[SerializeField] private string overviewInfo;
 	[SerializeField] private ItemInfo hiddenItem;
 	[SerializeField] private NoteInfo noteInfo;
-
+	
 	private void Awake()
 	{
 		Interactable = true;
@@ -29,7 +30,9 @@ public class SearchItemInteraction : ItemInteraction
 			variableSystem.NoteBook.Add(noteInfo);
 		}
 
+        onInteract.Invoke();
 		Interactable = false;
+		
 	}
 
 	public override void LoadState(VariableSystem variableSystem)
