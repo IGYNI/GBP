@@ -32,6 +32,7 @@ public class MoveItemInteraction : ItemInteraction
     {
         if (_started && !_finished)
         {
+            Interactable = false;
             var t = Mathf.Clamp01(_timer / InteractionTime);
             view.position = Vector3.Lerp(originPoint.position, targetPoint.position, t);
             view.rotation = Quaternion.Lerp(originPoint.rotation, targetPoint.rotation, t);
