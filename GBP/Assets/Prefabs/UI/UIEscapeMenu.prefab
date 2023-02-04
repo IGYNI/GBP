@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 676896764684486999}
         m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -3149,6 +3149,7 @@ GameObject:
   - component: {fileID: 2031469742486948601}
   - component: {fileID: 2031469742486948602}
   - component: {fileID: 7430664454089139841}
+  - component: {fileID: 2396824573832078873}
   m_Layer: 5
   m_Name: LoadGame
   m_TagString: Untagged
@@ -3258,7 +3259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031469742486948600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2396824573832078873}
+        m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2031469742486948602
 Animator:
   serializedVersion: 5
@@ -3291,6 +3304,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2396824573832078873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469742486948607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9645791c2f4f5c845b03bf26775694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2031469742572730179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,7 +4884,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2452297512530888421}
         m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
