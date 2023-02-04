@@ -23,6 +23,7 @@ public class UseItemInteraction : ItemInteraction
 	[SerializeField] private GameObject itemView;
 	[SerializeField] private GameObject playerMountPoint;
 	[SerializeField] private bool removeAfterUse;
+	[SerializeField] private ItemInfo returnItem;
 	[SerializeField] private UnityEvent onUseItem;
 
 	private void Awake()
@@ -39,6 +40,12 @@ public class UseItemInteraction : ItemInteraction
 			{
 				variableSystem.Inventory.RemoveItem(usedItem);
 				variableSystem.SetVariable(usedItem.itemName + Item.TakenSuffix, "false");
+			}
+
+			if (returnItem != null)
+			{
+				variableSystem.SetVariable(returnItem.itemName + Item.TakenSuffix, "true", true);
+				variableSystem.Inventory.AddItem(returnItem);
 			}
 
 			StartCoroutine(UseItemCor());

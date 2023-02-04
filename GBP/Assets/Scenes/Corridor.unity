@@ -1025,14 +1025,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164182443}
-  m_LocalRotation: {x: -0, y: -0.14196321, z: -0, w: 0.9898719}
-  m_LocalPosition: {x: 0.68799996, y: 0, z: -1.0110002}
+  m_LocalRotation: {x: -0, y: -0.5519102, z: -0, w: 0.8339036}
+  m_LocalPosition: {x: 1.37, y: 0, z: -0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2104889996}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: -16.323, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -66.996, z: 0}
 --- !u!1 &190784620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1443,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 221781838}
   interactionTime: 0.4
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 381543244}
   interactionInfo:
     interactionMode: 1
@@ -2524,6 +2527,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 688944188}
   interactionTime: 0.4
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 22579004}
   interactionInfo:
     interactionMode: 1
@@ -3339,6 +3345,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 960055101}
   interactionTime: 0.4
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 87429483}
   interactionInfo:
     interactionMode: 1
@@ -4427,6 +4436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1281216968}
   interactionTime: 1
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 439953093}
   interactionInfo:
     interactionMode: 1
@@ -4869,6 +4881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1432602537}
   interactionTime: 0.4
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 864179481}
   interactionInfo:
     interactionMode: 1
@@ -5595,6 +5610,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3750067842734949869, guid: 60beb9ba110df5f4a80d0de33197cb64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad79bef4c8351ab498d6523c13d77665, type: 2}
     - target: {fileID: 3933856399831809119, guid: 60beb9ba110df5f4a80d0de33197cb64, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6047,6 +6066,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 2104889997}
   interactionTime: 0.3
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   outline: {fileID: 1732593905}
   interactionInfo:
     interactionMode: 1

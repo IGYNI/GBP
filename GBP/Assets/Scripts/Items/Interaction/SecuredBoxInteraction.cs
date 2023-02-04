@@ -10,6 +10,7 @@ public class SecuredBoxInteraction : ItemInteraction
 	[SerializeField] private NoteInfo noteInfo;
 	[SerializeField] private CodeLock codeLock;
 	[SerializeField] private GameObject securedView;
+	[SerializeField] private string safeCode;
 	private VariableSystem _variableSystem;
 
 	private void Awake()
@@ -53,6 +54,7 @@ public class SecuredBoxInteraction : ItemInteraction
 	{
 		onInteract.Invoke();
 		yield return new WaitForSeconds(0.5f);
+		codeLock.SetPassword(safeCode);
 		codeLock.Show();
 	}
 

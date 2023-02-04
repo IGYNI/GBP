@@ -190,7 +190,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,6 +198,27 @@ TextureImporter:
       bones: []
       spriteID: ad55cdad7e6b36d48aa9ff9e30d12ffb
       internalID: 165262598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_CaptainKey
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 126
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1ddfe5e6c30634f8be91d06523b0c3
+      internalID: 381201972
       vertices: []
       indices: 
       edges: []
@@ -213,6 +234,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      UIAtlas_CaptainKey: 381201972
       UIAtlas_FillBar: -448374082
       UIAtlas_Chemical_2: 165262598
       UIAtlas_Glove: 325913245
