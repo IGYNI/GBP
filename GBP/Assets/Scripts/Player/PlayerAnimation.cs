@@ -9,6 +9,7 @@ public class PlayerAnimation : MonoBehaviour
 	private static readonly int AnimationRun = Animator.StringToHash("Run");
 	private static readonly int AnimationTake = Animator.StringToHash("Take");
 	private static readonly int AnimationInteract = Animator.StringToHash("Interact");
+	private static readonly int AnimationUse = Animator.StringToHash("Use");
 	
 	private void Awake()
 	{
@@ -35,6 +36,10 @@ public class PlayerAnimation : MonoBehaviour
 			
 			case PlayerController.PlayerState.Interact:
 				animator.SetTrigger(AnimationInteract);
+				break;
+			
+			case PlayerController.PlayerState.UseItem:
+				animator.SetTrigger(AnimationUse);
 				break;
 
 		}		

@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LaboratorySceneLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private VariableSystem _variableSystem;
+    
+    [SerializeField] private Item labHole;
+    
+    private void Start()
     {
-        
+        _variableSystem = VariableSystem.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UnlockHole()
     {
-        
+        _variableSystem.SetVariable(labHole.info.itemName+Item.VisibleSuffix, "true", true);
+        labHole.gameObject.SetActive(true);
     }
 }

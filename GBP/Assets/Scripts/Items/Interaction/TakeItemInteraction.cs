@@ -12,14 +12,12 @@ public class TakeItemInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
 		variableSystem.SetVariable(item.info.itemName + Item.TakenSuffix, "true", true);
 		variableSystem.SetVariable(item.info.itemName + Item.VisibleSuffix, "false", true);
-		variableSystem.Inventory.AddItem(item.info.itemName);
+		variableSystem.Inventory.AddItem(item.info);
 		item.gameObject.SetActive(false);
-		//Destroy(gameObject);
-		return true;
 	}
 
 	public override void LoadState(VariableSystem variableSystem)

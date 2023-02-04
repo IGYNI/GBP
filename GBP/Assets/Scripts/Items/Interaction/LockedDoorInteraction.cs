@@ -12,9 +12,9 @@ public class LockedDoorInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
-		return true;
+		
 	}
 
 	public override void LoadState(VariableSystem variableSystem)

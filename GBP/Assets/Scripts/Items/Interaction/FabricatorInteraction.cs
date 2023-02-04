@@ -15,11 +15,10 @@ public class FabricatorInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
 		_variableSystem = variableSystem;
 		StartCoroutine(ShowFabricator());
-		return true;
 	}
 
 	private IEnumerator ShowFabricator()

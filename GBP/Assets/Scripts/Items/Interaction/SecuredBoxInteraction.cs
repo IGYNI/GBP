@@ -43,11 +43,10 @@ public class SecuredBoxInteraction : ItemInteraction
 		}
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
 		_variableSystem = variableSystem;
 		StartCoroutine(ShowCodeLock());
-		return true;
 	}
 
 	private IEnumerator ShowCodeLock()

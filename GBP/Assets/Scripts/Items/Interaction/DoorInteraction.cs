@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class DoorInteraction : ItemInteraction
 {
-	public override PlayerController.PlayerState ProvideState => PlayerController.PlayerState.Interact;
+	public override PlayerController.PlayerState ProvideState
+	{
+		get 
+		{
+			if (openDoorCondition != null && !openDoorCondition.Satisfied())
+			{
+				return PlayerController.PlayerState.IdleInteract;	
+			}
+			return PlayerController.PlayerState.Interact; 
+		}
+	}
+
 	public override bool Interactable { get; protected set; }
 	
 	[SerializeField] private string failInfo;
@@ -22,7 +33,7 @@ public class DoorInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
 		if (openDoorCondition == null)
 		{
@@ -35,11 +46,11 @@ public class DoorInteraction : ItemInteraction
 				StartCoroutine(LoadNextLevelCor());
 			}
 		}
-		return true;
 	}
 
 	private IEnumerator LoadNextLevelCor()
 	{
+		outline.enabled = false;
 		yield return new WaitForSecondsRealtime(0.3f);
 		door.Open();
 		yield return new WaitForSecondsRealtime(0.5f);
