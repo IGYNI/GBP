@@ -52,8 +52,9 @@ public class CodeLock : Puzzle
 				if (hitInfo.collider.gameObject.TryGetComponent(out CodeLockButton button))
 				{
 					button.Press();
-				}
-			}
+                    AudioManager.instance.InitializeLockClick();
+                }
+            }
 		}
 	}
 

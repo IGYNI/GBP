@@ -16,8 +16,22 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference grabItem { get; private set; }
     [field: Header("UI_hover")]
     [field: SerializeField] public EventReference buttonHover { get; private set; }
-    [field: Header("Button Click")]
+    [field: Header("New Game Click")]
     [field: SerializeField] public EventReference buttonClick { get; private set; }
+    [field: Header("Menu Buttons Click")]
+    [field: SerializeField] public EventReference buttonsClick { get; private set; }
+    [field: Header("lock Buttons Click")]
+    [field: SerializeField] public EventReference lockButtonsClick { get; private set; }
+    [field: Header("Lock Fail")]
+    [field: SerializeField] public EventReference lockFail { get; private set; }
+    [field: Header("Lock Done")]
+    [field: SerializeField] public EventReference lockDone { get; private set; }
+    [field: Header("Lock Open")]
+    [field: SerializeField] public EventReference lockOpen { get; private set; }
+    [field: Header("Fabricator Anim")]
+    [field: SerializeField] public EventReference fabricatorAnim { get; private set; }
+    [field: Header("Extinguish")]
+    [field: SerializeField] public EventReference extinguish { get; private set; }
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
     [field: Header("Music")]
