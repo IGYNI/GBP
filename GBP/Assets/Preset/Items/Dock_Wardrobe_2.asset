@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b220334939491d8c427b27bcb32c08, type: 3}
   m_Name: Dock_Wardrobe_2
   m_EditorClassIdentifier: 
-  itemName: Dock_SpaceSuit3
+  itemName: Dock_Wardrobe_2
   screenName: 
   description: 
   icon: {fileID: 0}
