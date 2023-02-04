@@ -16,7 +16,7 @@ public abstract class ItemInteraction : MonoBehaviour
 	public float InteractionTime => interactionTime;
 	public abstract PlayerController.PlayerState ProvideState { get; }
 	public abstract bool Interactable { get; protected set; }
-	public abstract bool Interact(VariableSystem variableSystem);
+	public abstract void Interact(VariableSystem variableSystem);
 	public abstract void LoadState(VariableSystem variableSystem);
 	public abstract string GetOverviewInfo(VariableSystem variableSystem);
 }

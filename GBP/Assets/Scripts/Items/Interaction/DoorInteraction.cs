@@ -22,7 +22,7 @@ public class DoorInteraction : ItemInteraction
 		Interactable = true;
 	}
 
-	public override bool Interact(VariableSystem variableSystem)
+	public override void Interact(VariableSystem variableSystem)
 	{
 		if (openDoorCondition == null)
 		{
@@ -35,7 +35,6 @@ public class DoorInteraction : ItemInteraction
 				StartCoroutine(LoadNextLevelCor());
 			}
 		}
-		return true;
 	}
 
 	private IEnumerator LoadNextLevelCor()

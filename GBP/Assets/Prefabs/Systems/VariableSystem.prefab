@@ -425,7 +425,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Inventory: {fileID: 1845306785546703642}
   NoteBook: {fileID: 5657912571845478387}
-  initialVariables: []
+  initialVariables:
+  - name: RootPart_analyzed
+    value: false
 --- !u!1 &4616994162719713477
 GameObject:
   m_ObjectHideFlags: 0

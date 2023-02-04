@@ -21,12 +21,11 @@ public class MoveItemInteraction : ItemInteraction
         Interactable = true;
     }
 
-    public override bool Interact(VariableSystem variableSystem)
+    public override void Interact(VariableSystem variableSystem)
     {
         _started = true;
         variableSystem.SetVariable(item.info.itemName + Item.MovedSuffix, "true", true);
         OnInteract.Invoke(item.gameObject, variableSystem);
-        return _finished;
     }
 
     private void Update()

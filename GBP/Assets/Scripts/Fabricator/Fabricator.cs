@@ -16,7 +16,11 @@ public class Fabricator : Puzzle
 	[Header("UI")] 
 	[SerializeField] private Button runButton;
 	[SerializeField] private Button backButton;
-	[SerializeField] private NoteInfo debugReceipt;
+	//[SerializeField] private NoteInfo debugReceipt;
+	[SerializeField] private SelectReceipt receiptButtonTemplate;
+	[SerializeField] private Transform receiptsRoot;
+
+	private readonly List<SelectReceipt> _receiptButtons = new List<SelectReceipt>();
 
 
 	private InventoryToFabricatorBridge _intToFabBridge;
@@ -28,15 +32,14 @@ public class Fabricator : Puzzle
 	{
 		runButton.onClick.AddListener(Run);
 		backButton.onClick.AddListener(Hide);
-		
 	}
 
-	private void Start()
-	{
-#if DEBUG
-		LoadReceipt(debugReceipt.receipt);
-#endif
-	}
+// 	private void Start()
+// 	{
+// #if DEBUG
+// 		LoadReceipt(debugReceipt.receipt);
+// #endif
+// 	}
 
 	private void Initialize()
 	{
@@ -50,10 +53,37 @@ public class Fabricator : Puzzle
 		fabricatedItem.ItemHandler = _fabToInvBridge;
 	}
 
+	private void LoadReceipts()
+	{
+		ClearReceipts();
+		foreach (NoteInfo noteInfo in _variableSystem.NoteBook.Notes)
+		{
+			if (!noteInfo.isReceipt) 
+				continue;
+			var view = Instantiate(receiptButtonTemplate, receiptsRoot);
+			view.Setup(this, noteInfo.receipt);
+			_receiptButtons.Add(view);
+		}
+	}
+
+	private void ClearReceipts()
+	{
+		foreach (SelectReceipt receiptButton in _receiptButtons)
+		{
+			Destroy(receiptButton.gameObject);
+		}
+		_receiptButtons.Clear();
+	}
+
 	private void Update()
 	{
 		backButton.interactable = !IsProcessing;
 		runButton.interactable = !IsProcessing;
+
+		foreach (SelectReceipt receiptButton in _receiptButtons)
+		{
+			receiptButton.UpdateView(_receipt);
+		}
 	}
 
 	public void LoadReceipt(Receipt receipt)
@@ -128,6 +158,7 @@ public class Fabricator : Puzzle
 		base.Show();
 		_variableSystem = VariableSystem.Instance;
 		Initialize();
+		LoadReceipts();
 		player.gameObject.SetActive(false);
 		mainCamera.gameObject.SetActive(false);
 		_variableSystem.Inventory.SetItemHandler(_intToFabBridge);
@@ -149,6 +180,7 @@ public class Fabricator : Puzzle
 		if (fabricatedItem.ItemInfo != null)
 		{
 			_fabToInvBridge.ProcessItem(fabricatedItem.ItemInfo);
+			_variableSystem.SetVariable(fabricatedItem.ItemInfo.itemName + Item.TakenSuffix, "true");
 			fabricatedItem.SetItem(null);
 		}
 		_variableSystem.Inventory.SetItemHandler(null);

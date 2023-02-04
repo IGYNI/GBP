@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
 	public const string ExploredSuffix = "_explored";
 	public const string UnlockedSuffix = "_unlocked";
 	public const string MovedSuffix = "_moved";
+	public const string AnalyzedSuffix = "_analyzed";
 
 	public ItemInfo info;
 	[SerializeField] public ItemInteraction interaction;

@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ecc96432fba49b98bdf3705b02ce67f, type: 3}
-  m_Name: DemoReceipt
+  m_Name: Lab_PoisonReceipt
   m_EditorClassIdentifier: 
-  noteName: DemoReceipt
-  screenName: 
+  noteName: Lab_Poison
+  screenName: Poison
   text: 
   icon: {fileID: 0}
   isReceipt: 1
   receipt:
-    screenName: BLA BLA
+    screenName: 
     fabricationTime: 5
     requiredItems:
+    - {fileID: 11400000, guid: 33e178ac0a446794a87b73db0cc164a1, type: 2}
     - {fileID: 11400000, guid: dbae26a6acc51654c8b94203373c47b2, type: 2}
-    result: {fileID: 11400000, guid: f5e4fdf4d4a0b274e834bc4e43478d38, type: 2}
+    - {fileID: 11400000, guid: 3dc789c01c3217741b7f429b88e1d819, type: 2}
+    result: {fileID: 11400000, guid: bb25c91658f9bae4abbc2ed86c9906ac, type: 2}
