@@ -2236,6 +2236,7 @@ GameObject:
   - component: {fileID: 2031469741853695734}
   - component: {fileID: 2031469741853695731}
   - component: {fileID: 1283795976}
+  - component: {fileID: 4156897802914147355}
   m_Layer: 5
   m_Name: NewGame
   m_TagString: Untagged
@@ -2397,6 +2398,18 @@ MonoBehaviour:
       Data3: -793398139
       Data4: 1077787731
     Path: event:/Sfx/UI/ButtonClick
+--- !u!114 &4156897802914147355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469741853695732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469741886426223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +2761,7 @@ GameObject:
   - component: {fileID: 2031469742340319886}
   - component: {fileID: 2031469742340319883}
   - component: {fileID: 676896764684486999}
+  - component: {fileID: 2645052902606000480}
   m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
@@ -2909,6 +2923,18 @@ MonoBehaviour:
       Data3: -851892087
       Data4: -2111658470
     Path: event:/Sfx/UI/Buttons
+--- !u!114 &2645052902606000480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469742340319884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469742476880680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,6 +2949,7 @@ GameObject:
   - component: {fileID: 2031469742476880682}
   - component: {fileID: 2031469742476880679}
   - component: {fileID: 7606626567848977278}
+  - component: {fileID: 1472291009064503907}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -3096,6 +3123,18 @@ MonoBehaviour:
       Data3: -851892087
       Data4: -2111658470
     Path: event:/Sfx/UI/Buttons
+--- !u!114 &1472291009064503907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469742476880680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469742486948607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3148,7 @@ GameObject:
   - component: {fileID: 2031469742486948600}
   - component: {fileID: 2031469742486948601}
   - component: {fileID: 2031469742486948602}
+  - component: {fileID: 7430664454089139841}
   m_Layer: 5
   m_Name: LoadGame
   m_TagString: Untagged
@@ -3239,6 +3279,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7430664454089139841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469742486948607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469742572730179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,6 +3868,7 @@ GameObject:
   - component: {fileID: 2031469743008658337}
   - component: {fileID: 2031469743008658339}
   - component: {fileID: 5742258243298016832}
+  - component: {fileID: 1256234587938949763}
   m_Layer: 5
   m_Name: ContinueGame
   m_TagString: Untagged
@@ -3977,6 +4030,18 @@ MonoBehaviour:
       Data3: -851892087
       Data4: -2111658470
     Path: event:/Sfx/UI/Buttons
+--- !u!114 &1256234587938949763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469743008658342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469743126695455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,6 +4741,7 @@ GameObject:
   - component: {fileID: 2031469743676971406}
   - component: {fileID: 2031469743676971405}
   - component: {fileID: 2452297512530888421}
+  - component: {fileID: 5791037515229769620}
   m_Layer: 5
   m_Name: ExitGame
   m_TagString: Untagged
@@ -4837,6 +4903,18 @@ MonoBehaviour:
       Data3: -851892087
       Data4: -2111658470
     Path: event:/Sfx/UI/Buttons
+--- !u!114 &5791037515229769620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469743676971411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73054179f48f81444bca08ae240a45c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031469743702913626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,7 +5293,7 @@ Transform:
   m_Children:
   - {fileID: 2031469742572730239}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1892377108790043414
 MonoBehaviour:
