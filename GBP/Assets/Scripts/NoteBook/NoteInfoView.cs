@@ -1,19 +1,22 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class NoteInfoView : MonoBehaviour, IPointerClickHandler
 {
-	[SerializeField] private TextMesh note;
-	[SerializeField] private GameObject receiptView;
-	
-	[SerializeField] private List<Image> receiptIngredients;
-	[SerializeField] private Image receiptResult;
+	[SerializeField] private TMPro.TMP_Text note;
+	[SerializeField] private UIReceipt receiptView;
+	public NoteInfo NoteInfo => _noteInfo;
+	private NoteInfo _noteInfo;
 
 	public void SetNote(NoteInfo noteInfo)
 	{
+		_noteInfo = noteInfo;
 		note.text = noteInfo.text;
+		if (noteInfo.isReceipt)
+		{
+			receiptView.gameObject.SetActive(true);
+			receiptView.SetReceipt(noteInfo.receipt);
+		}
 	}
 
 	public void OnPointerClick(PointerEventData eventData)

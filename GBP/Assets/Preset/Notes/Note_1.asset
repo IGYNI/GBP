@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: Note_1
   m_EditorClassIdentifier: 
   noteName: Note1
-  screenName: Note 1
-  text: 
+  screenName: Note 128
+  text: 'Diary entry #128 Project: GHA-47t Senior Scientist: Classified. Today we
+    finally succeeded in synthesizing protein molecules compatible with the test
+    sample. Tomorrow, we''ll be able to start the production of the serum prototype.
+    After so many days of failures, I was beginning to doubt the success of the project,
+    but now everything has changed. Now the issue of increased funding is just a
+    formality.'
   icon: {fileID: 0}
+  isReceipt: 0
+  receipt:
+    screenName: 
+    fabricationTime: 5
+    requiredItems: []
+    result: {fileID: 0}
