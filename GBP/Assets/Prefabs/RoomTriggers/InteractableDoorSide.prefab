@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4557627385554216297}
   - component: {fileID: 4557627385554216296}
-  - component: {fileID: 5363577898661536561}
   m_Layer: 0
   m_Name: InteractableDoorSide
   m_TagString: Untagged
@@ -85,24 +84,6 @@ MonoBehaviour:
     closed: {fileID: 4557627385800951819}
     view: {fileID: 8668219866837164648}
   duration: 0.3
---- !u!114 &5363577898661536561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4557627385554216299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.9811321, g: 0.73616636, b: 0.35542893, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &4557627385800951818
 GameObject:
   m_ObjectHideFlags: 0
