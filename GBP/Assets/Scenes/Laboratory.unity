@@ -9824,6 +9824,10 @@ PrefabInstance:
       propertyPath: codeLock
       value: 
       objectReference: {fileID: 259767491}
+    - target: {fileID: 1847427531846788208, guid: 024fe94b77e6a0c44958b7cbb0918e5b, type: 3}
+      propertyPath: safeCode
+      value: 1984
+      objectReference: {fileID: 0}
     - target: {fileID: 1847427531846788212, guid: 024fe94b77e6a0c44958b7cbb0918e5b, type: 3}
       propertyPath: m_RootOrder
       value: -1

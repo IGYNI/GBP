@@ -26591,8 +26591,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1281216966}
   - component: {fileID: 1281216968}
-  - component: {fileID: 1281216967}
+  - component: {fileID: 1281216971}
   - component: {fileID: 1281216969}
+  - component: {fileID: 1281216970}
   m_Layer: 6
   m_Name: Roots
   m_TagString: Untagged
@@ -26616,33 +26617,6 @@ Transform:
   m_Father: {fileID: 1409345644}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1281216967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281216965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d64fc5926d3fb468488ee9215aca57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1281216968}
-  interactionTime: 1
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  outline: {fileID: 439953093}
-  interactionInfo:
-    interactionMode: 1
-    interactionSpot: {fileID: 960903200}
-    interactionRadius: 0
-  overviewInfo: It seems that the roots have grown on purpose in this very place.
-    It would be nice to find out what they are made of, but it will not work to break
-    them off just like that.
-  hiddenItem: {fileID: 11400000, guid: c82bc4aee77b86d498ff8d7964a4c29a, type: 2}
-  noteInfo: {fileID: 0}
 --- !u!114 &1281216968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26656,7 +26630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 6ce93d7292e21be429733e2150f4bc92, type: 2}
-  interaction: {fileID: 1281216967}
+  interaction: {fileID: 1281216971}
 --- !u!65 &1281216969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26678,6 +26652,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.81140304, y: 2.4910727, z: 1.7754586}
   m_Center: {x: -0.09429848, y: 0.7455363, z: -0.17376745}
+--- !u!114 &1281216970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281216965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708a9d7f8f7241eb9114793f819c3ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkVariables:
+  - name: LaserCutter_taken
+    value: true
+--- !u!114 &1281216971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281216965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b58a09be1da44c1923583a8cf656ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1281216968}
+  interactionTime: 1
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  outline: {fileID: 439953093}
+  interactionInfo:
+    interactionMode: 1
+    interactionSpot: {fileID: 960903200}
+    interactionRadius: 0
+  condition: {fileID: 1281216970}
+  overview: It seems that the roots have grown on purpose in this very place. It
+    would be nice to find out what they are made of, but it will not work to break
+    them off just like that.
+  failOverview: It seems that the roots have grown on purpose in this very place.
+    It would be nice to find out what they are made of, but it will not work to break
+    them off just like that.
+  usedItem: {fileID: 11400000, guid: 12b60d8789fbafa47b02504f78c1fc60, type: 2}
+  itemView: {fileID: 0}
+  playerMountPoint: {fileID: 0}
+  removeAfterUse: 0
+  returnItem: {fileID: 11400000, guid: c82bc4aee77b86d498ff8d7964a4c29a, type: 2}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1322830565
 GameObject:
   m_ObjectHideFlags: 0
