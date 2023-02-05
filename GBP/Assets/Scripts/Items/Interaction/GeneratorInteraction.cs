@@ -17,8 +17,10 @@ public class GeneratorInteraction : ItemInteraction
 	[SerializeField] private string overview;
 	[SerializeField] private string failOverview;
 	[SerializeField] private NoteInfo noteInfo;
+	[SerializeField] private ItemInfo consumeItem;
 	[SerializeField] private GeneratorPuzzle generator;
 	[SerializeField] private CheckCondition condition;
+	[SerializeField] private CircuitStateView сircuitStateView;
 	
 
 	private VariableSystem _variableSystem;
@@ -40,6 +42,14 @@ public class GeneratorInteraction : ItemInteraction
 				_variableSystem.SetVariable(noteInfo.noteName + Item.TakenSuffix, "true", true);
 				_variableSystem.NoteBook.Add(noteInfo);
 			}
+
+			if (consumeItem != null)
+			{
+				_variableSystem.SetVariable(consumeItem.itemName + Item.TakenSuffix, "false", true);
+				_variableSystem.Inventory.RemoveItem(consumeItem);
+			}
+			
+			сircuitStateView.ActiveState();
 			Interactable = false;
 		}
 	}
@@ -67,6 +77,7 @@ public class GeneratorInteraction : ItemInteraction
 		if (variable != null)
 		{
 			Interactable = variable.Value != "true";
+			сircuitStateView.ActiveState();
 			generator.SetFullPower();
 		}
 	}

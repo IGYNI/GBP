@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
+
 
 public class GeneratorPuzzle : Puzzle
 {
@@ -60,11 +63,20 @@ public class GeneratorPuzzle : Puzzle
     [SerializeField] private LayerMask layerMask;
 
     [SerializeField] private List<RingHandler> rings;
-
+    [SerializeField] private CircuitStateView stateView;
+    [SerializeField] private UnityEvent onPuzzleComplete;
+    [SerializeField] private float completeDelayTime = 2f;
+    [SerializeField] private Button backButton;
+    
     private Outline _currentHover;
     private float _checkTime;
     private bool[] _checkResult;
-    
+
+    private void Awake()
+    {
+        backButton.onClick.AddListener(OnBackButtonClick);
+    }
+
     private void OnEnable()
     {
         foreach (GameObject offObject in offObjects)
@@ -84,6 +96,11 @@ public class GeneratorPuzzle : Puzzle
             }
         }
         state.Set(EState.Idle);
+    }
+
+    private void OnBackButtonClick()
+    {
+        gameObject.SetActive(false);
     }
 
     public void InitPuzzle()
@@ -129,7 +146,7 @@ public class GeneratorPuzzle : Puzzle
         }
 
 
-        if (_checkTime > 0.3f)
+        if (_checkTime > 0.5f)
         {
             CheckPuzzle();
             _checkTime = 0f;
@@ -196,7 +213,9 @@ public class GeneratorPuzzle : Puzzle
 
     private IEnumerator CompletePuzzleCor()
     {
-        yield return new WaitForSeconds(0.5f);
+        onPuzzleComplete.Invoke();
+        stateView.ActiveState();
+        yield return new WaitForSeconds(completeDelayTime);
         Hide();
     }
 }
