@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4666466044490107372}
   - component: {fileID: 3825187834603932749}
   - component: {fileID: 4666466044490107371}
+  - component: {fileID: 1098867716}
   m_Layer: 6
   m_Name: Extinguisher
   m_TagString: Untagged
@@ -65,13 +66,26 @@ MonoBehaviour:
   interactionTime: 0.5
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1098867716}
+        m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   outline: {fileID: 5596016807437767258}
   interactionInfo:
     interactionMode: 0
     interactionSpot: {fileID: 0}
     interactionRadius: 0.2
-  overviewInfo: Fire extinguisher. A useful thing.
+  overviewInfo: I don't know what's inside, but this fire extinguisher can put out
+    any flame
 --- !u!65 &4666466044490107371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,6 +107,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3139614, y: 0.2486665, z: 0.68617916}
   m_Center: {x: -0.022195637, y: -0.0478331, z: -0.066203594}
+--- !u!114 &1098867716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4666466044490107370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9645791c2f4f5c845b03bf26775694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -413920436
+      Data2: 1199436828
+      Data3: -621853522
+      Data4: -933435581
+    Path: event:/Sfx/extinguish
 --- !u!1001 &66161976318125761
 PrefabInstance:
   m_ObjectHideFlags: 0

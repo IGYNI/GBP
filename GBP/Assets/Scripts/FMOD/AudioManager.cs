@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     private EventInstance lockOpen;
     private EventInstance fabricatorAnim;
     private EventInstance extinguish;
+    private EventInstance rootGrowth;
     private StudioBankLoader _bank;
 
     [Header("Volume")]
@@ -187,6 +188,12 @@ public class AudioManager : MonoBehaviour
     {
         extinguish = CreateInstance(events.extinguish);
         extinguish.start();
+    }
+
+    public void InitializeRootGrowth()
+    {
+        rootGrowth = CreateInstance(events.rootGrowth);
+        rootGrowth.start();
     }
 
 

@@ -26594,6 +26594,7 @@ GameObject:
   - component: {fileID: 1281216971}
   - component: {fileID: 1281216969}
   - component: {fileID: 1281216970}
+  - component: {fileID: 1281216972}
   m_Layer: 6
   m_Name: Roots
   m_TagString: Untagged
@@ -26703,7 +26704,38 @@ MonoBehaviour:
   returnItem: {fileID: 11400000, guid: c82bc4aee77b86d498ff8d7964a4c29a, type: 2}
   onUseItem:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1281216972}
+        m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1281216972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281216965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9645791c2f4f5c845b03bf26775694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -209895496
+      Data2: 1262055101
+      Data3: 745954987
+      Data4: -1222467778
+    Path: event:/Sfx/Growth
 --- !u!1 &1322830565
 GameObject:
   m_ObjectHideFlags: 0
@@ -28151,6 +28183,7 @@ GameObject:
   - component: {fileID: 2104889998}
   - component: {fileID: 2104889999}
   - component: {fileID: 2104890000}
+  - component: {fileID: 2104890001}
   m_Layer: 6
   m_Name: FireLaboratoryDoor
   m_TagString: Untagged
@@ -28236,6 +28269,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2104890001}
+        m_TargetAssemblyTypeName: FMODPlaySound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2104889999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28272,6 +28317,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9657502, y: 2.7641702, z: 1.795007}
   m_Center: {x: -0.7088132, y: 0.8820851, z: 0.0292207}
+--- !u!114 &2104890001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104889995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9645791c2f4f5c845b03bf26775694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -413920436
+      Data2: 1199436828
+      Data3: -621853522
+      Data4: -933435581
+    Path: event:/Sfx/extinguish
 --- !u!1 &2142899357
 GameObject:
   m_ObjectHideFlags: 0

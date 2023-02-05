@@ -442,8 +442,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <rootGrowth>k__BackingField.Path
+      value: event:/Sfx/Growth
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <buttonsClick>k__BackingField.Path
       value: event:/Sfx/UI/Buttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <rootGrowth>k__BackingField.Guid.Data1
+      value: -209895496
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <rootGrowth>k__BackingField.Guid.Data2
+      value: 1262055101
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <rootGrowth>k__BackingField.Guid.Data3
+      value: 745954987
+      objectReference: {fileID: 0}
+    - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
+      propertyPath: <rootGrowth>k__BackingField.Guid.Data4
+      value: -1222467778
       objectReference: {fileID: 0}
     - target: {fileID: 775693761, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: <buttonsClick>k__BackingField.Guid.Data1
@@ -716,6 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneInfo:
     sceneName: MainMenu
+    instant: 0
     hints: []
     images: []
   showTime: 2

@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &775693762
 MonoBehaviour:
@@ -154,6 +154,13 @@ MonoBehaviour:
       Data3: -621853522
       Data4: -933435581
     Path: event:/Sfx/extinguish
+  <rootGrowth>k__BackingField:
+    Guid:
+      Data1: -209895496
+      Data2: 1262055101
+      Data3: 745954987
+      Data4: -1222467778
+    Path: event:/Sfx/Growth
   <ambience>k__BackingField:
     Guid:
       Data1: 2124815434

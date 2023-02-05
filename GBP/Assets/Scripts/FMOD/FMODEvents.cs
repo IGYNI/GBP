@@ -32,6 +32,8 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference fabricatorAnim { get; private set; }
     [field: Header("Extinguish")]
     [field: SerializeField] public EventReference extinguish { get; private set; }
+    [field: Header("Root Growth")]
+    [field: SerializeField] public EventReference rootGrowth { get; private set; }
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
     [field: Header("Music")]
