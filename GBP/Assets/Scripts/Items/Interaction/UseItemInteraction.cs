@@ -71,6 +71,7 @@ public class UseItemInteraction : ItemInteraction
 		{
 			yield return new WaitForSeconds(0.5f);
 		}
+		onInteract.Invoke();
 		onUseItem.Invoke();
 	}
 
@@ -80,6 +81,7 @@ public class UseItemInteraction : ItemInteraction
 		if (variable != null && variable.Value == "true")
 		{
 			onUseItem.Invoke();
+			Interactable = false;
 		}
 	}
 
