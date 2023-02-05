@@ -459,6 +459,7 @@ MonoBehaviour:
   infoParent: {fileID: 4497736839051459381}
   showNotebook: {fileID: 1576263101}
   closeNoteBook: {fileID: 8487385843894512503}
+  scrollRect: {fileID: 7194011190637976065}
   _noteInfoViewPreset: {fileID: 8530105341599390787}
 --- !u!1 &902088434342975598
 GameObject:
@@ -1424,7 +1425,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7622684582712724715}
   m_HandleRect: {fileID: 9178527052066665866}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

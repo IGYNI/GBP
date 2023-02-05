@@ -11,6 +11,7 @@ public class NoteBook : MonoBehaviour
 	[SerializeField] private GameObject infoParent;
 	[SerializeField] private Button showNotebook;
 	[SerializeField] private Button closeNoteBook;
+	[SerializeField] private ScrollRect scrollRect;
 
 	[SerializeField] private NoteInfoView _noteInfoViewPreset;
 	public List<NoteInfo> Notes => _notes;
@@ -32,6 +33,7 @@ public class NoteBook : MonoBehaviour
 		var noteView = Instantiate(_noteInfoViewPreset, infoParent.transform);
 		noteView.SetNote(noteInfo);
 		//_noteViews.Add(noteView);
+		scrollRect.normalizedPosition = new Vector2(0f, 1f);
 		OnAddNote?.Invoke(noteInfo);
 		OnShowClick();
 	}
