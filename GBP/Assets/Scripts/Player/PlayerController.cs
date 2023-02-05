@@ -86,6 +86,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
 			return;
+		if (_raycastCamera == null)
+		{
+			_raycastCamera = Camera.main;
+		}
+		if (_raycastCamera == null)
+			return;
 		
 		if (State.Value != PlayerState.Idle && State.Value != PlayerState.Run) return;
 		if (Input.GetMouseButtonDown(0) && _hoveredItem.Value == null)
@@ -109,6 +115,12 @@ public class PlayerController : MonoBehaviour
 	private void CheckItems()
 	{
 		if (EventSystem.current.IsPointerOverGameObject())
+			return;
+		if (_raycastCamera == null)
+		{
+			_raycastCamera = Camera.main;
+		}
+		if (_raycastCamera == null)
 			return;
 		
 		Ray mRay = _raycastCamera.ScreenPointToRay(Input.mousePosition);

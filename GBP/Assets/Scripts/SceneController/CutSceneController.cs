@@ -8,6 +8,7 @@ public class CutSceneController : BaseSceneController
 {
 	[SerializeField] private GameObject skipText;
 	[SerializeField] private SerializedSceneInfo nextSceneInfo;
+	[SerializeField] private float waitSkipTimer = 3;
 
 	private bool _skip;
 	private bool _loadComplete;
@@ -22,6 +23,7 @@ public class CutSceneController : BaseSceneController
 	{
 		if (_skip)
 			return;
+		
 		if (!_loadComplete)
 			return;
 
@@ -35,10 +37,8 @@ public class CutSceneController : BaseSceneController
 
 	private IEnumerator CutSceneCor()
 	{
-		yield return new WaitForSecondsRealtime(3);
+		yield return new WaitForSecondsRealtime(waitSkipTimer);
 		skipText.gameObject.SetActive(true);
-		yield return new WaitForSecondsRealtime(30);
-		LoadNextScene();
 	}
 
 	public void LoadNextScene()

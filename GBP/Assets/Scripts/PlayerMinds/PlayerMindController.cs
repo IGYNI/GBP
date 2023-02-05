@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(DemoPlayer))]
+//[RequireComponent(typeof(DemoPlayer))]
 public class PlayerMindController : MonoBehaviour
 {
 	[SerializeField] private MindView mindView;
@@ -8,7 +8,7 @@ public class PlayerMindController : MonoBehaviour
 	[SerializeField] private float minIdleTime = 15f;
 	//[SerializeField] private float showMindTime = 10f;
 
-	private DemoPlayer _player;
+	//private DemoPlayer _player;
 	private Vector3 _lastPosition;
 
 	private bool _playerIdle;
@@ -16,12 +16,12 @@ public class PlayerMindController : MonoBehaviour
 	
 	private void Awake()
 	{
-		_player = GetComponent<DemoPlayer>();
+		//_player = GetComponent<DemoPlayer>();
 	}
 
 	private void Update()
 	{
-		_playerIdle = _lastPosition == _player.transform.position;
+		//_playerIdle = _lastPosition == _player.transform.position;
 		if (_playerIdle)
 		{
 			_idleTimer += Time.deltaTime;

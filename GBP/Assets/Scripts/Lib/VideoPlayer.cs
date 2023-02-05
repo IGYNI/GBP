@@ -1,10 +1,12 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VideoPlayer : MonoBehaviour
 {
-	[SerializeField] private CutSceneController sceneController;
-	
+	[SerializeField] private UnityEvent OnPlaybackComplete;
+	[SerializeField] private string videoFileName;
+
 	private void Start()
 	{
 		GameObject camera = GameObject.Find("Main Camera");
@@ -23,7 +25,8 @@ public class VideoPlayer : MonoBehaviour
 
 		// Set the video to play. URL supports local absolute or relative paths.
 		// Here, using absolute.
-		var path = Application.streamingAssetsPath + "/CutScene.mp4";
+		//var path = Application.streamingAssetsPath + "/+""CutScene.mp4";
+		var path = Application.streamingAssetsPath + "/" + videoFileName;
 		if (File.Exists(path))
 		{
 			videoPlayer.url = path;
@@ -32,20 +35,17 @@ public class VideoPlayer : MonoBehaviour
 		}
 		else
 		{
-			sceneController.LoadNextScene();
+			OnPlaybackComplete.Invoke();
 		}
-		
 
-		
 		// Start playback. This means the VideoPlayer may have to prepare (reserve
 		// resources, pre-load a few frames, etc.). To better control the delays
 		// associated with this preparation one can use videoPlayer.Prepare() along with
 		// its prepareCompleted event.
-		
 	}
 
 	private void EndReached(UnityEngine.Video.VideoPlayer vp)
 	{
-		sceneController.LoadNextScene();
+		OnPlaybackComplete.Invoke();
 	}
 }

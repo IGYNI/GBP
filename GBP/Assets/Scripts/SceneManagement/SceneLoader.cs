@@ -120,8 +120,16 @@ namespace SceneManagement
 		{
 			State = EState.Loading;
 
-			var fadeIn = _canvasGroup.DOFade(1f, fadeInTime);
-			await fadeIn.AsyncWaitForCompletion();
+			if (!context.sceneInfo.Instant)
+			{
+				var fadeIn = _canvasGroup.DOFade(1f, fadeInTime);
+				await fadeIn.AsyncWaitForCompletion();
+			}
+			else
+			{
+				_progressGroup.SetActive(false);
+				_canvasGroup.alpha = 0;
+			}
 			await UnloadCurrentScene();
 			
 			_loadingSceneController = null;
@@ -137,14 +145,20 @@ namespace SceneManagement
 			await Resources.UnloadUnusedAssets();
 			await UniTask.DelayFrame(1);
 			GC.Collect();
-			await UniTask.DelayFrame(1);
 			if (_loadingSceneController != null)
 			{
 				await _loadingSceneController.Load(context, this);
-				_progressGroup.SetActive(false);
-				var fadeOut = _canvasGroup.DOFade(0f, fadeOutTime);
-				await fadeOut.AsyncWaitForCompletion();
-				_progressGroup.SetActive(true);
+				if (!context.sceneInfo.Instant)
+				{
+					_progressGroup.SetActive(false);
+					var fadeOut = _canvasGroup.DOFade(0f, fadeOutTime);
+					await fadeOut.AsyncWaitForCompletion();
+				}
+				else
+				{
+					_canvasGroup.alpha = 0;
+					_progressGroup.SetActive(true);
+				}
 				State = EState.Idle;
 				_loadingSceneController.OnLoadComplete();
 				_loadingSceneController = null;

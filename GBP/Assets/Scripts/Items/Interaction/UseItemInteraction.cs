@@ -19,6 +19,7 @@ public class UseItemInteraction : ItemInteraction
 	
 	[SerializeField] private CheckCondition condition;
 	[SerializeField] private string overview;
+	[SerializeField] private string failOverview;
 	[SerializeField] private ItemInfo usedItem;
 	[SerializeField] private GameObject itemView;
 	[SerializeField] private GameObject playerMountPoint;
@@ -84,6 +85,10 @@ public class UseItemInteraction : ItemInteraction
 
 	public override string GetOverviewInfo(VariableSystem variableSystem)
 	{
+		if (condition != null)
+		{
+			return condition.Satisfied() ? overview : failOverview;
+		}
 		return overview;
 	}
 }

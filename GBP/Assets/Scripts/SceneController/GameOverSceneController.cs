@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Cysharp.Threading.Tasks;
 using SceneManagement;
 using UnityEngine;
@@ -6,28 +7,58 @@ using UnityEngine.UI;
 
 public class GameOverSceneController : BaseSceneController
 {
-    [SerializeField] private SerializedSceneInfo nextSceneInfo;
-    [SerializeField] private Button exitToMainMenu;
+	[SerializeField] private GameObject skipText;
+	[SerializeField] private SerializedSceneInfo nextSceneInfo;
+	[SerializeField] private float cutsceneTime;
 
-    private void Awake()
-    {
-        exitToMainMenu.onClick.AddListener(LoadNextScene);
-    }
+	private bool _skip;
+	private bool _loadComplete;
+	private Coroutine _cutSceneCor;
 
-    private void LoadNextScene()
-    {
-        var context = new SceneContext();
-        context.sceneInfo = nextSceneInfo;
-        SceneLoader.LoadScene(context);
-    }
+	private void Awake()
+	{
+		skipText.gameObject.SetActive(false);
+	}
 
-    public override async  UniTask Load(SceneContext sceneContext, IProgress<LoadingProgress> progress)
-    {
-        if (VariableSystem.Instance != null)
-        {
-            Destroy(VariableSystem.Instance.gameObject);
-        }
-        Debug.Log($"[VariableSystem] Instance is {VariableSystem.Instance}");
-        await UniTask.Yield();
-    }
+	private void Update()
+	{
+		if (_skip)
+			return;
+		if (!_loadComplete)
+			return;
+
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			_skip = true;
+			StopCoroutine(_cutSceneCor);
+			LoadNextScene();
+		}
+	}
+
+	private IEnumerator CutSceneCor()
+	{
+		yield return new WaitForSecondsRealtime(3);
+		skipText.gameObject.SetActive(true);
+		yield return new WaitForSecondsRealtime(30);
+		LoadNextScene();
+	}
+
+	public void LoadNextScene()
+	{
+		var context = new SceneContext();
+		context.sceneInfo = nextSceneInfo;
+		SceneLoader.LoadScene(context);
+	}
+
+	public override async UniTask Load(SceneContext sceneContext, IProgress<LoadingProgress> progress)
+	{
+		await UniTask.Yield();
+		progress.Report(new LoadingProgress() { progress = 1f });
+	}
+
+	public override void OnLoadComplete()
+	{
+		_cutSceneCor = StartCoroutine(CutSceneCor());
+		_loadComplete = true;
+	}
 }

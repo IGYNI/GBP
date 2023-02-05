@@ -3,7 +3,7 @@ using UnityEngine;
 public class RotateObject : MonoBehaviour
 {
     [SerializeField] private Axis axis;
-    [SerializeField] private float speed;
+    public float speed;
 
     private void Update()
     {
