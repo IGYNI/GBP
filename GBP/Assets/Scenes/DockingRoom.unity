@@ -1443,7 +1443,7 @@ MonoBehaviour:
     me
   exitPointName: DockingRoom
   nextSceneInfo:
-    sceneName: GameOver
+    sceneName: StoryGameOverAlternative
     instant: 0
     hints: []
     images: []
@@ -6425,7 +6425,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3452083810689109135, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 662127576}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 662127575, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5995984831357575471, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 972437177, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 734085885, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
 --- !u!4 &3452083811284268100 stripped
 Transform:

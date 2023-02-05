@@ -19,6 +19,14 @@ public class CutSceneController : BaseSceneController
 		skipText.gameObject.SetActive(false);
 	}
 
+	private void Start()
+	{
+		if (VariableSystem.Instance != null)
+		{
+			Destroy(VariableSystem.Instance.gameObject);
+		}
+	}
+
 	private void Update()
 	{
 		if (_skip)
