@@ -12,6 +12,7 @@ public class ItemStateSystem : MonoBehaviour
 		items.Clear();
 		var sceneItems = FindObjectsOfType<Item>(true);
 		items.AddRange(sceneItems);
+		UnityEditor.EditorUtility.SetDirty(gameObject);
 	}
 #endif
 
