@@ -12,5 +12,6 @@ public enum MusicArea
         CAPTAIN_ROOM = 5,
         REAKTOR = 6,
         CUT_SCENE_1 = 7,
+        FINAL_CUT_SCENE_1 = 8,
 
 }
