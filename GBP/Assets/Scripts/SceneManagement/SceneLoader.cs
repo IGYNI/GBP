@@ -115,11 +115,11 @@ namespace SceneManagement
 
 			_currentSceneController = null;
 		}
-
+		
 		private async UniTask ChangeScene(SceneContext context)
 		{
 			State = EState.Loading;
-
+			
 			if (!context.sceneInfo.Instant)
 			{
 				var fadeIn = _canvasGroup.DOFade(1f, fadeInTime);

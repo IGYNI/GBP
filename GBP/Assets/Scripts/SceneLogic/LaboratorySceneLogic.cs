@@ -15,5 +15,6 @@ public class LaboratorySceneLogic : MonoBehaviour
     {
         _variableSystem.SetVariable(labHole.info.itemName+Item.VisibleSuffix, "true", true);
         labHole.gameObject.SetActive(true);
+        labHole.gameObject.SetActive(true);
     }
 }

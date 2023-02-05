@@ -206,12 +206,12 @@ TextureImporter:
       name: UIAtlas_CaptainKey
       rect:
         serializedVersion: 2
-        x: 894
-        y: 126
+        x: 896
+        y: 128
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,6 +219,195 @@ TextureImporter:
       bones: []
       spriteID: 3f1ddfe5e6c30634f8be91d06523b0c3
       internalID: 381201972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Component_1
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307936f09f0634542bcefa4a3b31c08f
+      internalID: -1154525097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Component_2
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ace59f642976a49ab15c6e63177456
+      internalID: -1248792902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Component_3
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47b8f6411b910743a7346a5077de88c
+      internalID: 1402704337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_LaserCutter
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7073dbe3f6f6d53409863ae3d3cd1bf3
+      internalID: -2046470119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_emptyJar
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b782aec55008dc43b0a2551891fd18e
+      internalID: -1899984648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_RootProbe
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0ca89c7a5fe4148979e8820bb466a3
+      internalID: 1610596310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_PowerBattery
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f440232f5b1804ab2a89d40d2ab65e
+      internalID: -1465812580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Fabricator_Back
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 234
+        width: 420
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f474ac35f7c8745a15856c6748583c
+      internalID: 1302160415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_Fabricator_Start
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 59
+        width: 420
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ad2dbd931ce8244bdffd963c9596a1
+      internalID: -495123946
       vertices: []
       indices: 
       edges: []
@@ -235,10 +424,19 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIAtlas_CaptainKey: 381201972
+      UIAtlas_Component_3: 1402704337
+      UIAtlas_LaserCutter: -2046470119
       UIAtlas_FillBar: -448374082
       UIAtlas_Chemical_2: 165262598
       UIAtlas_Glove: 325913245
+      UIAtlas_Fabricator_Start: -495123946
+      UIAtlas_emptyJar: -1899984648
+      UIAtlas_RootProbe: 1610596310
+      UIAtlas_Fabricator_Back: 1302160415
+      UIAtlas_Component_1: -1154525097
+      UIAtlas_Component_2: -1248792902
       UIAtlas_FillBG: 1854762598
+      UIAtlas_PowerBattery: -1465812580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

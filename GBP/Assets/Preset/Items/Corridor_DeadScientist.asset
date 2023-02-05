@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3b220334939491d8c427b27bcb32c08, type: 3}
-  m_Name: Lab_Chemical_1
+  m_Name: Corridor_DeadScientist
   m_EditorClassIdentifier: 
-  itemName: Lab_Chemical_1
-  screenName: Chemical Ingredient 1
+  itemName: Corridor_DeadScientist
+  screenName: 
   description: 
-  icon: {fileID: -1154525097, guid: e3f6adbe8061846419468333d10d7d96, type: 3}
+  icon: {fileID: 0}
