@@ -23,6 +23,8 @@ public class DoorInteraction : ItemInteraction
 
 	[SerializeField] private CheckCondition openDoorCondition;
 	[SerializeField] private AutomaticDoor door;
+
+	public Cumplete Wiress;
 	
 	
 	public string exitPointName; 
@@ -35,13 +37,13 @@ public class DoorInteraction : ItemInteraction
 
 	public override void Interact(VariableSystem variableSystem)
 	{
-		if (openDoorCondition == null)
+		if (openDoorCondition == null )
 		{
 			StartCoroutine(LoadNextLevelCor());
 		}
 		else
 		{
-			if (openDoorCondition.Satisfied())
+			if (openDoorCondition.Satisfied() && Wiress.WIN)
 			{
 				StartCoroutine(LoadNextLevelCor());
 			}
