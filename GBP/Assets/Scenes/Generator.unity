@@ -18264,6 +18264,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneratorCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
