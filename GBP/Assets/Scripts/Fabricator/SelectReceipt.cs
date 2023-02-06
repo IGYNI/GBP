@@ -8,6 +8,7 @@ public class SelectReceipt : MonoBehaviour
 	[SerializeField] private Image selection;
 	private Fabricator _fabricator;
 	private Receipt _receipt;
+	public Receipt Receipt => _receipt;
 
 	private void Awake()
 	{

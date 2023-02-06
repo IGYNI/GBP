@@ -64,6 +64,11 @@ public class Fabricator : Puzzle
 			view.Setup(this, noteInfo.receipt);
 			_receiptButtons.Add(view);
 		}
+
+		if (_receiptButtons.Count > 0)
+		{
+			LoadReceipt(_receiptButtons[0].Receipt);
+		}
 	}
 
 	private void ClearReceipts()
