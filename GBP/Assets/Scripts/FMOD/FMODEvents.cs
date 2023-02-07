@@ -36,6 +36,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference rootGrowth { get; private set; }
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
+    [field: Header("Short Circuit")]
+    [field: SerializeField] public EventReference shortCircuit { get; private set; }
+    [field: Header("Short Circuit Done")]
+    [field: SerializeField] public EventReference shortCircuitDone { get; private set; }
     [field: Header("Music")]
     [field: SerializeField] public EventReference mainTheme { get; private set; }
 

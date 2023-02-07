@@ -24,6 +24,8 @@ public class AudioManager : MonoBehaviour
     private EventInstance fabricatorAnim;
     private EventInstance extinguish;
     private EventInstance rootGrowth;
+    private EventInstance shortCircuit;
+    private EventInstance shortCircuitDone;
     private StudioBankLoader _bank;
 
     [Header("Volume")]
@@ -196,5 +198,16 @@ public class AudioManager : MonoBehaviour
         rootGrowth.start();
     }
 
+    public void InitializeShortCircuit()
+    {
+        shortCircuit = CreateInstance(events.shortCircuit);
+        shortCircuit.start();
+    }
+
+    public void InitializeShortCircuitDone()
+    {
+        shortCircuitDone = CreateInstance(events.shortCircuitDone);
+        shortCircuitDone.start();
+    }
 
 }
