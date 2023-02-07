@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecc96432fba49b98bdf3705b02ce67f, type: 3}
+  m_Name: Ukraine
+  m_EditorClassIdentifier: 
+  noteName: Ukraine
+  screenName: 
+  text: 'For almost a year now, brave defenders of our country, in the ranks of the
+    Armed Forces, have been defending our lives and freedom day and night.
+
+
+    Bravely
+    opposing the enemy, they give us the opportunity to do what we love - create
+    games.
+
+
+    It is impossible to express our gratitude to our heroes in words.
+
+
+    We
+    only want to say:
+
+    We believe in victory! Glory to Ukraine! Glory to the
+    Armed Forces!'
+  icon: {fileID: 0}
+  isReceipt: 0
+  receipt:
+    screenName: 
+    fabricationTime: 5
+    requiredItems: []
+    result: {fileID: 0}

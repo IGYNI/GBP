@@ -122,6 +122,7 @@ namespace SceneManagement
 			
 			if (!context.sceneInfo.Instant)
 			{
+				_progressGroup.SetActive(true);
 				var fadeIn = _canvasGroup.DOFade(1f, fadeInTime);
 				await fadeIn.AsyncWaitForCompletion();
 			}
@@ -130,6 +131,7 @@ namespace SceneManagement
 				_progressGroup.SetActive(false);
 				_canvasGroup.alpha = 0;
 			}
+			_progressGroup.SetActive(true);
 			await UnloadCurrentScene();
 			
 			_loadingSceneController = null;
@@ -157,7 +159,7 @@ namespace SceneManagement
 				else
 				{
 					_canvasGroup.alpha = 0;
-					_progressGroup.SetActive(true);
+					_progressGroup.SetActive(false);
 				}
 				State = EState.Idle;
 				_loadingSceneController.OnLoadComplete();
