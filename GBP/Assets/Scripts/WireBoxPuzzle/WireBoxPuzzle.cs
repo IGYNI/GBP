@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class WireBoxPuzzle : Puzzle
@@ -76,7 +77,7 @@ public class WireBoxPuzzle : Puzzle
 		if (_lastPart == null)
 			return;
 		
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
 		{
 			AddWirePart();
 		}
@@ -96,15 +97,16 @@ public class WireBoxPuzzle : Puzzle
 		}
 		else
 		{
-			var distanceToFinish = Vector3.Distance(_lastPart.mountPoint.position, targetWirePoint.transform.position);
-			if (distanceToFinish < checkPuzzleDistance)
+			
+			var vec = (_lastPart.transform.position - targetWirePoint.transform.position);
+			if (vec.magnitude < checkPuzzleDistance)
 			{
 				_allowInput = false;
-				var vec = (_lastPart.transform.position - targetWirePoint.transform.position);
-				_lastPart.transform.forward = vec.normalized;
-				var s = _lastPart.transform.localScale; 
-				//0.12f is length of wirePart 
-				_lastPart.transform.localScale = new Vector3(s.x,s.y,0.12f * vec.magnitude);
+				Debug.Log(vec.magnitude);
+				_lastPart.Freeze();
+				_lastPart.transform.forward = vec.normalized*-1;
+				var s = _lastPart.transform.localScale;
+				_lastPart.transform.localScale = new Vector3(s.x,s.y,vec.magnitude*7f);
 				targetSphere.gameObject.SetActive(true);
 				StartCoroutine(CompletePuzzle());
 			}
@@ -136,6 +138,8 @@ public class WireBoxPuzzle : Puzzle
 
 	private void UpdateWallColliders()
 	{
+		if (_lastPart == null)
+			return;
 		if (_cameraSwapped)
 		{
 			backWall.gameObject.SetActive(false);
@@ -206,8 +210,10 @@ public class WireBoxPuzzle : Puzzle
 		_allowInput = false;
 		if (_cameraSwapped)
 		{
+			_cameraSwapped = false;
 			yield return SwapCameraFront();
 		}
+		
 		onPuzzleComplete.Invoke();
 		tutorial.gameObject.SetActive(false);
 		yield return new WaitForSeconds(0.5f);
@@ -216,16 +222,24 @@ public class WireBoxPuzzle : Puzzle
 		yield return new WaitForSeconds(0.7f);
 		state.Set(EState.Complete);
 		gameObject.SetActive(false);
+		DestroyWires();
 	}
 
 	private IEnumerator StopPuzzleCor()
 	{
 		_allowInput = false;
+		if (_cameraSwapped)
+		{
+			_cameraSwapped = false;
+			yield return SwapCameraFront();
+		}
+		
 		tutorial.gameObject.SetActive(false);
 		yield return new WaitForSeconds(0.2f);
 		onPlayAnimation.Invoke();
 		doorsAnimator.SetBool(Open, false);
 		gameObject.SetActive(false);
+		DestroyWires();
 	}
 
 	private void OnBackButtonClick()

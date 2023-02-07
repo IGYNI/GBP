@@ -7,9 +7,20 @@ public class WirePart : MonoBehaviour
 	public Vector3 cursor;
 
 	public bool IsCollide;
+	public Collider enterCollider;
+
+	private bool _freeze;
+
+	public void Freeze()
+	{
+		_freeze = true;
+	}
 
 	public void UpdateInput(Camera cam, bool cameraFlip, int layerMask)
 	{
+		if (_freeze)
+			return;
+		
 		Ray mRay = cam.ScreenPointToRay(Input.mousePosition);
 		
 		if (Physics.Raycast(mRay.origin, mRay.direction, out RaycastHit hitInfo, 100, layerMask))
@@ -41,7 +52,8 @@ public class WirePart : MonoBehaviour
 		else
 		{
 			IsCollide = true;
-			Debug.Log($"{name}  collider with {other.gameObject.name}");
+			enterCollider = other;
+			//Debug.Log($"{name}  collider with {other.gameObject.name}");
 		}
 	}
 	
@@ -54,7 +66,8 @@ public class WirePart : MonoBehaviour
 		else
 		{
 			IsCollide = false;
-			Debug.Log($"{name} Stop colliding");
+			enterCollider = null;
+			//Debug.Log($"{name} Stop colliding");
 		}
 	}
 }

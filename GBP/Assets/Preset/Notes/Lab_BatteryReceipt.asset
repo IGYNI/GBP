@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lab_BatteryReceipt
   m_EditorClassIdentifier: 
   noteName: ReactorBattery
-  screenName: Battery to supply circuit
+  screenName: Analyzer Log
   text: "Analysis result: [PART OF THE ROOT] \n- The original substance under normal
     conditions produces oxygen under low voltage.\n[MUTATION DETECTED].\n- The mutated
     sample has ultra-high current consumption and unstable growth. \n[CONCLUSION]\n-
