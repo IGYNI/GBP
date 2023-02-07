@@ -138,6 +138,11 @@ public class Outline : MonoBehaviour
 		Debug.Log("abrakadabra");
     }
 
+	public void TestMethod()
+	{
+		Debug.Log("Do Some");
+	}
+
 	void OnValidate()
 	{
 		// Update material properties
