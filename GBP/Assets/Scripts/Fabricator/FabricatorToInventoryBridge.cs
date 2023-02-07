@@ -2,9 +2,11 @@ public class FabricatorToInventoryBridge : IItemHandler
 {
 	private readonly Fabricator _fabricator;
 	private readonly Inventory _inventory;
+	private readonly VariableSystem _variableSystem;
 
-	public FabricatorToInventoryBridge(Fabricator fabricator, Inventory inventory)
+	public FabricatorToInventoryBridge(Fabricator fabricator, Inventory inventory, VariableSystem variableSystem)
 	{
+		_variableSystem = variableSystem;
 		_inventory = inventory;
 		_fabricator = fabricator;
 	}

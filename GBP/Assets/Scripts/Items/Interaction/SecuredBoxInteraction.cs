@@ -26,7 +26,6 @@ public class SecuredBoxInteraction : ItemInteraction
 			_variableSystem.SetVariable(item.info.itemName + Item.UnlockedSuffix, "true", true);
 			if (hiddenItem != null)
 			{
-				_variableSystem.SetVariable(hiddenItem.itemName + Item.TakenSuffix, "true", true);
 				_variableSystem.Inventory.AddItem(hiddenItem);
 			}
 

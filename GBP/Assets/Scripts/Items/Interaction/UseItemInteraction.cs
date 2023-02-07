@@ -40,12 +40,10 @@ public class UseItemInteraction : ItemInteraction
 			if (removeAfterUse)
 			{
 				variableSystem.Inventory.RemoveItem(usedItem);
-				variableSystem.SetVariable(usedItem.itemName + Item.TakenSuffix, "false");
 			}
 
 			if (returnItem != null)
 			{
-				variableSystem.SetVariable(returnItem.itemName + Item.TakenSuffix, "true", true);
 				variableSystem.Inventory.AddItem(returnItem);
 			}
 

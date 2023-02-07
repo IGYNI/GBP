@@ -12,6 +12,9 @@ public class VariableSystem : MonoBehaviour
     [field: SerializeField] public ItemOverview ItemOverview { get; private set; }
 
     public List<VariableDesc> initialVariables;
+    
+    [SerializeField] private List<ItemInfo> debugItems;
+    
 
     public IReadOnlyDictionary<string, GameVar> Variables => _gameVariables; 
 
@@ -33,11 +36,21 @@ public class VariableSystem : MonoBehaviour
 
     private void InitializeSystem()
     {
+        Inventory.Init(this);
         foreach (var variable in initialVariables)
         {
             var gameVar = new GameVar(variable.name, variable.value);
             _gameVariables.Add(variable.name, gameVar);
         }
+#if UNITY_EDITOR
+        foreach (ItemInfo debugItem in debugItems)
+        {
+            if (debugItem != null)
+            {
+                Inventory.AddItem(debugItem);
+            }
+        }
+#endif
     }
 
     private void OnDestroy()

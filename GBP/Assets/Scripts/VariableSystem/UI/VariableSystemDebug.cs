@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class VariableSystemDebug : MonoBehaviour
     [SerializeField] private TMP_Text hover;
     [SerializeField] private TMP_Text actions;
     [SerializeField] private TMP_Text currentAction;
-    
+
     private void Awake()
     {
         variableSystem.OnCreateVariable += CreateDebugSlot;

@@ -20,7 +20,6 @@ public class SearchItemInteraction : ItemInteraction
 		variableSystem.SetVariable(item.info.itemName + Item.ExploredSuffix, "true", true);
 		if (hiddenItem != null)
 		{
-			variableSystem.SetVariable(hiddenItem.itemName + Item.TakenSuffix, "true", true);
 			variableSystem.Inventory.AddItem(hiddenItem);
         }
 

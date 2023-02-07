@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class GeneratorInteraction : ItemInteraction
@@ -20,7 +21,13 @@ public class GeneratorInteraction : ItemInteraction
 	[SerializeField] private ItemInfo consumeItem;
 	[SerializeField] private GeneratorPuzzle generator;
 	[SerializeField] private CheckCondition condition;
+	[SerializeField] private InteractionSequence sequence;
 	[SerializeField] private CircuitStateView сircuitStateView;
+	[Header("Battery view")]
+	[SerializeField] private GameObject view;
+	[SerializeField] private Transform origin;
+	[SerializeField] private Transform target;
+	[SerializeField] private float sequenceTime = 1f;
 	
 
 	private VariableSystem _variableSystem;
@@ -45,7 +52,6 @@ public class GeneratorInteraction : ItemInteraction
 
 			if (consumeItem != null)
 			{
-				_variableSystem.SetVariable(consumeItem.itemName + Item.TakenSuffix, "false", true);
 				_variableSystem.Inventory.RemoveItem(consumeItem);
 			}
 			
@@ -67,8 +73,31 @@ public class GeneratorInteraction : ItemInteraction
 	{
 		onInteract.Invoke();
 		yield return new WaitForSeconds(0.5f);
+		//yield return InsertBattery();
+		//generator.InitPuzzle();
+		//generator.Show();
+		if (sequence != null)
+		{
+			yield return sequence.Proceed();
+
+		}
+		else
+		{
+			yield return new WaitForSeconds(0.5f);
+		}
 		generator.InitPuzzle();
 		generator.Show();
+	}
+
+	private IEnumerator InsertBattery()
+	{
+		view.transform.position = origin.transform.position;
+		view.transform.rotation = origin.transform.rotation;
+		view.SetActive(true);
+		view.transform.DORotate(target.transform.eulerAngles, sequenceTime);
+		var tween = view.transform.DOMove(target.transform.position, sequenceTime).SetEase(Ease.Linear);
+		yield return tween.WaitForCompletion();
+		view.SetActive(false);
 	}
 
 	public override void LoadState(VariableSystem variableSystem)

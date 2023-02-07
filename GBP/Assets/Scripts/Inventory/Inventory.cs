@@ -6,11 +6,18 @@ public interface IItemHandler
     void ProcessItem(ItemInfo itemInfo);
 }
 
+
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<ItemSlot> slots;
     [SerializeField] private List<ItemInfo> itemDatabase;
+    private VariableSystem _variableSystem;
 
+    public void Init(VariableSystem variableSystem)
+    {
+        _variableSystem = variableSystem;
+    }
+    
     public void SetItemHandler(IItemHandler itemHandler)
     {
         foreach (ItemSlot slot in slots)
@@ -28,14 +35,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(ItemInfo item)
+    public void AddItem(ItemInfo itemInfo)
     {
+        _variableSystem.SetVariable(itemInfo.itemName + Item.TakenSuffix, "true", true);
         foreach (ItemSlot slot in slots)
         {
             if (slot.isFull) 
                 continue;
             slot.isFull = true;
-            slot.SetItem(item);
+            slot.SetItem(itemInfo);
             break;
         }
     }
@@ -47,6 +55,7 @@ public class Inventory : MonoBehaviour
             if (slot.isFull && slot.ItemInfo == itemInfo)
             {
                 slot.isFull = false;
+                _variableSystem.SetVariable(itemInfo.itemName + Item.TakenSuffix, "false", true);
                 slot.SetItem(null);
                 break;
             }

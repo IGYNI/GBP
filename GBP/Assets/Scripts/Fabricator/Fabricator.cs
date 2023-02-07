@@ -43,8 +43,8 @@ public class Fabricator : Puzzle
 
 	private void Initialize()
 	{
-		_intToFabBridge = new InventoryToFabricatorBridge(this, _variableSystem.Inventory);
-		_fabToInvBridge = new FabricatorToInventoryBridge(this, _variableSystem.Inventory);
+		_intToFabBridge = new InventoryToFabricatorBridge(this, _variableSystem.Inventory, _variableSystem);
+		_fabToInvBridge = new FabricatorToInventoryBridge(this, _variableSystem.Inventory, _variableSystem);
 		foreach (ItemSlot itemSlot in slots)
 		{
 			itemSlot.ItemHandler = _fabToInvBridge;
@@ -186,8 +186,6 @@ public class Fabricator : Puzzle
 		if (fabricatedItem.ItemInfo != null)
 		{
 			_fabToInvBridge.ProcessItem(fabricatedItem.ItemInfo);
-			_variableSystem.SetVariable(fabricatedItem.ItemInfo.itemName + Item.TakenSuffix, "true");
-			fabricatedItem.SetItem(null);
 		}
 		_variableSystem.Inventory.SetItemHandler(null);
 		player.gameObject.SetActive(true);

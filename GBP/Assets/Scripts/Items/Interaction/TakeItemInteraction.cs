@@ -15,7 +15,6 @@ public class TakeItemInteraction : ItemInteraction
 
 	public override void Interact(VariableSystem variableSystem)
 	{
-		variableSystem.SetVariable(item.info.itemName + Item.TakenSuffix, "true", true);
 		variableSystem.SetVariable(item.info.itemName + Item.VisibleSuffix, "false", true);
 		variableSystem.Inventory.AddItem(item.info);
 		onInteract.Invoke();
