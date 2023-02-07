@@ -133,11 +133,11 @@ public class Outline : MonoBehaviour
 			rend.materials = materials.ToArray();
 		}
 	}
-	public void TestMethod()
-    {
-		Debug.Log("abrakadabra");
-    }
 
+	public void TestMethod()
+	{
+		Debug.Log("Do Some 2");
+	}
 
 	void OnValidate()
 	{
