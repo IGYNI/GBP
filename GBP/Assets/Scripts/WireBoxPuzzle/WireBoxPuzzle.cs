@@ -14,27 +14,29 @@ public class WireBoxPuzzle : Puzzle
 	[SerializeField] private UnityEvent OnCollide;
 	
 	[SerializeField] private Button backButton;
-	[SerializeField] private Animation boxAnimation;
-	[SerializeField] private AnimationClip openBox;
-	[SerializeField] private AnimationClip closeBox;
+	[SerializeField] private Animator doorsAnimator;
+	[SerializeField] private GameObject tutorial;
+	
 	[SerializeField] private UnityEvent onPlayAnimation;
 	[SerializeField] private GameObject frontView;
 	[SerializeField] private GameObject upView;
 	[SerializeField] private WirePart wirePrefab;
 	[SerializeField] private GameObject startWirePoint;
 	[SerializeField] private GameObject targetWirePoint;
+	[SerializeField] private GameObject targetSphere;
 	[SerializeField] private float checkPuzzleDistance = 0.1f;
 	[SerializeField] private GameObject debug;
 	[SerializeField] private Collider backWall;
 	[SerializeField] private Collider downWall;
 	private WirePart _lastPart;
-	private List<WirePart> _parts = new List<WirePart>();
+	private readonly List<WirePart> _parts = new List<WirePart>();
 
 	private bool _cameraSwapped;
 
 	private bool _allowInput;
 	private bool _cameraMove;
-	
+	private static readonly int Open = Animator.StringToHash("Open");
+
 	private void Awake()
 	{
 		backButton.onClick.AddListener(OnBackButtonClick);
@@ -97,6 +99,13 @@ public class WireBoxPuzzle : Puzzle
 			var distanceToFinish = Vector3.Distance(_lastPart.mountPoint.position, targetWirePoint.transform.position);
 			if (distanceToFinish < checkPuzzleDistance)
 			{
+				_allowInput = false;
+				var vec = (_lastPart.transform.position - targetWirePoint.transform.position);
+				_lastPart.transform.forward = vec.normalized;
+				var s = _lastPart.transform.localScale; 
+				//0.12f is length of wirePart 
+				_lastPart.transform.localScale = new Vector3(s.x,s.y,0.12f * vec.magnitude);
+				targetSphere.gameObject.SetActive(true);
 				StartCoroutine(CompletePuzzle());
 			}
 			else
@@ -185,8 +194,9 @@ public class WireBoxPuzzle : Puzzle
 	{
 		yield return new WaitForSeconds(0.5f);
 		onPlayAnimation.Invoke();
-		boxAnimation.clip = openBox;
-		boxAnimation.Play();
+		doorsAnimator.SetBool(Open, true);
+		yield return new WaitForSeconds(0.5f);
+		tutorial.gameObject.SetActive(true);
 		InitializePuzzle();
 		_allowInput = true;
 	}
@@ -194,11 +204,15 @@ public class WireBoxPuzzle : Puzzle
 	private IEnumerator CompletePuzzle()
 	{
 		_allowInput = false;
+		if (_cameraSwapped)
+		{
+			yield return SwapCameraFront();
+		}
 		onPuzzleComplete.Invoke();
+		tutorial.gameObject.SetActive(false);
 		yield return new WaitForSeconds(0.5f);
 		onPlayAnimation.Invoke();
-		boxAnimation.clip = closeBox;
-		boxAnimation.Play();
+		doorsAnimator.SetBool(Open, false);
 		yield return new WaitForSeconds(0.7f);
 		state.Set(EState.Complete);
 		gameObject.SetActive(false);
@@ -207,10 +221,10 @@ public class WireBoxPuzzle : Puzzle
 	private IEnumerator StopPuzzleCor()
 	{
 		_allowInput = false;
+		tutorial.gameObject.SetActive(false);
 		yield return new WaitForSeconds(0.2f);
 		onPlayAnimation.Invoke();
-		boxAnimation.clip = closeBox;
-		boxAnimation.Play();
+		doorsAnimator.SetBool(Open, false);
 		gameObject.SetActive(false);
 	}
 
