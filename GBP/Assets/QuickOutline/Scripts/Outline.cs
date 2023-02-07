@@ -136,7 +136,7 @@ public class Outline : MonoBehaviour
 
 	public void TestMethod()
 	{
-		Debug.Log("Do Some");
+		Debug.Log("Do Some 2");
 	}
 
 	void OnValidate()
