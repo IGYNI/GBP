@@ -1,3 +1,5 @@
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class MoveItemInteraction : ItemInteraction
@@ -7,8 +9,8 @@ public class MoveItemInteraction : ItemInteraction
     [SerializeField] private Transform targetPoint;
     [SerializeField] private Transform view;
     [SerializeField] private GameAction OnInteract;
+    [SerializeField] private float pushTime = 0.6f;
 
-    private bool _started;
     private bool _finished;
 
     private float _timer;
@@ -23,23 +25,19 @@ public class MoveItemInteraction : ItemInteraction
 
     public override void Interact(VariableSystem variableSystem)
     {
-        _started = true;
         variableSystem.SetVariable(item.info.itemName + Item.MovedSuffix, "true", true);
         OnInteract.Invoke(item.gameObject, variableSystem);
+        StartCoroutine(PushCor());
         onInteract.Invoke();
     }
 
-    private void Update()
+    private IEnumerator PushCor()
     {
-        if (_started && !_finished)
-        {
-            Interactable = false;
-            var t = Mathf.Clamp01(_timer / InteractionTime);
-            view.position = Vector3.Lerp(originPoint.position, targetPoint.position, t);
-            view.rotation = Quaternion.Lerp(originPoint.rotation, targetPoint.rotation, t);
-            _timer += Time.deltaTime;
-            _finished = _timer >= InteractionTime;
-        }
+        Interactable = false;
+        yield return new WaitForSeconds(0.5f);
+        view.DORotate(targetPoint.eulerAngles, pushTime);
+        yield return view.DOMove(targetPoint.position, pushTime);
+        _finished = true;
     }
 
     public override void LoadState(VariableSystem variableSystem)

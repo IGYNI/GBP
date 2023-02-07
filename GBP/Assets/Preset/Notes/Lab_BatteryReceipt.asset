@@ -25,7 +25,7 @@ MonoBehaviour:
   isReceipt: 1
   receipt:
     screenName: Reactor Battery
-    fabricationTime: 5
+    fabricationTime: 14
     requiredItems:
     - {fileID: 11400000, guid: 33e178ac0a446794a87b73db0cc164a1, type: 2}
     - {fileID: 11400000, guid: dbae26a6acc51654c8b94203373c47b2, type: 2}

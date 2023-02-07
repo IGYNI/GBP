@@ -67,6 +67,7 @@ public class GeneratorPuzzle : Puzzle
     [SerializeField] private UnityEvent onPuzzleComplete;
     [SerializeField] private float completeDelayTime = 2f;
     [SerializeField] private Button backButton;
+    [SerializeField] private Slider reactorPower;
     
     private Outline _currentHover;
     private float _checkTime;
@@ -84,6 +85,7 @@ public class GeneratorPuzzle : Puzzle
             offObject.gameObject.SetActive(false);
         }
         state.Set(EState.Processing);
+        InitPuzzle();
     }
 
     private void OnDisable()
@@ -146,13 +148,26 @@ public class GeneratorPuzzle : Puzzle
         }
 
 
-        if (_checkTime > 0.5f)
+        if (_checkTime > 2f)
         {
             CheckPuzzle();
             _checkTime = 0f;
         }
+        UpdatePowerGauge();
 
         _checkTime += Time.deltaTime;
+    }
+
+    private void UpdatePowerGauge()
+    {
+        float power = 0f;
+        foreach (RingHandler ringHandler in rings)
+        {
+            var maxPowerSection = ringHandler.inputPositions[ringHandler.puzzleTargetPosition];
+            power += ringHandler.generatorRing.CurrentSpeed / maxPowerSection.speed;
+        }
+        
+        reactorPower.value = power / rings.Count;
     }
 
     private void UpdateHover(RaycastHit hitInfo)
@@ -183,6 +198,10 @@ public class GeneratorPuzzle : Puzzle
 
     private void CheckPuzzle()
     {
+        if (_checkResult == null)
+        {
+            _checkResult = new bool[rings.Count];
+        }
         for (var i = 0; i < _checkResult.Length; i++)
         {
             _checkResult[i] = false;

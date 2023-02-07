@@ -9752,7 +9752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6951356686118717833, guid: cc381483337c0b744a5cb101988f99fe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.71
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6951356686118717833, guid: cc381483337c0b744a5cb101988f99fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9760,7 +9760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6951356686118717833, guid: cc381483337c0b744a5cb101988f99fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.67
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: -6951356686118717833, guid: cc381483337c0b744a5cb101988f99fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14141,7 +14141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateObject: {fileID: 622901291}
   ringRender: {fileID: 0}
-  acceleration: 5
+  acceleration: 2
   initialSpeed: -7
 --- !u!1 &726859305
 GameObject:
@@ -16795,7 +16795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateObject: {fileID: 1312162724}
   ringRender: {fileID: 0}
-  acceleration: 5
+  acceleration: 2
   initialSpeed: 35
 --- !u!1 &1345222132
 GameObject:
@@ -17208,7 +17208,7 @@ MonoBehaviour:
       speed: -90
     - targetRotation: {fileID: 1685188399}
       speed: -60
-    currentPosition: 3
+    currentPosition: 2
     puzzleTargetPosition: 2
   stateView: {fileID: 494534787}
   onPuzzleComplete:
@@ -17216,6 +17216,7 @@ MonoBehaviour:
       m_Calls: []
   completeDelayTime: 2
   backButton: {fileID: 1537510964}
+  reactorPower: {fileID: 543808543991310686}
 --- !u!1 &1531014950
 GameObject:
   m_ObjectHideFlags: 0
@@ -17725,7 +17726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateObject: {fileID: 1916758825}
   ringRender: {fileID: 0}
-  acceleration: 5
+  acceleration: 2
   initialSpeed: 13
 --- !u!1 &1945781660
 GameObject:
@@ -18401,21 +18402,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4518417513826559167, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485654563673202417, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485654563673202417, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.87
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+--- !u!114 &543808543991310686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1135573742404528906, guid: 57b77ccb945aed04a970474a96dd2174, type: 3}
+  m_PrefabInstance: {fileID: 543808543991310685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7427642743918022988
 PrefabInstance:
   m_ObjectHideFlags: 0

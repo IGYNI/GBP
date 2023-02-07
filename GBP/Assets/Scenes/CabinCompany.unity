@@ -11232,7 +11232,7 @@ MonoBehaviour:
     interactionMode: 0
     interactionSpot: {fileID: 0}
     interactionRadius: 0.5
-  overview: 
+  overview: hatch to the technical room
   exitPointName: CabinCompany
   nextSceneInfo:
     sceneName: Laboratory

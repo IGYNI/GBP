@@ -5,6 +5,7 @@ namespace Player.Commands
 	public class IdleInteract : IPlayerAction
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.IdleInteract;
+		public bool Failed => false;
 		
 		
 		private float _timer;
@@ -25,7 +26,7 @@ namespace Player.Commands
 			return _completed;
 		}
 
-		public void Update()
+		public bool Update()
 		{
 			if (!_started)
 			{
@@ -37,6 +38,8 @@ namespace Player.Commands
 			{
 				_completed = true;
 			}
+
+			return true;
 		}
 	}
 }

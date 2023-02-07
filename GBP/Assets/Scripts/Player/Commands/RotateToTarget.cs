@@ -5,6 +5,7 @@ namespace Player.Commands
 	public class RotateToTarget : IPlayerAction
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.Idle;
+		public bool Failed => false;
 		private readonly PlayerController _player;
 		private readonly Vector3 _target;
 
@@ -20,9 +21,10 @@ namespace Player.Commands
 			return Vector3.Dot(_player.transform.forward, _target) > 0.99f;
 		}
 
-		public void Update()
+		public bool Update()
 		{
 			_player.transform.forward = Vector3.Slerp(_player.transform.forward, _target, Time.deltaTime * 8);
+			return true;
 		}
 	}
 }

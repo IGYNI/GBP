@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skipText: {fileID: 1780171472}
   nextSceneInfo:
-    sceneName: MainMenu
+    sceneName: Credits
     instant: 0
     hints: []
     images: []

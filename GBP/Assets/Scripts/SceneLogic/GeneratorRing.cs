@@ -7,6 +7,7 @@ public class GeneratorRing : MonoBehaviour
 	public float acceleration = 5;
 	public float initialSpeed = 5;
 	private float _targetSpeed;
+	public float CurrentSpeed { get; private set; }
 
 	private void Start()
 	{
@@ -21,6 +22,7 @@ public class GeneratorRing : MonoBehaviour
 	private void Update()
 	{
 		rotateObject.speed = Mathf.Lerp(rotateObject.speed, _targetSpeed, Time.deltaTime * acceleration);
+		CurrentSpeed = rotateObject.speed; 
 	}
 }
 

@@ -24,14 +24,9 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private LayerMask groundLayer;
 	[SerializeField] private LayerMask interactable;
 
-
-	public IObservableVar<ItemInteraction> ActiveItem => _activeItem;
 	public IObservableVar<ItemInteraction> HoveredItem => _hoveredItem;
-	public string currentAction;
-
-	//public UIItemInfo itemInfo;
-
-	private readonly ObservableVar<ItemInteraction> _activeItem = new ObservableVar<ItemInteraction>();
+	public IReadOnlyCollection<IPlayerAction> Actions => _playerActions;
+	
 	private readonly ObservableVar<ItemInteraction> _hoveredItem = new ObservableVar<ItemInteraction>();
 
 	private PlayerState _previousState;
@@ -43,10 +38,6 @@ public class PlayerController : MonoBehaviour
 
 	private readonly ObservableVar<PlayerState> _playerState = new ObservableVar<PlayerState>();
 
-	
-	private string _sceneName;
-
-
 	private void Awake()
 	{
 		_navMeshAgent = GetComponent<NavMeshAgent>();
@@ -56,20 +47,8 @@ public class PlayerController : MonoBehaviour
 	{
 		_raycastCamera = Camera.main;
 		_currentAction = _idleAction;
-		ActiveItem.OnValueChanged += OnSelectItem;
-		_sceneName = SceneManager.GetActiveScene().name;
 	}
 	
-	private void OnDestroy()
-	{
-		ActiveItem.OnValueChanged -= OnSelectItem;
-	}
-
-	private void OnSelectItem(ItemInteraction previous, ItemInteraction item)
-	{
-		InteractWith(item);
-	}
-
 	public void SetDestination(Vector3 destination)
 	{
 		_navMeshAgent.destination = destination;
@@ -100,6 +79,9 @@ public class PlayerController : MonoBehaviour
 
 			if (Physics.Raycast(mRay.origin, mRay.direction, out RaycastHit hitInfo, 100, groundLayer))
 			{
+				if (Vector3.Distance(hitInfo.point, transform.position) < 1f)
+					return;
+				
 				NavMeshPath navMeshPath = new NavMeshPath();
 				if (_navMeshAgent.CalculatePath(hitInfo.point, navMeshPath) && navMeshPath.status == NavMeshPathStatus.PathComplete)
 				{
@@ -143,9 +125,9 @@ public class PlayerController : MonoBehaviour
 
 					_hoveredItem.Value.outline.OutlineWidth = itemOutlineWidth;
 
-					if (Input.GetMouseButtonDown(0))
+					if (Input.GetMouseButtonDown(0) && _currentAction == _idleAction)
 					{
-						_activeItem.Set(item);
+						InteractWith(item);
 					} 
 					else if (Input.GetMouseButtonDown(1))
 					{
@@ -168,9 +150,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 				else
-				{
-					UnHoverItem();	
-				}
+					UnHoverItem();
 			}
 			else
 				UnHoverItem();
@@ -189,7 +169,7 @@ public class PlayerController : MonoBehaviour
 
 	private void UpdateActions()
 	{
-		if (_currentAction == _idleAction || _currentAction.Completed())
+		if (_currentAction == _idleAction || _currentAction.Completed() || _currentAction.Failed)
 		{
 			if (_playerActions.Count > 0)
 			{
@@ -201,14 +181,20 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
-		Debug.Assert(_currentAction != null, "[Player] Current Action is null!");
-
-		_currentAction.Update();
-		currentAction = _currentAction.ToString();
+		var success = _currentAction.Update();
+		if (!success)
+		{
+			_playerActions.Clear();
+		}
 		_playerState.SetOnce(_currentAction.State);
 	}
 
-	public void InteractWith(ItemInteraction item)
+	public string GetCurrentAction()
+	{
+		return _currentAction.ToString();
+	}
+
+	private void InteractWith(ItemInteraction item)
 	{
 		switch (item.interactionInfo.interactionMode)
 		{

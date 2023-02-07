@@ -5,6 +5,7 @@ namespace Player.Commands
 	public class UseItem : IPlayerAction
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.UseItem;
+		public bool Failed => false;
 		
 		private float _timer;
 		private bool _completed;
@@ -24,7 +25,7 @@ namespace Player.Commands
 			return _completed;
 		}
 
-		public void Update()
+		public bool Update()
 		{
 			if (!_started)
 			{
@@ -36,6 +37,7 @@ namespace Player.Commands
 			{
 				_completed = true;
 			}
+			return true;
 		}
 	}
 }

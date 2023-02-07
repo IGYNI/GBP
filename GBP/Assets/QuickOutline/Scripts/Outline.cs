@@ -98,6 +98,19 @@ public class Outline : MonoBehaviour {
     // Apply material properties immediately
     needsUpdate = true;
   }
+  
+  [ContextMenu("Cleanup Static Data")]
+  private void CleanupStaticData()
+  {
+    registeredMeshes.Clear();
+  }
+
+  [ContextMenu("Cleanup Baked Data")]
+  private void CleanupBakeData()
+  {
+    bakeKeys.Clear();
+    bakeValues.Clear();
+  }
 
   void OnEnable() {
     foreach (var renderer in renderers) {
@@ -194,7 +207,7 @@ public class Outline : MonoBehaviour {
       // Store smooth normals in UV3
 #if UNITY_EDITOR
       
-      Debug.Log($"Try to set outline on {gameObject.name}");
+      Debug.Log($"Try to set outline on {gameObject.name}", gameObject);
 #endif
       meshFilter.sharedMesh.SetUVs(3, smoothNormals);
 

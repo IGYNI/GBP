@@ -5,6 +5,7 @@ namespace Player.Commands
 	public class TakeItem : IPlayerAction
 	{
 		public PlayerController.PlayerState State => PlayerController.PlayerState.TakeItem;
+		public bool Failed => false;
 		private readonly ItemInteraction _item;
 		private readonly VariableSystem _variableSystem;
 		private readonly PlayerController _player;
@@ -25,7 +26,7 @@ namespace Player.Commands
 			return _completed;
 		}
 
-		public void Update()
+		public bool Update()
 		{
 			if (!_started)
 			{
@@ -38,6 +39,8 @@ namespace Player.Commands
 				_item.Interact(_variableSystem);
 				_completed = true;
 			}
+
+			return true;
 		}
 	}
 }
