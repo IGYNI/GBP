@@ -11040,6 +11040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImageInCabinCompany
       objectReference: {fileID: 0}
+    - target: {fileID: 6961396624128271414, guid: 4bc6b430fe71fe84b8b43716bf02baa1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6961396624128271417, guid: 4bc6b430fe71fe84b8b43716bf02baa1, type: 3}
       propertyPath: m_fontSize
       value: 13.09
