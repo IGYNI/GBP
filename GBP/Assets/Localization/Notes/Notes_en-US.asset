@@ -110,6 +110,52 @@ MonoBehaviour:
       and it was no worse than my favorite character in Orwell's 1984.
     m_Metadata:
       m_Items: []
+  - m_Id: 32822205902848
+    m_Localized: Safe Code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32856351731712
+    m_Localized: In case dementia overcomes me - the password to the safe is 1234
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34431510016000
+    m_Localized: Analyzer Log
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34523428188160
+    m_Localized: "\"Analysis result: [PART OF THE ROOT] \n- The original substance
+      under normal conditions produces oxygen under low voltage.\n[MUTATION DETECTED].\n-
+      The mutated sample has ultra-high energy consumption and unstable growth.\n[CONCLUSION]\n-
+      To stabilize sample growth, the sample must be deprived of power.\n- To destroy
+      the sample, a strong current must be applied.\n\n[WARNING]\nLow energy level
+      in the main reactor!\nThe reactor requires fuel to operate. Use this fabricator
+      program to make a fuel cell:\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35482581626880
+    m_Localized: War in Ukraine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35568212537344
+    m_Localized: '"For almost a year now, brave defenders of our country, in the
+      ranks of the Armed Forces, have been defending our lives and freedom day and
+      night.
+
+
+      Bravely opposing the enemy, they give us the opportunity to
+      do what we love - create games.
+
+
+      It is impossible to express our gratitude
+      to our heroes in words.
+
+
+      We only want to say:
+
+      We believe in victory!
+      Glory to the Armed Forces of Ukraine! Glory to Ukraine!"'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

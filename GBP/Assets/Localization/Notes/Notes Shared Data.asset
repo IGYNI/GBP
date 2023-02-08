@@ -71,6 +71,30 @@ MonoBehaviour:
     m_Key: notebook_note_6
     m_Metadata:
       m_Items: []
+  - m_Id: 32822205902848
+    m_Key: notebook_captainCode_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32856351731712
+    m_Key: notebook_captainCode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34431510016000
+    m_Key: notebook_batteryReceipt_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34523428188160
+    m_Key: notebook_batteryReceipt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35482581626880
+    m_Key: notebook_Ukraine_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35568212537344
+    m_Key: notebook_Ukraine
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

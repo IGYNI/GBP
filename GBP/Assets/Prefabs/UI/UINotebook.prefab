@@ -441,7 +441,7 @@ Transform:
   m_Children:
   - {fileID: 963774453050345311}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &460119065942930245
 MonoBehaviour:
@@ -496,8 +496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478.5, y: -220.58499}
-  m_SizeDelta: {x: 957, y: 353.33}
+  m_AnchoredPosition: {x: 478.5, y: -152.59375}
+  m_SizeDelta: {x: 957, y: 101.0625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844892685435487066
 MonoBehaviour:
@@ -874,8 +874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478.5, y: -414.25}
-  m_SizeDelta: {x: 957, y: 6}
+  m_AnchoredPosition: {x: 478.5, y: -365.71875}
+  m_SizeDelta: {x: 957, y: 103.0625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2140365109860618044
 CanvasRenderer:
@@ -969,8 +969,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478.5, y: -404.25}
-  m_SizeDelta: {x: 957, y: 4}
+  m_AnchoredPosition: {x: 478.5, y: -258.65625}
+  m_SizeDelta: {x: 957, y: 101.0625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3667082569074353481
 MonoBehaviour:
@@ -1266,6 +1266,7 @@ GameObject:
   - component: {fileID: 5133084287954804607}
   - component: {fileID: 7108961616072844543}
   - component: {fileID: 7167293146947692690}
+  - component: {fileID: 5259862482749934014}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -1290,8 +1291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478.5, y: -19.46}
-  m_SizeDelta: {x: 957, y: 38.92}
+  m_AnchoredPosition: {x: 478.5, y: -48.53125}
+  m_SizeDelta: {x: 957, y: 97.0625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7108961616072844543
 CanvasRenderer:
@@ -1321,7 +1322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Header
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14670fa0417c365488a1b6b4cba421bd, type: 2}
   m_sharedMaterial: {fileID: 4772403404106059873, guid: 14670fa0417c365488a1b6b4cba421bd, type: 2}
@@ -1390,6 +1391,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5259862482749934014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588480968517345041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7167293146947692690}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5085568605561963261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,8 +1513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abde0c25f12461a852963dc43fa0712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: {fileID: 7167293146947692690}
-  note: {fileID: 5030895473340391700}
+  localizedHeader: {fileID: 5259862482749934014}
+  localizedNote: {fileID: 3319946870604144288}
   receiptView: {fileID: 2751365205112527841}
   highlight: {fileID: 675767678175267159}
 --- !u!1 &6514301487290172818
@@ -1827,6 +1868,7 @@ GameObject:
   - component: {fileID: 2220638790598288421}
   - component: {fileID: 2578049276064902435}
   - component: {fileID: 5030895473340391700}
+  - component: {fileID: 3319946870604144288}
   m_Layer: 5
   m_Name: Note
   m_TagString: Untagged
@@ -1851,8 +1893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478.5, y: -178.665}
-  m_SizeDelta: {x: 945, y: 349.33}
+  m_AnchoredPosition: {x: 6, y: -52.53125}
+  m_SizeDelta: {x: 0, y: 97.0625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2578049276064902435
 CanvasRenderer:
@@ -1882,13 +1924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Diary entry #135 Project: GHA-47t Senior Scientist: Classified.   Went
-    over the reports today and the test results are disappointing. The mass growth
-    of the underlying sample was 220 percent of the original. It appears the protein
-    in the syrovotca has mutated into a parasitic form that has taken over the nerve
-    system of the test specimen. The information gathered over a couple of days is
-    enough to conclude that we have no way to remove this parasite. One more thing,
-    maybe it''s just me, but today I saw this thing feeding to get out of its cell.'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96021fc411263344ebb58b0fcadbc762, type: 2}
   m_sharedMaterial: {fileID: -1777093897791204764, guid: 96021fc411263344ebb58b0fcadbc762, type: 2}
@@ -1957,6 +1993,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3319946870604144288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541124071097189296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5030895473340391700}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8951949374308838826
 GameObject:
   m_ObjectHideFlags: 0
