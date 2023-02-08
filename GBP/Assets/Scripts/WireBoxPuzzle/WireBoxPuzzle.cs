@@ -92,7 +92,7 @@ public class WireBoxPuzzle : Puzzle
 		{
 			OnCollide.Invoke();
 			DestroyWires();
-			Debug.Log("OOOPS");
+			//Debug.Log("OOOPS");
 			InitializePuzzle();
 		}
 		else
@@ -102,7 +102,7 @@ public class WireBoxPuzzle : Puzzle
 			if (vec.magnitude < checkPuzzleDistance)
 			{
 				_allowInput = false;
-				Debug.Log(vec.magnitude);
+				//Debug.Log(vec.magnitude);
 				_lastPart.Freeze();
 				_lastPart.transform.forward = vec.normalized*-1;
 				var s = _lastPart.transform.localScale;
