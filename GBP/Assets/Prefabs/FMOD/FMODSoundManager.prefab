@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &775693762
 MonoBehaviour:
@@ -168,6 +168,20 @@ MonoBehaviour:
       Data3: 1502015395
       Data4: 1056783654
     Path: event:/Ambience/Ambience
+  <shortCircuit>k__BackingField:
+    Guid:
+      Data1: -1380964744
+      Data2: 1282605860
+      Data3: 1586129300
+      Data4: 914996545
+    Path: event:/Sfx/short_circuit
+  <shortCircuitDone>k__BackingField:
+    Guid:
+      Data1: 76222837
+      Data2: 1244683501
+      Data3: 2064537023
+      Data4: -1040786441
+    Path: event:/Sfx/short_circuit_connect
   <mainTheme>k__BackingField:
     Guid:
       Data1: 2133568196
