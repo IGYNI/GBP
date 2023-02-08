@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Notes Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Notes
+  m_TableCollectionNameGuidString: 07f462e51151bc64bb4804e2d314aace
+  m_Entries:
+  - m_Id: 60749017088
+    m_Key: notebook_note_1_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 563310522368
+    m_Key: notebook_note_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26506741706752
+    m_Key: notebook_note_2_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26548982542336
+    m_Key: notebook_note_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27011320672256
+    m_Key: notebook_note_3_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27144213000192
+    m_Key: notebook_note_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27197564547072
+    m_Key: notebook_note_3a_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308432584704
+    m_Key: notebook_note_3a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27528952311808
+    m_Key: notebook_note_4_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27613639503872
+    m_Key: notebook_note_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27655465103360
+    m_Key: notebook_note_5_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27731897905152
+    m_Key: notebook_note_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27786767790080
+    m_Key: notebook_note_6_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27915855884288
+    m_Key: notebook_note_6
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1846551896048795648
+  references:
+    version: 2
+    RefIds:
+    - rid: 1846551896048795648
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1675819476968

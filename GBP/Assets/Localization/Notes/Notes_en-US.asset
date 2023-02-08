@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Notes_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 07f462e51151bc64bb4804e2d314aace, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 60749017088
+    m_Localized: Project log #128
+    m_Metadata:
+      m_Items: []
+  - m_Id: 563310522368
+    m_Localized: 'Project: GHA-47. Senior Scientist: Classified. "Today we finally
+      succeeded in synthesizing protein molecules compatible with the test sample.
+      Tomorrow, we''ll be able to start the production of the serum prototype. After
+      so many days of failures, I was beginning to doubt the success of the project,
+      but now everything has changed. Now the issue of increased funding is just
+      a formality."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26506741706752
+    m_Localized: Project log #135
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26548982542336
+    m_Localized: 'Project: GHA-47. Senior researcher: Classified. "Today I reviewed
+      the reports, the test results are disappointing. The weight of the test sample
+      has increased by 220% of the initial weight. It seems that the protein in the
+      serum has mutated into a parasitic form. The information collected over the
+      past few days is enough to conclude that we are not controlling the growth
+      of the sample. And one more thing, maybe I''m imagining things, but today I
+      saw this substance take root from the secure container."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27011320672256
+    m_Localized: Project log #140
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27144213000192
+    m_Localized: 'Project: GHA-47. Senior researcher: Classified. "The sample got
+      out of the container and began to grow at an incredible rate. The engineer
+      noticed roots in the main reactor compartment. It sounds crazy, but it seems
+      that the sample is trying to somehow feed on the reactor''s energy and at the
+      same time spread through the ship like a virus."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27197564547072
+    m_Localized: Project log #143
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308432584704
+    m_Localized: 'Project: GHA-47 Senior researcher: "The roots got to the command
+      bridge and blocked the automatic doors, which means we have no way to send
+      a SOS signal. The captain has developed a plan: the station has an emergency
+      entrance to the bridge through the outer plating. Someone has to get into the
+      hangar, put on a spacesuit, go into outer space, and get to the bridge. To
+      do this, he needs my help. Why do I think this is a bad idea?"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27528952311808
+    m_Localized: ROOTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27613639503872
+    m_Localized: '"Goddamn it, that thing pierced me! I barely made it to the reactor
+      room, but the damn terminal is locked down! Access is by captain''s key card
+      only. The bastard must have taken it with him when he first left the station!
+      Or he''s dead somewhere, cowering in a dark corner!
+
+
+      ...It looks like
+      a serious wound. I don''t have much time. I''ll try to hack the terminal."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27655465103360
+    m_Localized: Memuars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27731897905152
+    m_Localized: I've had it up to here, I've had it! Why did I take this job? I
+      should have gotten a job as an engineer at a regular company, on a regular
+      project, not here! They paid a lot less, but this wouldn't have happened there.
+      All right, I got to think about what to do next. From what the lab guys tell
+      me, this thing feeds off the reactor's energy. And looking at the data coming
+      directly from the reactor room, it's clear that it's doing it carefully, because
+      the reactor itself hasn't shut down yet, and the ship's power hasn't been lost.
+      Maybe if you crank up the power to 100% it will choke out. Of course it is
+      dangerous to do this, but I do not see any other options.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27786767790080
+    m_Localized: The last words of a laboratory assistant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27915855884288
+    m_Localized: My life was full of adventures, discoveries, and interesting work,
+      and it was no worse than my favorite character in Orwell's 1984.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
