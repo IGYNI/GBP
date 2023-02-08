@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerClickHandler
+public class ItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField] private Image icon;
 	public bool isFull;
@@ -33,6 +33,25 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 		if (ItemHandler != null && _itemInfo != null)
 		{
 			ItemHandler.ProcessItem(_itemInfo);
+		}
+	}
+
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+		if (_itemInfo != null)
+		{
+			if (VariableSystem.Instance != null)
+			{
+				VariableSystem.Instance.ItemOverview.SetItemInfo(_itemInfo);
+			}
+		}
+	}
+
+	public void OnPointerExit(PointerEventData eventData)
+	{
+		if (VariableSystem.Instance != null)
+		{
+			VariableSystem.Instance.ItemOverview.SetItemInfo((ItemInfo)null);
 		}
 	}
 }

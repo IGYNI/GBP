@@ -3,12 +3,14 @@ using System.Collections;
 using Cysharp.Threading.Tasks;
 using SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CutSceneController : BaseSceneController
 {
 	[SerializeField] private GameObject skipText;
 	[SerializeField] private SerializedSceneInfo nextSceneInfo;
 	[SerializeField] private float waitSkipTimer = 3;
+	[SerializeField] private UnityEvent onLeaveScene;
 
 	private bool _skip;
 	private bool _loadComplete;
@@ -60,6 +62,12 @@ public class CutSceneController : BaseSceneController
 	{
 		await UniTask.Yield();
 		progress.Report(new LoadingProgress() { progress = 1f });
+	}
+
+	public override async UniTask Unload()
+	{
+		onLeaveScene.Invoke();
+		await UniTask.Yield();
 	}
 
 	public override void OnLoadComplete()

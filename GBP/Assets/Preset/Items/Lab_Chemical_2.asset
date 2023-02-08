@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lab_Chemical_2
   screenName: Chemical Ingredient 2
-  description: 
+  description: A catalyst liqud for creating something in a fabricator
   icon: {fileID: -1248792902, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

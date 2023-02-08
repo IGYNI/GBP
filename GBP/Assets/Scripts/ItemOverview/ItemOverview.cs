@@ -4,16 +4,17 @@ using UnityEngine;
 public class ItemOverview : MonoBehaviour
 {
 	[SerializeField] private TMP_Text overviewText;
-	[SerializeField] private float overviewTime = 3f;
+	[SerializeField] private float showTime = 5f;
 
 	private bool _isShow;
 	private float _showTimer;
 	private float _wait;
-	
+	private ItemInteraction _itemInteraction;
+
 	public void ShowOverview(string text, float time = -1)
 	{
-		if (string.IsNullOrEmpty(text))
-			return;
+		// if (string.IsNullOrEmpty(text))
+		// 	return;
 		
 		_isShow = true;
 		_showTimer = 0f;
@@ -21,7 +22,43 @@ public class ItemOverview : MonoBehaviour
 		overviewText.text = text;
 		if (time <= -1)
 		{
-			_wait = overviewTime;
+			_wait = showTime;
+		}
+	}
+
+	public void SetItemInfo(ItemInfo itemInfo)
+	{
+		if (itemInfo != null)
+		{
+			overviewText.text = itemInfo.description;
+		}
+		else
+		{
+			ShowOverview("");
+			//overviewText.text = "";
+		}
+	}
+
+	public void SetItemInfo(ItemInteraction itemInteraction)
+	{
+		_itemInteraction = itemInteraction;
+		if (_itemInteraction != null)
+		{
+			var info = itemInteraction.GetOverviewInfo(VariableSystem.Instance);
+#if UNITY_EDITOR
+			if (string.IsNullOrEmpty(info))
+			{
+				Debug.LogWarning($"[ItemOverview] Overview not set on {itemInteraction.gameObject.name}");
+				UnityEditor.Selection.activeGameObject = itemInteraction.gameObject;
+			}
+#endif
+			ShowOverview(info);
+		}
+		else
+		{
+			overviewText.text = "";
+			_isShow = false;
+			_showTimer = 0f;
 		}
 	}
 

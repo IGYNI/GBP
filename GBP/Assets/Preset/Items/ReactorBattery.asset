@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: ReactorBattery
   screenName: Reactor Battery
-  description: 
+  description: Fuel cell for main reactor
   icon: {fileID: -1465812580, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

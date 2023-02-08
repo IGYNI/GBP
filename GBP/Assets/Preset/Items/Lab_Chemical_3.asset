@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lab_Chemical_3
   screenName: Chemical Ingredient 3
-  description: 
+  description: Stored coolant liquid. required to creating something in a fabricator
   icon: {fileID: 1402704337, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

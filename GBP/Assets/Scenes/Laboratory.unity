@@ -236,8 +236,8 @@ MonoBehaviour:
     interactionRadius: 0
   condition: {fileID: 2450644}
   failConditionOverview: Analyzer Septum RDE-28 is a powerful thing. It can analyze
-    any material by breaking it down almost to molecules. Maybe I can analize a root
-    rart here
+    any material by breaking it down almost to molecules. Maybe It can analize a
+    part of root
   overview: Analyzer Septum RDE-28 is a powerful thing. It can analyze any material
     by breaking it down almost to molecules.
   analyzedItem: {fileID: 11400000, guid: c82bc4aee77b86d498ff8d7964a4c29a, type: 2}
@@ -2585,7 +2585,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 936261947}
     interactionRadius: 0
-  overviewInfo: Maybe I'll find something interesting there?
+  overviewInfo: Laboratory terminal. Maybe I'll find something interesting there?
   hiddenItem: {fileID: 0}
   noteInfo: {fileID: 11400000, guid: fd2387ab8f0db5f43991e89f4ae31294, type: 2}
 --- !u!114 &458186921
@@ -5577,7 +5577,7 @@ MonoBehaviour:
     interactionSpot: {fileID: 128289737}
     interactionRadius: 0
   failInfo: 
-  overviewInfo: 
+  overviewInfo: Door to the main corridor
   openDoorCondition: {fileID: 0}
   door: {fileID: 1332410853}
   exitPointName: Laboratory
@@ -14894,8 +14894,8 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 863006857}
     interactionRadius: 0
-  overviewInfo: The latest model of the Fabricator. You don't need to do anything,
-    just put the ingredients in, press the button and you're done
+  overviewInfo: The newest model of the machine. "You don't have to do anything,
+    just put in the ingredients, choose a program, and press a button. And it's done!"
   fabricator: {fileID: 1893250462}
 --- !u!1 &1615031574
 GameObject:
@@ -17706,6 +17706,11 @@ PrefabInstance:
     - target: {fileID: 1847427531846788208, guid: 024fe94b77e6a0c44958b7cbb0918e5b, type: 3}
       propertyPath: safeCode
       value: 1984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847427531846788208, guid: 024fe94b77e6a0c44958b7cbb0918e5b, type: 3}
+      propertyPath: overviewInfo
+      value: Laboratory refrigerator, locked with a combination lock. I think it's
+        locked for a reason
       objectReference: {fileID: 0}
     - target: {fileID: 1847427531846788212, guid: 024fe94b77e6a0c44958b7cbb0918e5b, type: 3}
       propertyPath: m_RootOrder

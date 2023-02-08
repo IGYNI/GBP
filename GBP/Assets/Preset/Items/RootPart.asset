@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: RootPart
   screenName: 
-  description: 
+  description: Strange root part
   icon: {fileID: 1610596310, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

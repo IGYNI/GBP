@@ -864,7 +864,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1285660708}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.39202413
+  m_Size: 0.3799589
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -970,8 +970,8 @@ GameObject:
   m_Component:
   - component: {fileID: 961739753}
   - component: {fileID: 961739752}
-  - component: {fileID: 961739751}
   - component: {fileID: 961739750}
+  - component: {fileID: 961739754}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1022,14 +1022,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &961739751
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961739749}
-  m_Enabled: 1
 --- !u!20 &961739752
 Camera:
   m_ObjectHideFlags: 0
@@ -1096,6 +1088,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961739754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &993333268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,15 +2100,14 @@ MonoBehaviour:
   m_text: 'Many thanks to our brave army, which defends our country and gave us the
     opportunity to create this game.
 
-    
 
-    Thanks to our friends and relatives
-    who do not let us down on this path
 
-    
+    Thanks to our friends and relatives who
+    do not let us down on this path
 
-    And thank you for playing our
-    game ;)'
+
+
+    And thank you for playing our game ;)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14670fa0417c365488a1b6b4cba421bd, type: 2}
   m_sharedMaterial: {fileID: 4772403404106059873, guid: 14670fa0417c365488a1b6b4cba421bd, type: 2}

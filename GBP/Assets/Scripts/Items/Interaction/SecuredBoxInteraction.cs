@@ -21,6 +21,10 @@ public class SecuredBoxInteraction : ItemInteraction
 
 	private void HandleLockState(Puzzle.EState prev, Puzzle.EState current)
 	{
+		if (current != Puzzle.EState.Processing)
+		{
+			outline.enabled = true;
+		}
 		if (current == Puzzle.EState.Complete)
 		{
 			_variableSystem.SetVariable(item.info.itemName + Item.UnlockedSuffix, "true", true);
@@ -53,6 +57,7 @@ public class SecuredBoxInteraction : ItemInteraction
 	{
 		onInteract.Invoke();
 		yield return new WaitForSeconds(0.5f);
+		outline.enabled = false;
 		codeLock.SetPassword(safeCode);
 		codeLock.Show();
 	}

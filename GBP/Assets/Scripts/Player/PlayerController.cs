@@ -3,7 +3,6 @@ using Player.Commands;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
@@ -47,6 +46,7 @@ public class PlayerController : MonoBehaviour
 	{
 		_raycastCamera = Camera.main;
 		_currentAction = _idleAction;
+		_hoveredItem.OnValueChanged += UpdateOverview;
 	}
 	
 	public void SetDestination(Vector3 destination)
@@ -59,6 +59,12 @@ public class PlayerController : MonoBehaviour
 		UpdateNavigation();
 		CheckItems();
 		UpdateActions();
+		UpdateHovering();
+	}
+
+	private void OnDestroy()
+	{
+		_hoveredItem.OnValueChanged -= UpdateOverview;
 	}
 
 	private void UpdateNavigation()
@@ -131,19 +137,6 @@ public class PlayerController : MonoBehaviour
 					} 
 					else if (Input.GetMouseButtonDown(1))
 					{
-						if (VariableSystem.Instance != null)
-						{
-							var info = _hoveredItem.Value.GetOverviewInfo(VariableSystem.Instance);
-#if UNITY_EDITOR
-							if (string.IsNullOrEmpty(info))
-							{
-								Debug.LogWarning($"[ItemOverview] Overview not set on {_hoveredItem.Value.gameObject.name}");
-								UnityEditor.Selection.activeGameObject = _hoveredItem.Value.gameObject;
-							}
-#endif
-							VariableSystem.Instance.ItemOverview.ShowOverview(info);
-						}
-						
 						var direction = item.transform.position - transform.position;
 						direction.y = 0f;
 						_playerActions.Enqueue(new RotateToTarget(this, direction.normalized));
@@ -187,6 +180,26 @@ public class PlayerController : MonoBehaviour
 			_playerActions.Clear();
 		}
 		_playerState.SetOnce(_currentAction.State);
+	}
+
+	private float _hoverTimer;
+	private void UpdateHovering()
+	{
+		if (_hoverTimer > 1f)
+		{
+			UpdateOverview(null, _hoveredItem.Value);
+			_hoverTimer = 0f;
+			
+		}
+		_hoverTimer += Time.deltaTime;
+	}
+
+	private void UpdateOverview(ItemInteraction prev, ItemInteraction current)
+	{
+		if (!EventSystem.current.IsPointerOverGameObject() && VariableSystem.Instance != null)
+		{
+			VariableSystem.Instance.ItemOverview.SetItemInfo(current);
+		}
 	}
 
 	public string GetCurrentAction()

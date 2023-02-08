@@ -1448,7 +1448,7 @@ Transform:
   - {fileID: 1151725056}
   - {fileID: 1541734284}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203844586
 GameObject:
@@ -26019,7 +26019,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 419079034}
     interactionRadius: 0
-  overview: Reactor door panel. Damn, the wires are cut, but I think if you connect
+  overview: Reactor room door panel. Damn, the wires are cut, but I think if I connect
     them the door will work again
   puzzle: {fileID: 1430092702}
   onStartPuzzle:
@@ -26354,7 +26354,7 @@ Transform:
   - {fileID: 1405251341}
   - {fileID: 775787575}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799670893
 GameObject:
@@ -26401,7 +26401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8884640933894907492, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8884640933894907492, guid: 844ad189089180f4d86dba9ea5d31dbb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27234,7 +27234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -324.4, y: -42.785, z: 0}
 --- !u!1 &949824340
 GameObject:
@@ -27539,6 +27539,86 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534932049573618481, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856927116443027933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512043429617825035, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512043429617825035, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512043429617825035, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512043429617825035, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411928079110843687, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411928079110843687, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411928079110843687, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411928079110843687, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863849377222119811, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863849377222119811, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863849377222119811, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863849377222119811, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4616994162688286890, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
       propertyPath: m_Name
       value: VariableSystem
@@ -27585,6 +27665,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616994162688286933, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606011758906783985, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606011758906783985, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606011758906783985, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606011758906783985, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616081872280425894, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616081872280425894, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616081872280425894, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616081872280425894, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402561052246056373, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402561052246056373, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402561052246056373, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402561052246056373, guid: 07c7f8c7a5aa75541acf6976b5e2ea05, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -28287,54 +28415,14 @@ GameObject:
   - component: {fileID: 1244880689}
   - component: {fileID: 1244880688}
   - component: {fileID: 1244880687}
-  - component: {fileID: 1244880686}
-  - component: {fileID: 1244880685}
+  - component: {fileID: 1244880690}
   m_Layer: 0
-  m_Name: DockingRoomExitTrigger
+  m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1244880685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244880684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6615f056c384002409d624fd4b63eb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitPointName: Corridor
-  nextSceneInfo:
-    sceneName: DockingRoom
-    instant: 0
-    hints: []
-    images: []
---- !u!65 &1244880686
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244880684}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1244880687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28393,13 +28481,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244880684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9672, y: -0.02, z: -12.859}
-  m_LocalScale: {x: 3.2861125, y: 0.24999999, z: 1.9536709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.97101605, y: 0.6204089, z: 0.98915035}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1462370412}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1244880690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244880684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9811321, g: 0.73616636, b: 0.35542893, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &1249736857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4618108090775102, guid: 0f137b5c393c941479490a54310bf733, type: 3}
@@ -28434,7 +28540,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1269141508
 GameObject:
@@ -29211,8 +29317,9 @@ Transform:
   - {fileID: 1150862759}
   - {fileID: 5553936378518768918}
   - {fileID: 627233767}
+  - {fileID: 1462370412}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409345645
 MonoBehaviour:
@@ -29413,7 +29520,7 @@ Transform:
   - {fileID: 1421962981}
   - {fileID: 949824341}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1432602534 stripped
 Transform:
@@ -29446,6 +29553,105 @@ MonoBehaviour:
   checkVariables:
   - name: Corridor_Wirebox_unlocked
     value: true
+--- !u!1 &1462370411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462370412}
+  - component: {fileID: 1462370414}
+  - component: {fileID: 1462370413}
+  - component: {fileID: 1462370415}
+  m_Layer: 6
+  m_Name: DockingRoomTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462370412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462370411}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.9672, y: -0.02, z: -12.859}
+  m_LocalScale: {x: 3.3842, y: 0.40296, z: 1.9751}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1244880689}
+  m_Father: {fileID: 1409345644}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1462370413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462370411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0a286499413014299c8fb8bd33c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1462370414}
+  interactionTime: 1
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  outline: {fileID: 1244880690}
+  interactionInfo:
+    interactionMode: 0
+    interactionSpot: {fileID: 0}
+    interactionRadius: 0
+  overview: This passage leads to the docking room
+  exitPointName: Corridor
+  nextSceneInfo:
+    sceneName: DockingRoom
+    instant: 0
+    hints: []
+    images: []
+--- !u!114 &1462370414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462370411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0aa42fb1daf8844480eabe2943e3365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 11400000, guid: ace495d841b968e48a9b3e76cbf1ac35, type: 2}
+  interaction: {fileID: 1462370413}
+--- !u!65 &1462370415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462370411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1470798501
 GameObject:
   m_ObjectHideFlags: 0
@@ -29993,7 +30199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304496424760153970, guid: 423838cee3931834292b9a86e8224aa3, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5304496424760153970, guid: 423838cee3931834292b9a86e8224aa3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31257,7 +31463,7 @@ MonoBehaviour:
     interactionRadius: 0
   condition: {fileID: 2104889999}
   overview: Doot to Laboratory
-  failOverview: The door to the laboratory. I'm not going to fry myself
+  failOverview: Door on fire. I'm not going to fry myself
   usedItem: {fileID: 11400000, guid: d7e550af8d2988e4ab190dcdf905c039, type: 2}
   itemView: {fileID: 72174010}
   playerMountPoint: {fileID: 609697658}
@@ -31441,6 +31647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 1462370414}
   - {fileID: 221781838}
   - {fileID: 627233768}
   - {fileID: 688944188}
@@ -31459,8 +31666,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
       propertyPath: failInfo
-      value: It looks like this door leads to the reactor room. But it's blocked
-        by something
+      value: This door leads to the reactor room. But it's not working
+      objectReference: {fileID: 0}
+    - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
+      propertyPath: overviewInfo
+      value: This door leads to the reactor room
       objectReference: {fileID: 0}
     - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
       propertyPath: openDoorCondition
@@ -31681,7 +31891,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 5553936377849705770}
     interactionRadius: 0
-  overviewInfo: 
+  overviewInfo: I see a paper it his hand
   hiddenItem: {fileID: 0}
   noteInfo: {fileID: 11400000, guid: 08a7ab75e8bf2d0488fef06b7e197478, type: 2}
 --- !u!65 &5553936378518768917

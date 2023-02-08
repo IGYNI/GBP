@@ -1249,9 +1249,9 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 12158993}
     interactionRadius: 0
-  overview: This is where I came from. Somewhere out there is my ship.  Or maybe
-    to hell with this damn place?  On the ship, a new episode of The Last Of Us awaits
-    me
+  overview: This is the place where I came from. Somewhere out there, my ship is
+    waiting for me...  Or maybe it's a cursed place. There's a new episode of The
+    Last of Us waiting for me on the ship.
   exitPointName: DockingRoom
   nextSceneInfo:
     sceneName: StoryGameOverAlternative
@@ -5904,6 +5904,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957119976, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 972437179, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      propertyPath: m_text
+      value: Look around
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620390146, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3452083811997177940, guid: 33911f918ab5ef14baef7c64feb2dfeb, type: 3}
       propertyPath: m_Name
       value: Tutorial
