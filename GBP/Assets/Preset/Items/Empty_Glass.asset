@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Empty_Glass
   screenName: Empty Glass
-  description: Empty glass, it can contain some liquid
+  description: inv_Empty_Glass
   icon: {fileID: -1899984648, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

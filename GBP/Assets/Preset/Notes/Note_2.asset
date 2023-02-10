@@ -13,14 +13,8 @@ MonoBehaviour:
   m_Name: Note_2
   m_EditorClassIdentifier: 
   noteName: Note1
-  screenName: Note 135
-  text: 'Diary Entry #135 Project: GHA-47t Senior Scientist: Classified. Today I
-    reviewed the reports, the test results are disappointing. The increase in the
-    weight of the test sample was 220 percent of the initial weight. It seems that
-    the protein in the serum has mutated into a parasitic form that took over the
-    subject''s nervous system. The information collected over several days is enough
-    to conclude that we have no way to remove this parasite. And one more thing,
-    maybe it''s just me, but today I saw this thing trying to get out of its cell.'
+  screenName: notebook_note_2_header
+  text: notebook_note_2
   icon: {fileID: 0}
   isReceipt: 0
   receipt:

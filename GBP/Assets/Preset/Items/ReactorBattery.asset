@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ReactorBattery
   m_EditorClassIdentifier: 
   itemName: ReactorBattery
-  screenName: Reactor Battery
-  description: Fuel cell for main reactor
+  screenName: notebook_batteryReceiptCaption
+  description: inv_ReactorBattery
   icon: {fileID: -1465812580, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

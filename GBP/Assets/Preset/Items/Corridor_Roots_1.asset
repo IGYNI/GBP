@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Corridor_Roots_1
   screenName: Strange Roots
-  description: Part of root thing
+  description: 
   icon: {fileID: 0}

@@ -91,12 +91,16 @@ MonoBehaviour:
 
 
       Thanks to our friends and
-      relatives who do not let us down on this path
+      relatives who do not let us down on our path
 
 
 
       And thank you for playing
       our game ;)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132221753913344
+    m_Localized: Press Space to skip
     m_Metadata:
       m_Items: []
   references:

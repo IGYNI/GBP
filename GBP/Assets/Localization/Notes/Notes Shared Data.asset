@@ -307,6 +307,70 @@ MonoBehaviour:
     m_Key: item_lab_terminal
     m_Metadata:
       m_Items: []
+  - m_Id: 765976378109952
+    m_Key: inv_Captain_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766061073690624
+    m_Key: inv_Dock_Glove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766452624551936
+    m_Key: inv_Empty_Glass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766817940041728
+    m_Key: inv_Extinguisher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766900928540672
+    m_Key: inv_Lab_Chemical_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767112375988224
+    m_Key: inv_Lab_Chemical_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767417272528896
+    m_Key: inv_Lab_Chemical_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767881376460800
+    m_Key: inv_LaserCutter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768125912772608
+    m_Key: inv_ReactorBattery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768211963113472
+    m_Key: inv_RootPart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 771070901383168
+    m_Key: emptyLine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787133550587904
+    m_Key: item_hall_DockingDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792445514969088
+    m_Key: item_fabricator_run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792504667238400
+    m_Key: item_fabricator_receipts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794242736484352
+    m_Key: notebook_batteryReceiptCaption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795845031915520
+    m_Key: item_lab_deadScientist
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

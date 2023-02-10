@@ -13,12 +13,8 @@ MonoBehaviour:
   m_Name: Note_4
   m_EditorClassIdentifier: 
   noteName: Note1
-  screenName: ROOT THING
-  text: Damn! That thing stabbed me! I had such a hard time getting to the reactor
-    and it turned out that the terminal was blocked! Only the captain has access
-    now. That bastard must've been the first one to get off the ship! Or died in
-    some dark corner. Looks like it's a serious wound. I don't have much time. I'll
-    try to hack into the terminal.
+  screenName: notebook_note_4_header
+  text: notebook_note_4
   icon: {fileID: 0}
   isReceipt: 0
   receipt:

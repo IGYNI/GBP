@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: LaserCutter
   screenName: Laser Cutter
-  description: Laser cutted. Cat cut anything.
+  description: inv_LaserCutter
   icon: {fileID: -2046470119, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

@@ -1784,7 +1784,7 @@ MonoBehaviour:
     interactionSpot: {fileID: 5982649}
     interactionRadius: 0
   failInfo: 
-  overviewInfo: I smell food, there must be a kitchen
+  overviewInfo: item_hall_kitchenDoor
   openDoorCondition: {fileID: 0}
   door: {fileID: 381543245}
   exitPointName: Corridor
@@ -26019,8 +26019,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 419079034}
     interactionRadius: 0
-  overview: Reactor room door panel. Damn, the wires are cut, but I think if I connect
-    them the door will work again
+  overview: item_hall_wireBox
   puzzle: {fileID: 1430092702}
   onStartPuzzle:
     m_PersistentCalls:
@@ -26176,7 +26175,7 @@ MonoBehaviour:
     interactionSpot: {fileID: 366816746}
     interactionRadius: 0
   failInfo: 
-  overviewInfo: The door to the laboratory
+  overviewInfo: item_hall_LabDoor
   openDoorCondition: {fileID: 0}
   door: {fileID: 22579005}
   exitPointName: Corridor
@@ -28085,8 +28084,8 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 906149563}
     interactionRadius: 0
-  failInfo: The door to the cabin. It looks like it's broken.
-  overviewInfo: The door to the cabin company
+  failInfo: item_hall_cabinDoorFail
+  overviewInfo: item_hall_cabinDoor
   openDoorCondition: {fileID: 1150862763}
   door: {fileID: 1280958961}
   exitPointName: Corridor
@@ -28853,12 +28852,8 @@ MonoBehaviour:
     interactionSpot: {fileID: 960903200}
     interactionRadius: 0
   condition: {fileID: 1281216970}
-  overview: It seems that the roots have grown on purpose in this very place. It
-    would be nice to find out what they are made of, but it will not work to break
-    them off just like that.
-  failOverview: It seems that the roots have grown on purpose in this very place.
-    It would be nice to find out what they are made of, but it will not work to break
-    them off just like that.
+  overview: item_hall_roots_info
+  failOverview: item_hall_roots_failInfo
   usedItem: {fileID: 11400000, guid: 12b60d8789fbafa47b02504f78c1fc60, type: 2}
   itemView: {fileID: 0}
   playerMountPoint: {fileID: 0}
@@ -29317,11 +29312,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 688944185}
   - {fileID: 221781834}
   - {fileID: 1432602534}
   - {fileID: 1281216966}
   - {fileID: 2104889996}
+  - {fileID: 688944185}
   - {fileID: 1150862759}
   - {fileID: 5553936378518768918}
   - {fileID: 627233767}
@@ -29351,6 +29346,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1430092703}
     m_Modifications:
+    - target: {fileID: 662127576, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 662127577, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_text
+      value: item_tutorial_wirebox_AddWire
+      objectReference: {fileID: 0}
+    - target: {fileID: 662127577, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 662127577, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215081800, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215081801, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_text
+      value: item_tutorial_wirebox_FlipCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215081801, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215081801, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3452083810689109135, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.165
@@ -29410,13 +29437,131 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 662127575, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421962984}
+    - targetCorrespondingSourceObject: {fileID: 1215081799, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421962987}
   m_SourcePrefab: {fileID: 100100000, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
 --- !u!4 &1421962981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3452083811997177947, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
   m_PrefabInstance: {fileID: 1421962980}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1421962982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 662127575, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+  m_PrefabInstance: {fileID: 1421962980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1421962983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 662127577, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+  m_PrefabInstance: {fileID: 1421962980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1421962984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:07f462e51151bc64bb4804e2d314aace
+    m_TableEntryReference:
+      m_KeyId: 744078822895616
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1421962983}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
+--- !u!1 &1421962985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1215081799, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+  m_PrefabInstance: {fileID: 1421962980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1421962986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1215081801, guid: fd86ef185c7245a41a4586b16a567417, type: 3}
+  m_PrefabInstance: {fileID: 1421962980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421962985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1421962987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421962985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:07f462e51151bc64bb4804e2d314aace
+    m_TableEntryReference:
+      m_KeyId: 744145029984256
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1421962986}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1430092701
 GameObject:
   m_ObjectHideFlags: 0
@@ -29618,7 +29763,7 @@ MonoBehaviour:
     interactionMode: 0
     interactionSpot: {fileID: 0}
     interactionRadius: 0
-  overview: This passage leads to the docking room
+  overview: item_hall_DockingDoor
   exitPointName: Corridor
   nextSceneInfo:
     sceneName: DockingRoom
@@ -31470,8 +31615,8 @@ MonoBehaviour:
     interactionSpot: {fileID: 164182444}
     interactionRadius: 0
   condition: {fileID: 2104889999}
-  overview: Doot to Laboratory
-  failOverview: Door on fire. I'm not going to fry myself
+  overview: item_hall_fireLabDoor
+  failOverview: item_hall_fireLabDoorFail
   usedItem: {fileID: 11400000, guid: d7e550af8d2988e4ab190dcdf905c039, type: 2}
   itemView: {fileID: 72174010}
   playerMountPoint: {fileID: 609697658}
@@ -31674,11 +31819,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
       propertyPath: failInfo
-      value: This door leads to the reactor room. But it's not working
+      value: item_hall_generatorDoor_fail
       objectReference: {fileID: 0}
     - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
       propertyPath: overviewInfo
-      value: This door leads to the reactor room
+      value: item_hall_generatorDoor
       objectReference: {fileID: 0}
     - target: {fileID: 413606217034021696, guid: 51713ab20bc81da4b8d7a64afb13e0a6, type: 3}
       propertyPath: openDoorCondition
@@ -31899,7 +32044,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 5553936377849705770}
     interactionRadius: 0
-  overviewInfo: I see a paper it his hand
+  overviewInfo: item_hall_deadScientist
   hiddenItem: {fileID: 0}
   noteInfo: {fileID: 11400000, guid: 08a7ab75e8bf2d0488fef06b7e197478, type: 2}
 --- !u!65 &5553936378518768917
@@ -32092,6 +32237,7 @@ GameObject:
   - component: {fileID: 6574769498685883209}
   - component: {fileID: 6574769498685883211}
   - component: {fileID: 6574769498685883210}
+  - component: {fileID: 6574769498685883212}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -32216,6 +32362,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6574769498685883208}
   m_CullTransparentMesh: 1
+--- !u!114 &6574769498685883212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574769498685883208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:498cea1e95cba86488d7aed342c41b6c
+    m_TableEntryReference:
+      m_KeyId: 31952655380480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6574769498685883210}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &6574769499511835844
 GameObject:
   m_ObjectHideFlags: 0

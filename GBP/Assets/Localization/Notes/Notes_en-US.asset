@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27655465103360
-    m_Localized: Memuars
+    m_Localized: Diary entry
     m_Metadata:
       m_Items: []
   - m_Id: 27731897905152
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32856351731712
-    m_Localized: In case dementia overcomes me - the password to the safe is 1234
+    m_Localized: In case dementia overcomes me - the password to the safe is 0399
     m_Metadata:
       m_Items: []
   - m_Id: 34431510016000
@@ -137,23 +137,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 35568212537344
-    m_Localized: '"For almost a year now, brave defenders of our country, in the
-      ranks of the Armed Forces, have been defending our lives and freedom day and
-      night.
+    m_Localized: 'For almost a year now, brave defenders of our country, in the ranks
+      of the Armed Forces, have been defending our lives and freedom day and night.
 
 
-      Bravely opposing the enemy, they give us the opportunity to
-      do what we love - create games.
+      Bravely
+      opposing the enemy, they give us the opportunity to do what we love - create
+      games.
 
 
-      It is impossible to express our gratitude
-      to our heroes in words.
+      It is impossible to express our gratitude to our heroes in words.
 
 
-      We only want to say:
+      We
+      only want to say:
 
-      We believe in victory!
-      Glory to the Armed Forces of Ukraine! Glory to Ukraine!"'
+      We believe in victory! Glory to the Armed Forces of
+      Ukraine! Glory to Ukraine!'
     m_Metadata:
       m_Items: []
   - m_Id: 733521436766208
@@ -218,19 +218,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 741625486405632
-    m_Localized: It seems that the roots have grown on purpose in this very place.
-      It would be nice to find out what they are made of, but it will not work to
-      break them off just like that.
+    m_Localized: This roots have grown on purpose in this very place. It would be
+      nice to find out what they are made of
     m_Metadata:
       m_Items: []
   - m_Id: 741661549031424
-    m_Localized: It seems that the roots have grown on purpose in this very place.
-      It would be nice to find out what they are made of, but it will not work to
-      break them off just like that.
+    m_Localized: This roots have grown on purpose in this very place. It would be
+      nice to find out what they are made of, but it will not work to break them
+      off just like that.
     m_Metadata:
       m_Items: []
   - m_Id: 741726090981376
-    m_Localized: Door to Laboratory
+    m_Localized: Door to the laboratory, engulfed in flames
     m_Metadata:
       m_Items: []
   - m_Id: 741772970717184
@@ -302,7 +301,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 748149155852288
-    m_Localized: Poor guy
+    m_Localized: It's disgusting. The roots are sticking out of his chest.
     m_Metadata:
       m_Items: []
   - m_Id: 748225462824960
@@ -378,12 +377,72 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 759842137206784
-    m_Localized: Analyzer Septum RDE-28 is a powerful thing. It can analyze any material
-      by breaking it down almost to molecules. Maybe It can analize a part of root
+    m_Localized: Analyzer Septum RDE-28 is a powerful thing. Maybe It can analize
+      a part of root
     m_Metadata:
       m_Items: []
   - m_Id: 759877897842688
     m_Localized: Laboratory terminal. Maybe I'll find something interesting there?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 765976378109952
+    m_Localized: Captain's Master Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766061073690624
+    m_Localized: This glove contains a wireless key for opening doors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766452624551936
+    m_Localized: An empty glass, there may be something liquid in it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766817940041728
+    m_Localized: Extinguisher. Can handle a local fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766900928540672
+    m_Localized: Ingredients to create something in fabricator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767112375988224
+    m_Localized: A catalyst liqud for creating something in a fabricator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767417272528896
+    m_Localized: Contains coolant. Needed to create something in the fabricator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767881376460800
+    m_Localized: A laser cutter. It can cut anything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768125912772608
+    m_Localized: Fuel cell for main reactor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768211963113472
+    m_Localized: Strange root part
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787133550587904
+    m_Localized: This passage leads to the docking room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792445514969088
+    m_Localized: RUN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792504667238400
+    m_Localized: Programs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794242736484352
+    m_Localized: Fuel cell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795845031915520
+    m_Localized: Another dead scientist...
     m_Metadata:
       m_Items: []
   references:

@@ -1,8 +1,13 @@
+using System;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 
 public class ItemOverview : MonoBehaviour
 {
+	//[SerializeField] private LocalizeStringEvent overview;
 	[SerializeField] private TMP_Text overviewText;
 	[SerializeField] private float showTime = 5f;
 
@@ -11,26 +16,39 @@ public class ItemOverview : MonoBehaviour
 	private float _wait;
 	private ItemInteraction _itemInteraction;
 
-	public void ShowOverview(string text, float time = -1)
+	private void Start()
 	{
-		// if (string.IsNullOrEmpty(text))
-		// 	return;
-		
-		_isShow = true;
-		_showTimer = 0f;
-		_wait = time;
-		overviewText.text = text;
-		if (time <= -1)
+		//overview.SetTable("Notes");
+	}
+
+	public async UniTask ShowOverview(string text, float time = -1)
+	{
+		if (string.IsNullOrEmpty(text))
 		{
-			_wait = showTime;
+			_isShow = false;
+			_showTimer = 0f;
+			overviewText.text = "";
+		}
+		else
+		{
+			_isShow = true;
+			_showTimer = 0f;
+			_wait = time;
+			overviewText.text = await LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Notes", text);
+			//overview.SetEntry(text);
+			if (time <= -1)
+			{
+				_wait = showTime;
+			}
 		}
 	}
 
-	public void SetItemInfo(ItemInfo itemInfo)
+	public async UniTask SetItemInfo(ItemInfo itemInfo)
 	{
 		if (itemInfo != null)
 		{
-			overviewText.text = itemInfo.description;
+			overviewText.text = await LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Notes", itemInfo.description);
+			//overview.SetEntry(itemInfo.description);
 		}
 		else
 		{
@@ -56,7 +74,7 @@ public class ItemOverview : MonoBehaviour
 		}
 		else
 		{
-			overviewText.text = "";
+			ShowOverview("");
 			_isShow = false;
 			_showTimer = 0f;
 		}
@@ -71,7 +89,7 @@ public class ItemOverview : MonoBehaviour
 		if (_showTimer >= _wait)
 		{
 			_isShow = false;
-			overviewText.text = "";
+			ShowOverview("");
 		}
 	}
 }

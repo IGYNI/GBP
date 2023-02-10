@@ -21,7 +21,7 @@ public class SecuredBoxInteraction : ItemInteraction
 
 	private void HandleLockState(Puzzle.EState prev, Puzzle.EState current)
 	{
-		if (current != Puzzle.EState.Processing)
+		if (current == Puzzle.EState.Idle)
 		{
 			outline.enabled = true;
 		}

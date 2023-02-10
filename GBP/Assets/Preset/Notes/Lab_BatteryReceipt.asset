@@ -13,19 +13,13 @@ MonoBehaviour:
   m_Name: Lab_BatteryReceipt
   m_EditorClassIdentifier: 
   noteName: BatteryReceipt
-  screenName: Analyzer Log
-  text: "Analysis result: [PART OF THE ROOT] \n- The original substance under normal
-    conditions produces oxygen under low voltage.\n[MUTATION DETECTED].\n- The mutated
-    sample has ultra-high current consumption and unstable growth. \n[CONCLUSION]\n-
-    To stabilize growth, the sample must be deprived of power.\n- A high current
-    must be applied to destroy the sample.\n\n[WARNING]\nLow energy level in the
-    main reactor!\nThe reactor requires fuel to operate. Use this fabricator program
-    to make a fuel cell:"
+  screenName: notebook_batteryReceipt_header
+  text: notebook_batteryReceipt
   icon: {fileID: 0}
   isReceipt: 1
   receipt:
-    screenName: Reactor Battery
-    fabricationTime: 14
+    screenName: notebook_batteryReceiptCaption
+    fabricationTime: 13
     requiredItems:
     - {fileID: 11400000, guid: 33e178ac0a446794a87b73db0cc164a1, type: 2}
     - {fileID: 11400000, guid: dbae26a6acc51654c8b94203373c47b2, type: 2}

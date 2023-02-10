@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lab_Chemical_1
   screenName: Chemical Ingredient 1
-  description: Ingredient to create something in fabricator
+  description: inv_Lab_Chemical_1
   icon: {fileID: -1154525097, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

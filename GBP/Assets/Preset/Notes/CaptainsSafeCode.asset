@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CaptainsSafeCode
   m_EditorClassIdentifier: 
   noteName: Captains_SafeCode
-  screenName: Safe Code
-  text: "In case dementia overcomes me - the password to \nthe safe is 1234"
+  screenName: notebook_captainCode_header
+  text: notebook_captainCode
   icon: {fileID: 0}
   isReceipt: 0
   receipt:

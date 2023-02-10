@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: credits_thanks
     m_Metadata:
       m_Items: []
+  - m_Id: 132221753913344
+    m_Key: ui_skipCutScene
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
