@@ -156,6 +156,236 @@ MonoBehaviour:
       Glory to the Armed Forces of Ukraine! Glory to Ukraine!"'
     m_Metadata:
       m_Items: []
+  - m_Id: 733521436766208
+    m_Localized: Look around
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733935007723520
+    m_Localized: Open the door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734011738320896
+    m_Localized: Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734028909801472
+    m_Localized: Get Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735627426164736
+    m_Localized: This door is blocked by something
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735678030442496
+    m_Localized: Now I have a glove so i think I can pass this door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735703728943104
+    m_Localized: The door is closed?! It turns out the closet was not enough. That
+      dead man clearly didn't want to let anyone into his private party.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735758707879936
+    m_Localized: Wow! The newest models of spacesuits. I heard a bunch of bells and
+      whistles were built into them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735818757730304
+    m_Localized: So, they have a good MC, and the contests are interesting...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735842900144128
+    m_Localized: Well, if the wardrobe was dragged here, then it will be possible
+      to move it too. Anyway, I don't see any other entrance to the station
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735883895271424
+    m_Localized: This is where I came from. Somewhere out there is my ship.  Or maybe
+      to hell with this damn place?  On the ship, a new episode of The Last Of Us
+      awaits me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741444363776000
+    m_Localized: I smell food, there must be a kitchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741502022873088
+    m_Localized: Door to the generator room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741558323015680
+    m_Localized: Door to the generator room, but the panel does not light up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741625486405632
+    m_Localized: It seems that the roots have grown on purpose in this very place.
+      It would be nice to find out what they are made of, but it will not work to
+      break them off just like that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741661549031424
+    m_Localized: It seems that the roots have grown on purpose in this very place.
+      It would be nice to find out what they are made of, but it will not work to
+      break them off just like that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741726090981376
+    m_Localized: Door to Laboratory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741772970717184
+    m_Localized: Door to the Laboratory. But I'm not going to fry myself in that
+      flame.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741887190003712
+    m_Localized: Door to Laboratory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741949974540288
+    m_Localized: Door to Cabin-company
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741980706205696
+    m_Localized: Door to Cabin-company. Looks like it's broken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742030505177088
+    m_Localized: Deal laborant. I see a paper in his hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742089841995776
+    m_Localized: Door panel to the reactor. Damn, the wires are broken, but I think
+      if I connect them, the doors will work again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742991009181696
+    m_Localized: Hatch to the technical room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743058818494464
+    m_Localized: Captain's safe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743130620784640
+    m_Localized: Coolant. The fabricator will be able to extract the necessary components
+      from it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743229308563456
+    m_Localized: Coolant. The manufacturer will be able to extract the necessary
+      components from it. It needs to be collected into something
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743273684299776
+    m_Localized: Pillow. A yellow, stinky pillow...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743323965616128
+    m_Localized: They did not deserve it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743368106471424
+    m_Localized: 4.5.0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744078822895616
+    m_Localized: Add Wire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744145029984256
+    m_Localized: Flip Camera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748089835810816
+    m_Localized: Door to the hall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748149155852288
+    m_Localized: Poor guy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748225462824960
+    m_Localized: 'root@station$: Access only with the captain''s pass'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748288448688128
+    m_Localized: 'root@station$: Check the power of the reactor'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748499673837568
+    m_Localized: This is the end?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748530837516288
+    m_Localized: What a terrible thing...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748599825428480
+    m_Localized: Circuit control system
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748647103623168
+    m_Localized: It looks like a circuit control system, but it's not active. Maybe
+      I can power it up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759114698092544
+    m_Localized: Door to the hall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759178812223488
+    m_Localized: This fire extinguisher can handle any flame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759210802180096
+    m_Localized: There seems to be something in that cabinet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759259833593856
+    m_Localized: It used to be used for cooking. Maybe there's something inside.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759312073650176
+    m_Localized: I will definitely need this laser cutter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759537798508544
+    m_Localized: Sugar ruined him. Or was it sugar?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759586918002688
+    m_Localized: Laboratory refrigerator, locked with a combination lock. I think
+      it's locked for a reason
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759647118848000
+    m_Localized: Door to the hall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759693956640768
+    m_Localized: The newest model of fabricator. "You don't have to do anything,
+      just put in the ingredients, choose a program, and press a button. Voila, done!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759747631149056
+    m_Localized: I wonder where this rabbit hole will lead me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759778962599936
+    m_Localized: Analyzer Septum RDE-28 is a powerful thing. It can analyze any material
+      by breaking it down almost to molecules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759842137206784
+    m_Localized: Analyzer Septum RDE-28 is a powerful thing. It can analyze any material
+      by breaking it down almost to molecules. Maybe It can analize a part of root
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759877897842688
+    m_Localized: Laboratory terminal. Maybe I'll find something interesting there?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
