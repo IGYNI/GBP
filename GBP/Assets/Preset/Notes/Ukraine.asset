@@ -13,24 +13,8 @@ MonoBehaviour:
   m_Name: Ukraine
   m_EditorClassIdentifier: 
   noteName: Ukraine
-  screenName: War in Ukraine
-  text: 'For almost a year now, brave defenders of our country, in the ranks of the
-    Armed Forces, have been defending our lives and freedom day and night.
-
-
-    Bravely
-    opposing the enemy, they give us the opportunity to do what we love - create
-    games.
-
-
-    It is impossible to express our gratitude to our heroes in words.
-
-
-    We
-    only want to say:
-
-    We believe in victory! Glory to Ukraine! Glory to the
-    Armed Forces!'
+  screenName: notebook_Ukraine_header
+  text: notebook_Ukraine
   icon: {fileID: 0}
   isReceipt: 0
   receipt:

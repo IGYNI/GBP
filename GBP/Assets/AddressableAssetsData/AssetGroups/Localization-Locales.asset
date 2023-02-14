@@ -17,8 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: eabdbd6184bfc6c4ea418ce4d73a3e05
   m_SerializeEntries:
-  - m_GUID: 306fab546b72fe44c94548b549931d02
-    m_Address: English (en)
+  - m_GUID: 307973376f98edb4c9946bb7615f1918
+    m_Address: Ukrainian (Ukraine) (uk-UA)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ca4d120e2c288f42929cf4dee2d8e94
+    m_Address: English (United States) (en-US)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale

@@ -1,0 +1,384 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Notes Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Notes
+  m_TableCollectionNameGuidString: 07f462e51151bc64bb4804e2d314aace
+  m_Entries:
+  - m_Id: 60749017088
+    m_Key: notebook_note_1_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 563310522368
+    m_Key: notebook_note_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26506741706752
+    m_Key: notebook_note_2_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26548982542336
+    m_Key: notebook_note_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27011320672256
+    m_Key: notebook_note_3_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27144213000192
+    m_Key: notebook_note_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27197564547072
+    m_Key: notebook_note_3a_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308432584704
+    m_Key: notebook_note_3a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27528952311808
+    m_Key: notebook_note_4_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27613639503872
+    m_Key: notebook_note_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27655465103360
+    m_Key: notebook_note_5_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27731897905152
+    m_Key: notebook_note_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27786767790080
+    m_Key: notebook_note_6_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27915855884288
+    m_Key: notebook_note_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32822205902848
+    m_Key: notebook_captainCode_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32856351731712
+    m_Key: notebook_captainCode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34431510016000
+    m_Key: notebook_batteryReceipt_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34523428188160
+    m_Key: notebook_batteryReceipt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35482581626880
+    m_Key: notebook_Ukraine_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35568212537344
+    m_Key: notebook_Ukraine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733521436766208
+    m_Key: dock_tutorial_lookAround
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733935007723520
+    m_Key: dock_tutorial_openDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734011738320896
+    m_Key: dock_tutorial_interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734028909801472
+    m_Key: dock_tutorial_getInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735627426164736
+    m_Key: item_dock_lockedExitDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735678030442496
+    m_Key: item_dock_unlockedExitDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735703728943104
+    m_Key: item_dock_lockedExitDoorFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735758707879936
+    m_Key: item_dock_spacesuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735818757730304
+    m_Key: item_dock_deadScientist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735842900144128
+    m_Key: item_dock_movableBox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735883895271424
+    m_Key: item_hangar_door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741444363776000
+    m_Key: item_hall_kitchenDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741502022873088
+    m_Key: item_hall_generatorDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741558323015680
+    m_Key: item_hall_generatorDoor_fail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741625486405632
+    m_Key: item_hall_roots_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741661549031424
+    m_Key: item_hall_roots_failInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741726090981376
+    m_Key: item_hall_fireLabDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741772970717184
+    m_Key: item_hall_fireLabDoorFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741887190003712
+    m_Key: item_hall_LabDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741949974540288
+    m_Key: item_hall_cabinDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741980706205696
+    m_Key: item_hall_cabinDoorFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742030505177088
+    m_Key: item_hall_deadScientist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742089841995776
+    m_Key: item_hall_wireBox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742991009181696
+    m_Key: item_cabih_Hole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743058818494464
+    m_Key: item_cabin_captainsSafe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743130620784640
+    m_Key: item_cabin_coolant_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743229308563456
+    m_Key: item_cabin_coolant_failInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743273684299776
+    m_Key: item_cabin_pillow_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743323965616128
+    m_Key: item_cabin_deadScientist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743368106471424
+    m_Key: item_cabin_Ukraine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744078822895616
+    m_Key: item_tutorial_wirebox_AddWire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744145029984256
+    m_Key: item_tutorial_wirebox_FlipCamera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748089835810816
+    m_Key: item_generator_door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748149155852288
+    m_Key: item_generator_deadScientist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748225462824960
+    m_Key: item_generatror_terminal_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748288448688128
+    m_Key: item_generatror_terminal_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748499673837568
+    m_Key: item_generatror_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748530837516288
+    m_Key: item_generatror_roots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748599825428480
+    m_Key: item_generatror_circuits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748647103623168
+    m_Key: item_generatror_circuitsFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759114698092544
+    m_Key: item_kitchen_door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759178812223488
+    m_Key: item_kitchen_extinguisher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759210802180096
+    m_Key: item_kitchen_cabinet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759259833593856
+    m_Key: item_kitchen_stove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759312073650176
+    m_Key: item_kitchen_lasetCutter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759537798508544
+    m_Key: item_kitchen_deadScientist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759586918002688
+    m_Key: item_lab_freezer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759647118848000
+    m_Key: item_lab_doorToHall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759693956640768
+    m_Key: item_lab_fabricator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759747631149056
+    m_Key: item_lab_hole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759778962599936
+    m_Key: item_lab_analyzer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759842137206784
+    m_Key: item_lab_analyzerFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759877897842688
+    m_Key: item_lab_terminal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 765976378109952
+    m_Key: inv_Captain_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766061073690624
+    m_Key: inv_Dock_Glove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766452624551936
+    m_Key: inv_Empty_Glass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766817940041728
+    m_Key: inv_Extinguisher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766900928540672
+    m_Key: inv_Lab_Chemical_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767112375988224
+    m_Key: inv_Lab_Chemical_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767417272528896
+    m_Key: inv_Lab_Chemical_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767881376460800
+    m_Key: inv_LaserCutter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768125912772608
+    m_Key: inv_ReactorBattery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768211963113472
+    m_Key: inv_RootPart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 771070901383168
+    m_Key: emptyLine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787133550587904
+    m_Key: item_hall_DockingDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792445514969088
+    m_Key: item_fabricator_run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792504667238400
+    m_Key: item_fabricator_receipts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794242736484352
+    m_Key: notebook_batteryReceiptCaption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795845031915520
+    m_Key: item_lab_deadScientist
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1846551896048795648
+  references:
+    version: 2
+    RefIds:
+    - rid: 1846551896048795648
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1675819476968

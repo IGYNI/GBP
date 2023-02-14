@@ -124,6 +124,7 @@ public class GeneratorPuzzle : Puzzle
 
     private void Update()
     {
+        UpdatePowerGauge();
         if (state.Value != EState.Processing)
             return;
 
@@ -153,7 +154,7 @@ public class GeneratorPuzzle : Puzzle
             CheckPuzzle();
             _checkTime = 0f;
         }
-        UpdatePowerGauge();
+        
 
         _checkTime += Time.deltaTime;
     }

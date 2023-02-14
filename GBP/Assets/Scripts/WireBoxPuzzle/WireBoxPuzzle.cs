@@ -92,21 +92,22 @@ public class WireBoxPuzzle : Puzzle
 		{
 			OnCollide.Invoke();
 			DestroyWires();
-			Debug.Log("OOOPS");
+			//Debug.Log("OOOPS");
 			InitializePuzzle();
 		}
 		else
 		{
-			
-			var vec = (_lastPart.transform.position - targetWirePoint.transform.position);
-			if (vec.magnitude < checkPuzzleDistance)
+			var distanceToTarget = (_lastPart.mountPoint.position - targetWirePoint.transform.position).magnitude;
+			if (distanceToTarget < checkPuzzleDistance)
 			{
 				_allowInput = false;
-				Debug.Log(vec.magnitude);
+				//Debug.Log(distanceToTarget);
 				_lastPart.Freeze();
-				_lastPart.transform.forward = vec.normalized*-1;
+				var len = (_lastPart.transform.position - targetWirePoint.transform.position);
+				_lastPart.transform.forward = len.normalized * -1;
 				var s = _lastPart.transform.localScale;
-				_lastPart.transform.localScale = new Vector3(s.x,s.y,vec.magnitude*7f);
+				var scaleFactor = 0.2f;
+				_lastPart.transform.localScale = new Vector3(s.x,s.y,len.magnitude/scaleFactor);
 				targetSphere.gameObject.SetActive(true);
 				StartCoroutine(CompletePuzzle());
 			}

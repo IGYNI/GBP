@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Video;
 
 public class VideoPlayer : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class VideoPlayer : MonoBehaviour
 		// to a camera object, no need to change videoPlayer.targetCamera.
 		var videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
 		videoPlayer.playOnAwake = false;
+		videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
 
 		// By default, VideoPlayers added to a camera will use the far plane.
 		// Let's target the near plane instead.

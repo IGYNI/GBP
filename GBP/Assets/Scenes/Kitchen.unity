@@ -879,7 +879,7 @@ MonoBehaviour:
     interactionSpot: {fileID: 597619}
     interactionRadius: 0
   failInfo: 
-  overviewInfo: Exit door
+  overviewInfo: item_kitchen_door
   openDoorCondition: {fileID: 0}
   door: {fileID: 255611028}
   exitPointName: Kitchen
@@ -2261,6 +2261,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1898730667}
     m_Modifications:
     - target: {fileID: 3825187834603932749, guid: b7a4633e0a2f6fe4a93c2c65bd24c159, type: 3}
+      propertyPath: overviewInfo
+      value: item_kitchen_extinguisher
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825187834603932749, guid: b7a4633e0a2f6fe4a93c2c65bd24c159, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -2441,14 +2445,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119079692}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0.326, y: 0.511, z: -0.203}
   m_LocalScale: {x: -38.306713, y: -29.619724, z: -57.447426}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3710638334753691745}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!23 &1119079694
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2469,7 +2473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 880774007180850119, guid: daf51ca36a1d1814384efb39187331fa, type: 3}
+  - {fileID: 2100000, guid: 78e0e15eb6b983d459a38cd7aeaa08e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3191,6 +3195,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -678588488315902003, guid: daf51ca36a1d1814384efb39187331fa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78e0e15eb6b983d459a38cd7aeaa08e0, type: 2}
     - target: {fileID: -601018869012299972, guid: daf51ca36a1d1814384efb39187331fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.08
@@ -3536,6 +3544,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4618108090775102, guid: 0f137b5c393c941479490a54310bf733, type: 3}
   m_PrefabInstance: {fileID: 1717772376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1803017586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3710638334753691745}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.334
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.282
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.002725833
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.015114437
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9840078
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.17746253
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 200.446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 178.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+      propertyPath: m_Name
+      value: Jar2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+--- !u!4 &1803017587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f53f689f58844745a72c28afc415b3d, type: 3}
+  m_PrefabInstance: {fileID: 1803017586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891031893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,8 +3718,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1098867713}
   - {fileID: 242804861}
+  - {fileID: 1098867713}
   - {fileID: 5981103266007197946}
   - {fileID: 6585674497742794471}
   - {fileID: 4754743341013267076}
@@ -4351,7 +4437,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 8377760835616940286}
     interactionRadius: 0
-  overviewInfo: There seems to be something on that shelf
+  overviewInfo: item_kitchen_cabinet
   hiddenItem: {fileID: 11400000, guid: 33e178ac0a446794a87b73db0cc164a1, type: 2}
   noteInfo: {fileID: 0}
 --- !u!4 &3710638334753691745
@@ -4366,6 +4452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1803017587}
   - {fileID: 1119079693}
   m_Father: {fileID: 5981103266007197946}
   m_RootOrder: -1
@@ -4392,8 +4479,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 1762383979774068836}
     interactionRadius: 0.4
-  overviewInfo: Maybe that thing is not dead yet, but I will definitely need a laser
-    cutter
+  overviewInfo: item_kitchen_lasetCutter
 --- !u!114 &4239671889642927682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4416,9 +4502,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 8946375081750685411}
     interactionRadius: 0
-  overviewInfo: The refrigerator is working, it is necessary to check whether the
-    foods have not spoiled. It will be clear whether there were interruptions in
-    the power supply. An empty jar may be useful
+  overviewInfo: item_kitchen_stove
   hiddenItem: {fileID: 11400000, guid: 8bdf446e0f708734a901b65c22bf5684, type: 2}
   noteInfo: {fileID: 0}
 --- !u!4 &4258985008174702204
@@ -4618,7 +4702,7 @@ MonoBehaviour:
     interactionMode: 1
     interactionSpot: {fileID: 8256675956419420575}
     interactionRadius: 0
-  overviewInfo: Sugar ruined him. Or was it sugar?
+  overviewInfo: item_kitchen_deadScientist
   hiddenItem: {fileID: 0}
   noteInfo: {fileID: 11400000, guid: 7249cdd6d295cc84e8421a7d9e63b7a2, type: 2}
 --- !u!1 &8256675955473488290

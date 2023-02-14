@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Extinguisher
   screenName: Extinguisher
-  description: 
+  description: inv_Extinguisher
   icon: {fileID: 165262598, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

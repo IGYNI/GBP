@@ -1,12 +1,12 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
-public class NoteInfoView : MonoBehaviour, IPointerClickHandler
+public class NoteInfoView : MonoBehaviour
 {
-	[SerializeField] private TMPro.TMP_Text header;
-	[SerializeField] private TMPro.TMP_Text note;
+	[SerializeField] private LocalizeStringEvent localizedHeader;
+	[SerializeField] private LocalizeStringEvent localizedNote;
 	[SerializeField] private UIReceipt receiptView;
 	[SerializeField] private Image highlight;
 	public NoteInfo NoteInfo => _noteInfo;
@@ -14,9 +14,12 @@ public class NoteInfoView : MonoBehaviour, IPointerClickHandler
 
 	public void SetNote(NoteInfo noteInfo)
 	{
-		header.text = noteInfo.screenName;
 		_noteInfo = noteInfo;
-		note.text = noteInfo.text;
+		localizedHeader.SetTable("Notes");
+		localizedHeader.SetEntry(noteInfo.screenName);
+		localizedNote.SetTable("Notes");
+		localizedNote.SetEntry(noteInfo.text);
+		
 		if (noteInfo.isReceipt)
 		{
 			receiptView.gameObject.SetActive(true);
@@ -24,10 +27,5 @@ public class NoteInfoView : MonoBehaviour, IPointerClickHandler
 		}
 
 		highlight.DOFade(0f, 1f).SetEase(Ease.OutBounce);
-	}
-
-	public void OnPointerClick(PointerEventData eventData)
-	{
-		
 	}
 }

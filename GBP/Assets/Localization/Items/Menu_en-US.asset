@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 498cea1e95cba86488d7aed342c41b6c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 31467995164672
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31548198645760
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31580125687808
+    m_Localized: Exit Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31872451899392
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31952655380480
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32006011121664
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33497937637376
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34558899417088
+    m_Localized: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34715141435392
+    m_Localized: Ambience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34813170708480
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34862323757056
+    m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42092188168192
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54124052508672
+    m_Localized: To Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54343343304704
+    m_Localized: "This project was created as part of the GGJ 2023 competition in
+      one week, by strangers. \nDuring this time, we became a cool team :)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59509769531392
+    m_Localized: "<color=#F3C27D>Game Designer:</color>\r\nVladyslav Barchuk\r\n\r\n<color=#F3C27D>Narrative
+      Designer:</color>\r\nVladyslav Barchuk\r\n\r\n<color=#F3C27D>Lead developer:</color>\r\nSerhii
+      Romanenko\r\n\r\n<color=#F3C27D>Developers:</color>\r\nAleksandr Nakopyuk\r\n-_-(Arsen)\r\nIlya
+      Repin\r\n\r\n<color=#F3C27D>Sound Designer:</color>\r\nIlya Repin\r\n\r\n<color=#F3C27D>3D
+      Artists:</color>\r\nVolodymyr \u200BTryzna (Animator, Character artist\u200B)\r\nVolodymyr
+      Romanovich (3D Soft Surface, 3D Hard Surface)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59950779625472
+    m_Localized: 'Many thanks to our brave army, which defends our country and gave
+      us the opportunity to create this game.
+
+
+
+      Thanks to our friends and
+      relatives who do not let us down on our path
+
+
+
+      And thank you for playing
+      our game ;)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132221753913344
+    m_Localized: Press Space to skip
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

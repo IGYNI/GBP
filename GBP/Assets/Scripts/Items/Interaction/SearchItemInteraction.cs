@@ -42,7 +42,7 @@ public class SearchItemInteraction : ItemInteraction
 			Interactable = variable.Value != "true";
 		}
 
-		Debug.Log($"[Interaction] Item {item.info.itemName} interactable: {Interactable.ToString()}");
+		//Debug.Log($"[Interaction] Item {item.info.itemName} interactable: {Interactable.ToString()}");
 	}
 
 	public override string GetOverviewInfo(VariableSystem variableSystem)

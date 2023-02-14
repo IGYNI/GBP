@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Captain_Key
   screenName: Captain's Key
-  description: 
+  description: inv_Captain_Key
   icon: {fileID: 381201972, guid: e3f6adbe8061846419468333d10d7d96, type: 3}

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Note_LabCode
   m_EditorClassIdentifier: 
   noteName: Lab Code
-  screenName: Death note
-  text: 'My last words: This life was full of adventures and no worse than the hero
-    of Orwell''s 1984'
+  screenName: notebook_note_6_header
+  text: notebook_note_6
   icon: {fileID: 0}
   isReceipt: 0
   receipt:

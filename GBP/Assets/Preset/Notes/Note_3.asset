@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: Note_3
   m_EditorClassIdentifier: 
   noteName: Note1
-  screenName: Note 140
-  text: 'Diary Entry #140 Project: GHA-47t Senior Scientist: Classified. The sample
-    broke free and made its way into the reactor compartment. It sounds crazy, but
-    it looks like it''s somehow feeding off his energy and spreading through the
-    ship like a virus. We don''t have access to the bridge, so we can''t even call
-    a rescue team. The captain has come up with a plan: to sneak into the hangar
-    and to put on spacesuits to go out into space. There, holding on to the outer
-    side of the cladding, we will be able to walk to the bridge. For this he needs
-    my help. Why do I think this won''t work?'
+  screenName: notebook_note_3_header
+  text: notebook_note_3
   icon: {fileID: 0}
   isReceipt: 0
   receipt:
